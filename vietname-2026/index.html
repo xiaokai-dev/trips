@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4-Day Saigon &amp; Dalat Trip | Flower Festival 2026</title>
+  <meta name="description" content="Four days by bus from Phnom Penh: Saigon's museums and street food, then the cool pine hills of Dalat on the opening night of the 11th Dalat Flower Festival. Dec 17 – 20, 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Be+Vietnam+Pro:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    /* ───────── RESET & BASE ───────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #070a0b;
+      --bg-card: #0e1314;
+      --bg-card-alt: #141b1c;
+      --glass: rgba(14,19,20,0.65);
+      --glass-border: rgba(255,255,255,0.08);
+      --gold: #f2b84b;
+      --gold-light: #ffd98a;
+      --gold-rgb: 242,184,75;
+      --accent-saigon: #ff7a59;
+      --accent-saigon-rgb: 255,122,89;
+      --accent-pine: #4fd1a5;
+      --accent-pine-rgb: 79,209,165;
+      --accent-flower: #f472b6;
+      --accent-flower-rgb: 244,114,182;
+      --text: #e8e6e3;
+      --text-muted: #8f9a9b;
+      --text-dim: #4a5556;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 8px 32px rgba(0,0,0,0.45);
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-deep);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--gold-light); }
+    h1,h2,h3,h4,h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
+    .viet-accent { font-family: 'Be Vietnam Pro', sans-serif; }
+
+    /* ───────── UTILITY ───────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 12px;
+    }
+    .section-label::before {
+      content: ''; width: 32px; height: 1px; background: var(--gold);
+    }
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800;
+      background: linear-gradient(135deg, #fff 0%, var(--gold-light) 50%, var(--gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 16px;
+    }
+    .section-subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; margin-bottom: 48px; }
+
+    /* ───────── SCROLL ANIMATIONS ───────── */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ───────── NAVBAR ───────── */
+    .navbar {
+      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+      padding: 16px 0;
+      background: transparent;
+      transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+    }
+    .navbar.scrolled {
+      background: rgba(7,10,11,0.85);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .navbar .container {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .nav-brand {
+      font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.25rem;
+      color: #fff; display: flex; align-items: center; gap: 8px; white-space: nowrap;
+    }
+    .nav-brand span { font-size: 1.5rem; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.7); font-size: 0.875rem; font-weight: 500;
+      letter-spacing: 0.5px; position: relative; padding: 4px 0;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px; background: var(--gold);
+      transition: width 0.3s ease;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links .nav-home a { color: var(--gold); }
+    .nav-mobile-toggle {
+      display: none; background: none; border: none; color: #fff;
+      font-size: 1.5rem; cursor: pointer;
+    }
+
+    /* ───────── HERO ───────── */
+    .hero {
+      position: relative; height: 100vh; min-height: 700px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ho_Chi_Minh_City_Skyline_%28night%29.jpg/1920px-Ho_Chi_Minh_City_Skyline_%28night%29.jpg') center/cover no-repeat;
+      transform: scale(1.1);
+      transition: transform 0.1s linear;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(7,10,11,0.45) 0%,
+        rgba(7,10,11,0.25) 30%,
+        rgba(7,10,11,0.6) 70%,
+        rgba(7,10,11,1) 100%
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2; text-align: center;
+      padding: 0 24px; max-width: 900px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(var(--gold-rgb),0.15); border: 1px solid rgba(var(--gold-rgb),0.3);
+      padding: 8px 20px; border-radius: 50px; font-size: 0.8rem;
+      color: var(--gold-light); font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-badge .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.5); }
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900;
+      line-height: 1.05; margin-bottom: 20px;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+    .hero h1 .line1 { color: #fff; display: block; }
+    .hero h1 .line2 {
+      display: block;
+      background: linear-gradient(90deg, var(--accent-saigon), var(--gold), var(--accent-flower));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 1.15rem; color: rgba(255,255,255,0.8);
+      max-width: 650px; margin: 0 auto 36px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .hero-stats {
+      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-value {
+      font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 800;
+      color: #fff;
+    }
+    .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 1.5px; }
+    .scroll-indicator {
+      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 2px;
+      text-transform: uppercase; animation: float 3s ease-in-out infinite;
+    }
+    .scroll-indicator .arrow {
+      width: 24px; height: 24px; border-right: 2px solid rgba(255,255,255,0.4);
+      border-bottom: 2px solid rgba(255,255,255,0.4);
+      transform: rotate(45deg); margin-top: -8px;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* ───────── FESTIVAL BANNER ───────── */
+    .festival-section { padding: 40px 0 0; }
+    .festival-banner {
+      display: grid; grid-template-columns: 280px 1fr; gap: 0;
+      background: var(--bg-card); border: 1px solid rgba(var(--accent-flower-rgb),0.3);
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 0 60px rgba(var(--accent-flower-rgb),0.08);
+    }
+    .festival-banner img { width: 100%; height: 100%; object-fit: cover; min-height: 220px; }
+    .festival-body { padding: 28px 32px; }
+    .festival-kicker {
+      font-size: 0.7rem; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--accent-flower); font-weight: 600; margin-bottom: 8px;
+    }
+    .festival-body h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+    .festival-body p { color: var(--text-muted); font-size: 0.95rem; }
+    .festival-body p strong { color: var(--text); }
+    .festival-facts { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .fact-chip {
+      font-size: 0.75rem; font-weight: 600; padding: 5px 12px; border-radius: 50px;
+      background: rgba(var(--accent-flower-rgb),0.1); color: #ffb3d9;
+      border: 1px solid rgba(var(--accent-flower-rgb),0.3);
+    }
+
+    /* ───────── ROUTE OVERVIEW ───────── */
+    .route-section { padding: 100px 0 40px; }
+    .route-path {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .route-node {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      padding: 16px 20px; position: relative;
+    }
+    .route-node-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      background: var(--bg-card-alt); border: 2px solid var(--glass-border);
+      transition: all 0.3s;
+    }
+    .route-node:hover .route-node-icon {
+      border-color: var(--gold); transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(var(--gold-rgb),0.3);
+    }
+    .route-node-city { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem; }
+    .route-node-dates { font-size: 0.7rem; color: var(--text-muted); text-align: center; }
+    .route-connector {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      margin-bottom: 28px; font-size: 0.65rem; color: var(--text-dim);
+    }
+    .route-connector::before {
+      content: ''; width: 56px; height: 2px;
+      background: linear-gradient(90deg, var(--gold) 0%, transparent 50%, var(--gold) 100%);
+      opacity: 0.4;
+    }
+
+    /* ───────── CITY SHOWCASE ───────── */
+    .cities-section { padding: 60px 0 100px; }
+    .city-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .city-card {
+      position: relative; border-radius: var(--radius); overflow: hidden;
+      height: 460px; cursor: pointer; display: block; color: inherit;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .city-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); color: inherit; }
+    .city-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    .city-card-img {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform 0.6s ease;
+    }
+    .city-card:hover .city-card-img { transform: scale(1.08); }
+    .city-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 30%, rgba(7,10,11,0.92) 100%);
+    }
+    .city-card-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 32px; z-index: 2;
+    }
+    .city-card-tag {
+      display: inline-block; padding: 4px 12px; border-radius: 50px;
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 12px;
+    }
+    .tag-saigon { background: rgba(var(--accent-saigon-rgb),0.18); color: #ffa58c; border: 1px solid rgba(var(--accent-saigon-rgb),0.35); }
+    .tag-dalat { background: rgba(var(--accent-pine-rgb),0.15); color: var(--accent-pine); border: 1px solid rgba(var(--accent-pine-rgb),0.3); }
+    .city-card h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 2px; }
+    .city-card-viet { font-size: 0.95rem; color: rgba(255,255,255,0.55); margin-bottom: 8px; }
+    .city-card-sub { color: var(--text-muted); font-size: 0.85rem; }
+    .city-card-temp {
+      position: absolute; top: 20px; right: 20px; z-index: 3;
+      background: var(--glass); backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border); border-radius: var(--radius-sm);
+      padding: 10px 14px; text-align: center;
+    }
+    .city-card-temp .temp { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem; }
+    .city-card-temp .temp-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ───────── TIMELINE / ITINERARY ───────── */
+    .timeline-section { padding: 100px 0; }
+    .timeline { position: relative; padding-left: 60px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 23px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent-saigon) 0%, var(--accent-saigon) 40%, var(--accent-pine) 60%, var(--gold) 100%);
+      opacity: 0.3;
+    }
+    .timeline-day { position: relative; margin-bottom: 64px; --day-color: var(--gold); }
+    .timeline-day.city-saigon { --day-color: var(--accent-saigon); }
+    .timeline-day.city-dalat { --day-color: var(--accent-pine); }
+    .timeline-dot {
+      position: absolute; left: -48px; top: 6px;
+      width: 16px; height: 16px; border-radius: 50%;
+      border: 3px solid var(--day-color); background: var(--bg-deep);
+      z-index: 2;
+    }
+    .timeline-day-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+    .timeline-day-num {
+      font-family: 'Outfit', sans-serif; font-weight: 800;
+      font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--day-color);
+    }
+    .timeline-day-date { font-size: 0.8rem; color: var(--text-muted); }
+    .timeline-day-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+    .timeline-card {
+      background: var(--bg-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .timeline-card:hover { border-color: rgba(var(--gold-rgb),0.3); }
+    .timeline-card-body { padding: 24px; }
+    .timeline-card-img {
+      width: 100%; height: 280px; object-fit: cover;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .timeline-why {
+      font-size: 0.85rem; color: var(--text-muted); font-style: italic;
+      padding: 10px 14px; margin-bottom: 18px; border-left: 2px solid var(--day-color);
+      background: rgba(255,255,255,0.02); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .timeline-highlights { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+    .highlight-item { display: flex; align-items: flex-start; gap: 12px; }
+    .highlight-time {
+      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.75rem;
+      color: var(--day-color); white-space: nowrap; min-width: 100px;
+      padding-top: 2px;
+    }
+    .highlight-text { font-size: 0.9rem; color: var(--text-muted); }
+    .highlight-text strong { color: var(--text); font-weight: 600; }
+    .highlight-text em { color: var(--text-dim); font-style: normal; }
+    .highlight-item.key .highlight-text strong { color: var(--gold-light); }
+    .map-container {
+      width: 100%; height: 220px; border-radius: var(--radius-sm);
+      overflow: hidden; border: 1px solid var(--glass-border); margin-top: 16px;
+    }
+    .map-container iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+    .map-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .map-link {
+      display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+      font-size: 0.8rem; color: var(--gold); font-weight: 500;
+      padding: 8px 16px; border-radius: 50px;
+      background: rgba(var(--gold-rgb),0.08); border: 1px solid rgba(var(--gold-rgb),0.2);
+      transition: all 0.3s;
+    }
+    .map-link:hover {
+      background: rgba(var(--gold-rgb),0.15); border-color: rgba(var(--gold-rgb),0.4);
+      color: var(--gold-light);
+    }
+
+    /* ───────── PLACES / PRIORITY ───────── */
+    .places-section { padding: 100px 0; }
+    .priority-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+    .priority {
+      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+      padding: 3px 10px; border-radius: 50px; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .priority-must { background: rgba(var(--gold-rgb),0.15); color: var(--gold-light); border: 1px solid rgba(var(--gold-rgb),0.35); }
+    .priority-rec { background: rgba(var(--accent-pine-rgb),0.1); color: var(--accent-pine); border: 1px solid rgba(var(--accent-pine-rgb),0.3); }
+    .priority-opt { background: transparent; color: var(--text-muted); border: 1px dashed var(--text-dim); }
+    .places-city { margin-bottom: 48px; }
+    .places-city h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+    .places-list {
+      background: var(--bg-card); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .place-row {
+      display: grid; grid-template-columns: 130px 1.4fr 110px 1fr; gap: 16px;
+      align-items: start; padding: 16px 24px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .place-row:last-child { border-bottom: none; }
+    .place-name { font-weight: 600; font-size: 0.95rem; }
+    .place-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
+    .place-duration { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.85rem; }
+    .place-slot { font-size: 0.8rem; color: var(--text-muted); }
+    .table-head { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
+    .table-head .place-duration { font-size: 0.7rem; }
+    .leg-row { grid-template-columns: 1.1fr 1.7fr 1.2fr 130px; }
+    .ticket-row { grid-template-columns: 1.4fr 1fr 1.2fr; }
+    .food-row { grid-template-columns: 170px 1.6fr 140px; }
+    .places-callout {
+      margin-top: 12px; padding: 12px 16px; border-radius: var(--radius-sm);
+      background: rgba(var(--gold-rgb),0.06); border: 1px solid rgba(var(--gold-rgb),0.18);
+      font-size: 0.85rem; color: var(--text-muted);
+    }
+    .places-callout strong { color: var(--gold-light); }
+    .places-callout.warn { background: rgba(var(--accent-saigon-rgb),0.07); border-color: rgba(var(--accent-saigon-rgb),0.25); }
+    .places-callout.warn strong { color: #ffa58c; }
+    .free-list { padding: 16px 24px; font-size: 0.9rem; color: var(--text-muted); }
+    .budget-row { grid-template-columns: 1.1fr 2fr 90px 100px 90px; align-items: center; }
+    .budget-row .place-duration { text-align: right; }
+    .budget-mid { color: var(--gold-light); }
+    .budget-total { background: rgba(var(--gold-rgb),0.06); }
+    .budget-total .place-name, .budget-total .place-duration { font-size: 1.05rem; }
+    .budget-tips { list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 20px 24px; }
+    .budget-tips li { font-size: 0.875rem; color: var(--text-muted); }
+    .budget-tips li strong { color: var(--text); }
+    .save-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px; }
+    .save-head { padding: 16px 24px 0; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.05rem; }
+    .plan-tag {
+      display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 50px;
+      font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 1px;
+      text-transform: uppercase; vertical-align: middle;
+      background: rgba(var(--gold-rgb),0.15); color: var(--gold-light); border: 1px solid rgba(var(--gold-rgb),0.35);
+    }
+    .plan-list { list-style: none; padding: 12px 24px 20px; display: flex; flex-direction: column; gap: 10px; }
+    .plan-list li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 0.875rem; color: var(--text-muted); }
+    .plan-list li span:first-child { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); font-weight: 600; padding-top: 3px; }
+    .plan-list li strong { color: var(--text); }
+
+    /* ───────── GALLERY ───────── */
+    .gallery-section { padding: 100px 0; background: var(--bg-card); }
+    .gallery-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
+    .gallery-filter {
+      font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600;
+      padding: 8px 18px; border-radius: 50px; cursor: pointer;
+      background: transparent; color: var(--text-muted);
+      border: 1px solid var(--glass-border); transition: all 0.3s;
+    }
+    .gallery-filter:hover { color: var(--text); border-color: rgba(var(--gold-rgb),0.4); }
+    .gallery-filter.active { background: rgba(var(--gold-rgb),0.15); color: var(--gold-light); border-color: rgba(var(--gold-rgb),0.4); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 220px;
+      grid-auto-flow: dense;
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: var(--radius-sm); overflow: hidden; position: relative;
+      cursor: zoom-in; padding: 0; border: 0; background: var(--bg-card-alt);
+      font: inherit; color: inherit; text-align: left;
+    }
+    .gallery-item.hidden { display: none; }
+    .gallery-item.big { grid-column: span 2; grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-item-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7) 100%);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 16px;
+    }
+    .gallery-item:hover .gallery-item-overlay,
+    .gallery-item:focus-visible .gallery-item-overlay { opacity: 1; }
+    .gallery-item-overlay span { font-size: 0.85rem; font-weight: 500; }
+    .photo-credit { margin-top: 16px; font-size: 0.75rem; color: var(--text-dim); }
+
+    /* ───────── LIGHTBOX ───────── */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(3,4,5,0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox.visible { opacity: 1; }
+    .lightbox-figure { margin: 0; max-width: min(1200px, 92vw); display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .lightbox-img {
+      max-width: 100%; max-height: 78vh; object-fit: contain;
+      border-radius: var(--radius-sm); box-shadow: var(--shadow);
+      transition: opacity 0.25s;
+    }
+    .lightbox-img.loading { opacity: 0.2; }
+    .lightbox-caption { text-align: center; }
+    .lightbox-caption strong { font-family: 'Outfit', sans-serif; font-size: 1.1rem; display: block; }
+    .lightbox-caption span { font-size: 0.8rem; color: var(--text-muted); }
+    .lightbox-btn {
+      position: absolute; background: var(--glass); color: #fff;
+      border: 1px solid var(--glass-border); border-radius: 50%;
+      width: 48px; height: 48px; font-size: 1.4rem; line-height: 1;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .lightbox-btn:hover { background: rgba(var(--gold-rgb),0.2); border-color: rgba(var(--gold-rgb),0.5); }
+    .lightbox-close { top: 20px; right: 20px; }
+    .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+    .lightbox-counter {
+      position: absolute; top: 32px; left: 24px;
+      font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px;
+    }
+
+    /* ───────── CHECKLIST ───────── */
+    .checklist-section { padding: 100px 0; }
+    .checklist-progress { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .progress-bar { flex: 1; height: 6px; border-radius: 6px; background: var(--bg-card-alt); overflow: hidden; }
+    .progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--accent-saigon), var(--gold), var(--accent-pine)); transition: width 0.4s ease; }
+    .progress-label { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
+    .check-item {
+      display: grid; grid-template-columns: 24px 120px 1fr; gap: 14px; align-items: start;
+      padding: 14px 24px; border-bottom: 1px solid var(--glass-border); cursor: pointer;
+      transition: background 0.2s;
+    }
+    .check-item:last-child { border-bottom: none; }
+    .check-item:hover { background: rgba(255,255,255,0.02); }
+    .check-item input {
+      appearance: none; -webkit-appearance: none; width: 20px; height: 20px; margin-top: 2px;
+      border: 2px solid var(--text-dim); border-radius: 6px; cursor: pointer;
+      display: grid; place-content: center; transition: all 0.2s;
+    }
+    .check-item input::after { content: '✓'; font-size: 0.8rem; font-weight: 700; color: var(--bg-deep); transform: scale(0); transition: transform 0.15s; }
+    .check-item input:checked { background: var(--accent-pine); border-color: var(--accent-pine); }
+    .check-item input:checked::after { transform: scale(1); }
+    .check-item input:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .check-when { font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); font-weight: 600; padding-top: 3px; }
+    .check-text { font-size: 0.9rem; color: var(--text-muted); }
+    .check-text strong { color: var(--text); }
+    .check-item:has(input:checked) .check-text { text-decoration: line-through; opacity: 0.5; }
+
+    /* ───────── TIPS SECTION ───────── */
+    .tips-section { padding: 100px 0; }
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 20px; }
+    .tip-card {
+      background: var(--bg-card); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); padding: 28px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .tip-card:hover { border-color: rgba(var(--gold-rgb),0.25); transform: translateY(-4px); }
+    .tip-card-icon { font-size: 2rem; margin-bottom: 16px; }
+    .tip-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+    .tip-card p, .tip-card li { color: var(--text-muted); font-size: 0.875rem; }
+    .tip-card ul { padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+    .tip-card strong { color: var(--text); }
+    .phrase-list { list-style: none; padding: 0 !important; }
+    .phrase-list li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--glass-border); padding-bottom: 6px; }
+    .phrase-list li:last-child { border-bottom: none; }
+    .phrase-list .viet-accent { color: var(--gold-light); }
+
+    /* ───────── MAP SECTION ───────── */
+    .fullmap-section { padding: 80px 0; }
+    .fullmap-container {
+      width: 100%; height: 450px; border-radius: var(--radius);
+      overflow: hidden; border: 1px solid var(--glass-border);
+    }
+    .fullmap-container iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+
+    /* ───────── SOURCES ───────── */
+    .sources-section { padding: 0 0 80px; }
+    .sources-list { columns: 2 320px; column-gap: 32px; list-style: none; }
+    .sources-list li { font-size: 0.85rem; padding: 6px 0; break-inside: avoid; border-bottom: 1px solid var(--glass-border); }
+
+    /* ───────── FOOTER ───────── */
+    .footer { padding: 60px 0 40px; border-top: 1px solid var(--glass-border); text-align: center; }
+    .footer-route { font-family: 'Outfit', sans-serif; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 8px; }
+    .footer-copy { font-size: 0.75rem; color: var(--text-dim); }
+
+    /* ───────── RESPONSIVE ───────── */
+    @media (max-width: 900px) {
+      .city-grid { grid-template-columns: 1fr; }
+      .city-card { height: 360px; }
+      .festival-banner { grid-template-columns: 1fr; }
+      .festival-banner img { height: 200px; min-height: 0; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
+      .gallery-item.big { grid-column: span 2; grid-row: span 1; }
+      .gallery-item.wide { grid-column: span 1; }
+      .nav-links {
+        display: none; position: absolute; top: 60px; right: 24px;
+        flex-direction: column; gap: 16px; padding: 20px;
+        background: rgba(7,10,11,0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-mobile-toggle { display: block; }
+      .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
+      .place-row { grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 16px; }
+      .place-row .priority { grid-column: 1 / -1; justify-self: start; }
+      .table-head { display: none; }
+      .leg-row > :first-child, .leg-row > :nth-child(2) { grid-column: 1 / -1; }
+      .ticket-row > :first-child { grid-column: 1 / -1; }
+      .food-row > .place-slot:first-child { grid-column: 1 / -1; }
+      .budget-row { grid-template-columns: 1fr 1fr 1fr; }
+      .budget-row > div:first-child, .budget-row > .place-slot { grid-column: 1 / -1; }
+      .budget-row.table-head { display: grid; }
+      .budget-head > span:nth-child(-n+2), .budget-total > .place-slot { display: none; }
+      .budget-row .place-duration { text-align: left; }
+      .check-item { grid-template-columns: 24px 1fr; padding: 14px 16px; }
+      .check-when { grid-column: 2; padding-top: 0; }
+      .check-text { grid-column: 2; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 16px; }
+      .hero-stats { gap: 24px; }
+      .timeline { padding-left: 40px; }
+      .timeline::before { left: 13px; }
+      .timeline-dot { left: -34px; width: 12px; height: 12px; }
+      .timeline-card-img { height: 200px; }
+      .highlight-item { flex-direction: column; gap: 2px; }
+      .highlight-time { min-width: 0; }
+      .route-node { padding: 8px 6px; }
+      .route-node-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+      .route-connector::before { width: 20px; }
+      .route-connector span { display: none; }
+      .festival-body { padding: 22px; }
+      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+      .gallery-item.big, .gallery-item.wide { grid-column: span 1; grid-row: span 1; }
+      .plan-list li { grid-template-columns: 1fr; gap: 2px; }
+      .lightbox-prev, .lightbox-next { top: auto; bottom: 24px; transform: none; }
+      .lightbox-prev { left: calc(50% - 60px); }
+      .lightbox-next { right: calc(50% - 60px); }
+      .lightbox-img { max-height: 65vh; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="nav-brand"><span>🇻🇳</span> Saigon &amp; Dalat 2026</a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-home"><a href="../">← All trips</a></li>
+      <li><a href="#itinerary">Itinerary</a></li>
+      <li><a href="#places">Places</a></li>
+      <li><a href="#transport">Transport</a></li>
+      <li><a href="#tickets">Tickets</a></li>
+      <li><a href="#food">Food</a></li>
+      <li><a href="#budget">Budget</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#checklist">Checklist</a></li>
+      <li><a href="#tips">Tips</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><div class="dot"></div> Bus Adventure · Dec 17 – 20, 2026</div>
+    <h1>
+      <span class="line1">Saigon Streets &amp;</span>
+      <span class="line2">Dalat in Bloom</span>
+    </h1>
+    <p class="hero-desc">
+      Four days, two night buses, one hotel night in Saigon. Museums and bánh mì in the south,
+      then pine hills, cool air and the opening night of the Dalat Flower Festival.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">4</div>
+        <div class="hero-stat-label">Days</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">2</div>
+        <div class="hero-stat-label">Cities</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">4</div>
+        <div class="hero-stat-label">Bus legs</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">~$305</div>
+        <div class="hero-stat-label">Mid budget</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="arrow"></div>
+  </div>
+</section>
+
+<!-- ═══════════ FESTIVAL BANNER ═══════════ -->
+<section class="festival-section" id="festival">
+  <div class="container">
+    <div class="festival-banner reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Dalat_Flower_Festival_2012_-_Doi_Cu.jpg/960px-Dalat_Flower_Festival_2012_-_Doi_Cu.jpg" alt="Flower displays at a past Dalat Flower Festival" loading="lazy" />
+      <div class="festival-body">
+        <div class="festival-kicker">🌸 Big news for your dates</div>
+        <h3>11th Dalat Flower Festival opens the day you're there</h3>
+        <p>The opening ceremony is on <strong>Saturday, Dec 19 at 20:00 in Lam Vien Square</strong>, your one full day in Dalat. Expect crowds, higher room rates and buses that sell out, so <strong>book the Dalat hotel and both sleeper buses early</strong>.</p>
+        <div class="festival-facts">
+          <span class="fact-chip">📅 Sat, Dec 19</span>
+          <span class="fact-chip">🕗 20:00, arrive by 19:00</span>
+          <span class="fact-chip">📍 Lam Vien Square</span>
+          <span class="fact-chip">🎟️ Free</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ROUTE OVERVIEW ═══════════ -->
+<section class="route-section" id="route">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">Route Overview</div>
+      <h2 class="section-title" style="margin:0 auto 16px;">The Journey</h2>
+      <p class="section-subtitle" style="margin:0 auto 48px;">All by bus: across the Bavet / Moc Bai border to Saigon, up into the Central Highlands overnight, and back down again. Plan A gets you home on Sunday afternoon.</p>
+    </div>
+    <div class="route-path reveal">
+      <div class="route-node">
+        <div class="route-node-icon">🏠</div>
+        <div class="route-node-city">Phnom Penh</div>
+        <div class="route-node-dates">Dec 17</div>
+      </div>
+      <div class="route-connector"><span>🚌 ~6.5 h</span></div>
+      <div class="route-node">
+        <div class="route-node-icon">🛵</div>
+        <div class="route-node-city">Saigon</div>
+        <div class="route-node-dates">Dec 17–18</div>
+      </div>
+      <div class="route-connector"><span>🌙 7–8 h</span></div>
+      <div class="route-node">
+        <div class="route-node-icon">🌸</div>
+        <div class="route-node-city">Dalat</div>
+        <div class="route-node-dates">Dec 19</div>
+      </div>
+      <div class="route-connector"><span>🌙 7–8 h</span></div>
+      <div class="route-node">
+        <div class="route-node-icon">☕</div>
+        <div class="route-node-city">Saigon</div>
+        <div class="route-node-dates">Dec 20 a.m.</div>
+      </div>
+      <div class="route-connector"><span>🚌 ~6.5 h</span></div>
+      <div class="route-node">
+        <div class="route-node-icon">🏠</div>
+        <div class="route-node-city">Phnom Penh</div>
+        <div class="route-node-dates">Dec 20</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CITIES SHOWCASE ═══════════ -->
+<section class="cities-section" id="cities">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Destinations</div>
+      <h2 class="section-title">Two Cities, Two Climates</h2>
+      <p class="section-subtitle">Hot, loud, colonial-meets-modern Saigon, then Dalat at 1,500 m: pine forest, lakes, French villas and nights cold enough for a jacket.</p>
+    </div>
+    <div class="city-grid">
+      <a class="city-card reveal" href="#day1">
+        <div class="city-card-img" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Ho_Chi_Minh_City%2C_Nguyen_Hue_Street%2C_2020-01_CN-01.jpg/960px-Ho_Chi_Minh_City%2C_Nguyen_Hue_Street%2C_2020-01_CN-01.jpg')"></div>
+        <div class="city-card-overlay"></div>
+        <div class="city-card-temp">
+          <div class="temp" style="color:var(--accent-saigon)">~32°C</div>
+          <div class="temp-label">Day high</div>
+        </div>
+        <div class="city-card-content">
+          <div class="city-card-tag tag-saigon">Days 1, 2 &amp; 4</div>
+          <h3>Saigon</h3>
+          <div class="city-card-viet viet-accent">Thành phố Hồ Chí Minh</div>
+          <p class="city-card-sub">War Remnants Museum · Independence Palace · Nguyen Hue Walking Street · Bánh mì</p>
+        </div>
+      </a>
+      <a class="city-card reveal" style="transition-delay:0.15s" href="#day3">
+        <div class="city-card-img" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Da_Lat_-_Xuan_Huong_Lake.jpg/960px-Da_Lat_-_Xuan_Huong_Lake.jpg')"></div>
+        <div class="city-card-overlay"></div>
+        <div class="city-card-temp">
+          <div class="temp" style="color:var(--accent-pine)">10–24°C</div>
+          <div class="temp-label">Night – day</div>
+        </div>
+        <div class="city-card-content">
+          <div class="city-card-tag tag-dalat">Day 3 · Festival day</div>
+          <h3>Dalat</h3>
+          <div class="city-card-viet viet-accent">Đà Lạt</div>
+          <p class="city-card-sub">Xuan Huong Lake · Crazy House · Robin Hill cable car · Datanla · Flower Festival</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ITINERARY TIMELINE ═══════════ -->
+<section class="timeline-section" id="itinerary">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Day by Day</div>
+      <h2 class="section-title">The Complete Itinerary</h2>
+      <p class="section-subtitle">Plan A: all by bus, home on Dec 20. Plan B, which swaps the last night bus for a flight, is under Transport.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- ─── DAY 1 ─── -->
+      <div class="timeline-day city-saigon reveal" id="day1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-day-header">
+          <span class="timeline-day-num">Day 01</span>
+          <span class="timeline-day-date">Thursday, December 17</span>
+        </div>
+        <h3 class="timeline-day-title">🚌 Phnom Penh to Saigon</h3>
+        <div class="timeline-card">
+          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Ho_Chi_Minh_City%2C_Nguyen_Hue_Street%2C_2020-01_CN-01.jpg/960px-Ho_Chi_Minh_City%2C_Nguyen_Hue_Street%2C_2020-01_CN-01.jpg" alt="Nguyen Hue Walking Street, Saigon" loading="lazy" />
+          <div class="timeline-card-body">
+            <div class="timeline-highlights">
+              <div class="highlight-item">
+                <span class="highlight-time">07:30</span>
+                <span class="highlight-text"><strong>Giant Ibis terminal</strong>, Street 106 near the night market (30 min before departure). Passport, printed e-visa if needed, some US$ cash.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">08:00 – ~14:30</span>
+                <span class="highlight-text"><strong>Bus to Saigon.</strong> At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry. Lunch at a roadside stop isn't included (~US$3–4).</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">~14:30</span>
+                <span class="highlight-text">Arrive at the <strong>Giant Ibis office, Pham Ngu Lao, District 1</strong>. Grab or walk to your hotel (book in District 1 so everything is walkable). Activate your eSIM; withdraw VND.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">17:00 – 21:00</span>
+                <span class="highlight-text"><strong>Nguyen Hue Walking Street &amp; Ben Thanh.</strong> Walk the pedestrian boulevard from the Opera House towards the river at dusk, then street-food dinner around Ben Thanh Market: cơm tấm, bánh xèo.</span>
+              </div>
+            </div>
+            <div class="map-container">
+              <iframe src="https://maps.google.com/maps?q=Nguyen+Hue+Walking+Street+Ho+Chi+Minh+City&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Map of Nguyen Hue Walking Street" allowfullscreen></iframe>
+            </div>
+            <div class="map-links">
+              <a class="map-link" href="https://maps.google.com/maps?q=Giant+Ibis+Transport+Phnom+Penh" target="_blank" rel="noopener">📍 Giant Ibis, Phnom Penh</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Nguyen+Hue+Walking+Street+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 Nguyen Hue Walking Street</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── DAY 2 ─── -->
+      <div class="timeline-day city-saigon reveal" id="day2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-day-header">
+          <span class="timeline-day-num">Day 02</span>
+          <span class="timeline-day-date">Friday, December 18</span>
+        </div>
+        <h3 class="timeline-day-title">🏛️ Saigon, then night bus to Dalat</h3>
+        <div class="timeline-card">
+          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG/960px-Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG" alt="Independence Palace, Saigon" loading="lazy" />
+          <div class="timeline-card-body">
+            <p class="timeline-why">Why this order: both museums open at 07:30 and are cooler and quieter early. Ask the hotel for a late check-out (or leave bags at reception) since your bus leaves at night.</p>
+            <div class="timeline-highlights">
+              <div class="highlight-item">
+                <span class="highlight-time">07:00</span>
+                <span class="highlight-text"><strong>Bánh mì breakfast</strong> (Bánh Mì Huỳnh Hoa is the famous one).</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">07:30 – 10:00</span>
+                <span class="highlight-text"><strong>War Remnants Museum.</strong> Tanks and aircraft in the yard; the indoor galleries are heavy going. Allow 2–2.5 h.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">10:15 – 11:45</span>
+                <span class="highlight-text"><strong>Independence Palace</strong>, a 700 m walk. The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">12:00 – 13:15</span>
+                <span class="highlight-text"><strong>Lunch:</strong> beef phở at Phở Hòa Pasteur.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">13:30 – 15:00</span>
+                <span class="highlight-text"><strong>Colonial core:</strong> Notre-Dame Cathedral (outside), Central Post Office (inside), then iced coffee on Book Street.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">15:00 – 18:00</span>
+                <span class="highlight-text"><strong>Rest.</strong> Shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">18:00 – 20:30</span>
+                <span class="highlight-text"><strong>Early dinner</strong> (bún thịt nướng), then the Futa office or its free shuttle. Check the pickup time on your ticket.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">~22:00</span>
+                <span class="highlight-text"><strong>Sleeper bus to Dalat</strong> (7–8 h, through Bao Loc).</span>
+              </div>
+            </div>
+            <div class="map-container">
+              <iframe src="https://maps.google.com/maps?q=Independence+Palace+Ho+Chi+Minh+City&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Map of Independence Palace area" allowfullscreen></iframe>
+            </div>
+            <div class="map-links">
+              <a class="map-link" href="https://maps.google.com/maps?q=War+Remnants+Museum+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 War Remnants Museum</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Independence+Palace+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 Independence Palace</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Saigon+Central+Post+Office" target="_blank" rel="noopener">📍 Central Post Office</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── DAY 3 ─── -->
+      <div class="timeline-day city-dalat reveal" id="day3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-day-header">
+          <span class="timeline-day-num">Day 03</span>
+          <span class="timeline-day-date">Saturday, December 19</span>
+        </div>
+        <h3 class="timeline-day-title">🌸 Dalat &amp; the Flower Festival opening</h3>
+        <div class="timeline-card">
+          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Da_Lat_-_Xuan_Huong_Lake.jpg/960px-Da_Lat_-_Xuan_Huong_Lake.jpg" alt="Xuan Huong Lake, Dalat" loading="lazy" />
+          <div class="timeline-card-body">
+            <p class="timeline-why">Why so early: it's a Saturday and festival opening day, so the centre jams from ~09:00. Do the lake first and spend the middle of the day out on Prenn Pass.</p>
+            <div class="timeline-highlights">
+              <div class="highlight-item">
+                <span class="highlight-time">~05:30</span>
+                <span class="highlight-text"><strong>Arrive in Dalat.</strong> Futa shuttle or Grab to your hotel (booked from Dec 18 so the room is ready). Shower, nap, warm breakfast. It will be ~10–13 °C.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">07:30 – 08:30</span>
+                <span class="highlight-text"><strong>Xuan Huong Lake.</strong> Festival flower displays with no crowds and soft morning light.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">08:45 – 10:00</span>
+                <span class="highlight-text"><strong>Crazy House (Hang Nga Villa).</strong> Opens 08:30; you'll beat the tour groups.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">10:15 – 12:00</span>
+                <span class="highlight-text"><strong>Robin Hill cable car ➔ Truc Lam Monastery.</strong> Ride up <strong>before 11:30</strong> (lunch stop until 13:00). 12 minutes over pines and Tuyen Lam Lake; quiet Zen monastery at the top.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">12:00 – 13:15</span>
+                <span class="highlight-text"><strong>Lunch on Prenn Pass:</strong> lẩu gà lá é, chicken hotpot with é leaves.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">13:30 – 15:30</span>
+                <span class="highlight-text"><strong>Datanla Waterfall &amp; alpine coaster.</strong> Ride the coaster down to the falls and back up. <em>Swap: Linh Phuoc Pagoda or the flower villages if the coaster is closed for rain.</em></span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">15:30 – 17:00</span>
+                <span class="highlight-text"><strong>Back to the hotel.</strong> Rest, check out, leave bags at reception.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">17:30 – 19:00</span>
+                <span class="highlight-text"><strong>Night Market dinner:</strong> bánh tráng nướng, hot soy milk, strawberries.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">19:00 – 21:00</span>
+                <span class="highlight-text"><strong>Flower Festival opening, Lam Vien Square.</strong> Starts 20:00; arrive by 19:00 for a view. Leave by ~21:15.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">21:30</span>
+                <span class="highlight-text">Collect bags; <strong>Futa shuttle</strong> to the terminal.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">~22:30 – 23:00</span>
+                <span class="highlight-text"><strong>Sleeper bus to Saigon.</strong></span>
+              </div>
+            </div>
+            <div class="map-container">
+              <iframe src="https://maps.google.com/maps?q=Lam+Vien+Square+Da+Lat&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Map of central Dalat" allowfullscreen></iframe>
+            </div>
+            <div class="map-links">
+              <a class="map-link" href="https://maps.google.com/maps?q=Crazy+House+Da+Lat" target="_blank" rel="noopener">📍 Crazy House</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Robin+Hill+Cable+Car+Da+Lat" target="_blank" rel="noopener">📍 Robin Hill cable car</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Datanla+Waterfall" target="_blank" rel="noopener">📍 Datanla Waterfall</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Lam+Vien+Square+Da+Lat" target="_blank" rel="noopener">📍 Lam Vien Square</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── DAY 4 ─── -->
+      <div class="timeline-day reveal" id="day4">
+        <div class="timeline-dot"></div>
+        <div class="timeline-day-header">
+          <span class="timeline-day-num">Day 04</span>
+          <span class="timeline-day-date">Sunday, December 20</span>
+        </div>
+        <h3 class="timeline-day-title">🏠 Saigon to Phnom Penh</h3>
+        <div class="timeline-card">
+          <div class="timeline-card-body">
+            <div class="timeline-highlights">
+              <div class="highlight-item">
+                <span class="highlight-time">~05:30 – 07:00</span>
+                <span class="highlight-text"><strong>Arrive in Saigon.</strong> Grab to Pham Ngu Lao (District 1).</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">07:00 – 09:15</span>
+                <span class="highlight-text"><strong>Phở breakfast and coffee</strong> near the Giant Ibis office; many cafés there open early. Buy water and snacks for the border.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">09:15</span>
+                <span class="highlight-text">Check in at <strong>Giant Ibis</strong> (30 min before departure). Passport ready for the Moc Bai / Bavet border.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">09:45 – ~16:00</span>
+                <span class="highlight-text"><strong>Bus to Phnom Penh.</strong> If your night bus was badly late, switch to the <strong>15:45</strong> departure (arrives ~22:00).</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">~16:00</span>
+                <span class="highlight-text">Arrive at Street 106, Phnom Penh. <strong>Home!</strong></span>
+              </div>
+            </div>
+            <div class="places-callout warn"><strong>Don't book the 08:00 Giant Ibis on Dec 20.</strong> Night buses from Dalat often arrive late; the 09:45 gives you a 2–3 h buffer.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PLACES ═══════════ -->
+<section class="places-section" id="places">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Pick &amp; Choose</div>
+      <h2 class="section-title">Places &amp; Suggested Time</h2>
+      <p class="section-subtitle">You get one full day in each city, so drop places from the bottom up: Must is the reason you're there, Recommended is worth it if you have energy, Optional is first to go.</p>
+      <div class="priority-legend">
+        <span class="priority priority-must">⭐ Must</span>
+        <span class="priority priority-rec">👍 Recommended</span>
+        <span class="priority priority-opt">➕ Optional</span>
+      </div>
+    </div>
+
+    <!-- Saigon -->
+    <div class="places-city reveal">
+      <h3>🛵 Saigon <span class="place-slot">· Dec 17 – 18</span></h3>
+      <div class="places-list">
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">War Remnants Museum</div><div class="place-note">Daily 07:30–17:30, last entry 17:00 · graphic photos · online tickets available</div></div>
+          <span class="place-duration">2 – 2.5 h</span>
+          <span class="place-slot">Day 2 · 07:30 – 10:00</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">Independence Palace</div><div class="place-note">~07:30–16:00 · 700 m from the War Remnants Museum, so walk</div></div>
+          <span class="place-duration">1 – 1.5 h</span>
+          <span class="place-slot">Day 2 · 10:15 – 11:45</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">Nguyen Hue Walking Street</div><div class="place-note">Free · best after dark · good spot for the first dinner</div></div>
+          <span class="place-duration">1 – 1.5 h</span>
+          <span class="place-slot">Day 1 · evening</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-rec">👍 Recommended</span>
+          <div><div class="place-name">Notre-Dame Cathedral &amp; Central Post Office</div><div class="place-note">Free · across the road from each other · cathedral may still be under scaffolding</div></div>
+          <span class="place-duration">45 min</span>
+          <span class="place-slot">Day 2 · 13:30 – 14:15</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-rec">👍 Recommended</span>
+          <div><div class="place-name">Book Street (Nguyen Van Binh)</div><div class="place-note">Free · shaded lane next to the post office, with cafés</div></div>
+          <span class="place-duration">30 min</span>
+          <span class="place-slot">Day 2 · 14:15 – 14:45</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-opt">➕ Optional</span>
+          <div><div class="place-name">Ben Thanh Market</div><div class="place-note">Indoor ~06:00–18:00 · night stalls outside after 18:00 · bargain hard</div></div>
+          <span class="place-duration">1 h</span>
+          <span class="place-slot">Day 1 evening or Day 2 afternoon</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-opt">➕ Optional</span>
+          <div><div class="place-name">Cu Chi Tunnels (half-day tour)</div><div class="place-note">~40 km out · only <em>instead of</em> the two museums · tiring before a night bus</div></div>
+          <span class="place-duration">5 – 6 h</span>
+          <span class="place-slot">Day 2 · morning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dalat -->
+    <div class="places-city reveal">
+      <h3>🌲 Dalat <span class="place-slot">· Dec 19</span></h3>
+      <div class="places-list">
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">Xuan Huong Lake &amp; festival flower displays</div><div class="place-note">Free, 24 h · go early: crowds and traffic build from ~09:00</div></div>
+          <span class="place-duration">1 h</span>
+          <span class="place-slot">Day 3 · 07:30 – 08:30</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">Flower Festival opening, Lam Vien Square</div><div class="place-note">Free · starts 20:00, arrive by 19:00 · leave ~21:15 for your bus</div></div>
+          <span class="place-duration">1.5 – 2 h</span>
+          <span class="place-slot">Day 3 · 19:00 – 21:00</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-must">⭐ Must</span>
+          <div><div class="place-name">Crazy House (Hang Nga Villa)</div><div class="place-note">08:30–18:00 · come before 10:00, when the tour groups arrive</div></div>
+          <span class="place-duration">1 – 1.5 h</span>
+          <span class="place-slot">Day 3 · 08:45 – 10:00</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-rec">👍 Recommended</span>
+          <div><div class="place-name">Robin Hill cable car ➔ Truc Lam Monastery</div><div class="place-note">~07:00–17:00 but <strong>stops 11:30–13:00</strong> · monastery free</div></div>
+          <span class="place-duration">1.5 – 2 h</span>
+          <span class="place-slot">Day 3 · 10:15 – 12:00</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-rec">👍 Recommended</span>
+          <div><div class="place-name">Datanla Waterfall &amp; alpine coaster</div><div class="place-note">07:30–17:00 · same Prenn Pass road · coaster can close in bad weather</div></div>
+          <span class="place-duration">1.5 – 2 h</span>
+          <span class="place-slot">Day 3 · 13:30 – 15:30</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-rec">👍 Recommended</span>
+          <div><div class="place-name">Dalat Night Market</div><div class="place-note">From ~17:00 around the central market · street-food dinner</div></div>
+          <span class="place-duration">1 – 1.5 h</span>
+          <span class="place-slot">Day 3 · 17:30 – 19:00</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-opt">➕ Optional</span>
+          <div><div class="place-name">Linh Phuoc Pagoda (via heritage train)</div><div class="place-note">Free pagoda covered in ceramic shards, 8 km out · train from the 1930s station</div></div>
+          <span class="place-duration">2 h</span>
+          <span class="place-slot">Swap for Datanla</span>
+        </div>
+        <div class="place-row">
+          <span class="priority priority-opt">➕ Optional</span>
+          <div><div class="place-name">Van Thanh / Thai Phien flower villages</div><div class="place-note">Greenhouses growing the festival flowers · Grab out, rides back are hard to find</div></div>
+          <span class="place-duration">1.5 h</span>
+          <span class="place-slot">Swap for Datanla</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRANSPORT ═══════════ -->
+<section class="places-section" id="transport" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Getting Around</div>
+      <h2 class="section-title">Transport: All Four Legs</h2>
+      <p class="section-subtitle">Book the two Dalat sleeper buses about a month ahead (by ~Nov 18): seats for Dec 18–19 sell out in festival years.</p>
+    </div>
+
+    <div class="places-city reveal">
+      <div class="places-list">
+        <div class="place-row leg-row table-head">
+          <span>Leg</span><span>Recommended option</span><span>Time</span><span>Price</span>
+        </div>
+        <div class="place-row leg-row">
+          <div><div class="place-name">Phnom Penh ➔ Saigon</div><div class="place-note">Thu, Dec 17</div></div>
+          <div><div class="place-name">Giant Ibis VIP bus</div><div class="place-note">Street 106 terminal (night market) · <a href="https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh" target="_blank" rel="noopener">giantibis.com</a></div></div>
+          <span class="place-slot">Departs 04:45, <strong>08:00</strong> or 09:45 · ~6–7 h</span>
+          <span class="place-duration">from ~US$34</span>
+        </div>
+        <div class="place-row leg-row">
+          <div><div class="place-name">Saigon ➔ Dalat</div><div class="place-note">Fri, Dec 18</div></div>
+          <div><div class="place-name">Futa (Phuong Trang) sleeper</div><div class="place-note">Night departure · futabus.vn or 12go.asia</div></div>
+          <span class="place-slot">~22:00 ➔ ~05:30 · 7–8 h</span>
+          <span class="place-duration">280k–450k VND<br><span class="place-slot">~US$11–18</span></span>
+        </div>
+        <div class="place-row leg-row">
+          <div><div class="place-name">Dalat ➔ Saigon</div><div class="place-note">Sat, Dec 19</div></div>
+          <div><div class="place-name">Futa sleeper</div><div class="place-note">Late departure · futabus.vn or 12go.asia</div></div>
+          <span class="place-slot">~22:30–23:00 ➔ ~05:30–07:00</span>
+          <span class="place-duration">~US$12–18</span>
+        </div>
+        <div class="place-row leg-row">
+          <div><div class="place-name">Saigon ➔ Phnom Penh</div><div class="place-note">Sun, Dec 20</div></div>
+          <div><div class="place-name">Giant Ibis</div><div class="place-note">Pham Ngu Lao, District 1 · <a href="https://online.giantibis.com/blog/21ed19b7-9aff-8055-9d3d-e34e1d845ea1" target="_blank" rel="noopener">new timetable</a></div></div>
+          <span class="place-slot"><strong>09:45</strong> (backup 15:45) · ~6–7 h</span>
+          <span class="place-duration">from ~US$34</span>
+        </div>
+      </div>
+      <div class="places-callout">Cheaper Phnom Penh–Saigon buses (<strong>Kumho Samco, Mekong Express, Khai Nam</strong>) run ~US$14–28 if you want to save.</div>
+      <div class="places-callout"><strong>Sleeper bus tips:</strong> Futa includes a free shuttle between its terminal and central hotels, so ask for it when you book. Berths are ~170 cm long, the A/C is cold, and Dalat nights drop to 10–13 °C: wear a jacket on board.</div>
+    </div>
+
+    <div class="places-city reveal">
+      <h3>Getting home on Dec 20: Plan A vs Plan B</h3>
+      <div class="save-grid">
+        <div class="places-list">
+          <div class="save-head">🚌 Plan A: night bus <span class="plan-tag">Recommended</span></div>
+          <ul class="plan-list">
+            <li><span>Dalat ➔ Saigon</span><span>Sleeper bus Sat ~22:30, arrive Sun ~06:00</span></li>
+            <li><span>Saigon ➔ PP</span><span>Giant Ibis <strong>09:45</strong>, arrive ~16:00</span></li>
+            <li><span>Extra cost</span><span>None</span></li>
+            <li><span>Upside</span><span><strong>Cheapest;</strong> you see the festival opening and still get home early</span></li>
+            <li><span>Risk</span><span>A late bus could miss the 09:45; fallback is the 15:45</span></li>
+          </ul>
+        </div>
+        <div class="places-list">
+          <div class="save-head">✈️ Plan B: fly from Dalat</div>
+          <ul class="plan-list">
+            <li><span>Dalat ➔ Saigon</span><span>Sleep in Dalat Sat night; fly Lien Khuong (DLI) ➔ SGN Sun, ~55 min</span></li>
+            <li><span>Saigon ➔ PP</span><span>Giant Ibis 15:45 (arrive ~22:00) or fly SGN ➔ Techo (KTI), ~1 h</span></li>
+            <li><span>Extra cost</span><span>Flight ~US$28–47 + airport taxi ~US$11–15 + 2nd Dalat night; SGN–KTI usually US$150+</span></li>
+            <li><span>Upside</span><span><strong>A real bed</strong> on Sat night; more relaxed</span></li>
+            <li><span>Risk</span><span>Few DLI–SGN flights (Vietjet resumed only 7 a week from Aug 2026); check times first</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TICKETS ═══════════ -->
+<section class="places-section" id="tickets" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Tickets</div>
+      <h2 class="section-title">What to Book Ahead</h2>
+      <p class="section-subtitle">Only the buses and the Dalat hotel need booking ahead; every sight sells tickets at the gate. Planning rate: ~26,000 VND ≈ US$1. Prices marked * are estimates.</p>
+    </div>
+
+    <div class="places-city reveal">
+      <h3>🗓️ Book online in advance</h3>
+      <div class="places-list">
+        <div class="place-row ticket-row table-head"><span>What</span><span>Price</span><span>When to book</span></div>
+        <div class="place-row ticket-row">
+          <div class="place-name">Giant Ibis, Dec 17 and Dec 20</div>
+          <span class="place-duration">from ~US$34 each way</span>
+          <span class="place-slot">Now – early November</span>
+        </div>
+        <div class="place-row ticket-row">
+          <div class="place-name">Futa sleeper buses, Dec 18 and Dec 19</div>
+          <span class="place-duration">~US$11–18 each</span>
+          <span class="place-slot"><strong>By ~Nov 18</strong> (festival dates sell out)</span>
+        </div>
+        <div class="place-row ticket-row">
+          <div class="place-name">Dalat hotel, night of Dec 18</div>
+          <span class="place-duration">Festival rates +30–50%</span>
+          <span class="place-slot">Now, with free cancellation</span>
+        </div>
+        <div class="place-row ticket-row">
+          <div><div class="place-name">War Remnants Museum</div><div class="place-note">Optional to pre-book</div></div>
+          <span class="place-duration">40,000–60,000 VND*</span>
+          <span class="place-slot">Online the day before, or at the gate</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="save-grid reveal">
+      <div class="places-list">
+        <div class="save-head">🎟️ Buy on the day</div>
+        <div class="place-row ticket-row"><div class="place-name">Independence Palace</div><span class="place-duration">65,000 VND</span><span class="place-slot">~US$2.60</span></div>
+        <div class="place-row ticket-row"><div class="place-name">Crazy House</div><span class="place-duration">80,000 VND</span><span class="place-slot">~US$3</span></div>
+        <div class="place-row ticket-row"><div class="place-name">Robin Hill cable car (return)</div><span class="place-duration">~100,000 VND</span><span class="place-slot">~US$4</span></div>
+        <div class="place-row ticket-row"><div class="place-name">Datanla Waterfall entry</div><span class="place-duration">30k–50k VND*</span><span class="place-slot">~US$1–2</span></div>
+        <div class="place-row ticket-row"><div class="place-name">Datanla alpine coaster (return)</div><span class="place-duration">130k–250k VND*</span><span class="place-slot">Depends on the track</span></div>
+        <div class="place-row ticket-row"><div class="place-name">Dalat heritage train <em>(optional)</em></div><span class="place-duration">~108k–150k VND</span><span class="place-slot">Return</span></div>
+      </div>
+      <div class="places-list">
+        <div class="save-head">🆓 Free</div>
+        <p class="free-list">Nguyen Hue Walking Street · Notre-Dame Cathedral (outside) · Central Post Office · Book Street · Ben Thanh Market · Xuan Huong Lake &amp; festival displays · Flower Festival opening at Lam Vien Square · Truc Lam Monastery · Dalat Night Market · Linh Phuoc Pagoda</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOD ═══════════ -->
+<section class="places-section" id="food" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Eat Like a Local</div>
+      <h2 class="section-title">Where to Eat</h2>
+      <p class="section-subtitle">Food is cheap: plan on ~US$15–25 a day per person. Street stalls want cash in small notes (20,000 and 50,000 VND). Prices are estimates.</p>
+    </div>
+
+    <div class="places-city reveal">
+      <h3>🛵 Saigon</h3>
+      <div class="places-list">
+        <div class="place-row food-row">
+          <span class="place-slot">Day 1 · dinner</span>
+          <div><div class="place-name">Street food around Ben Thanh / Nguyen Hue</div><div class="place-note">Cơm tấm (broken rice with grilled pork), bánh xèo</div></div>
+          <span class="place-duration">50k–120k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 2 · breakfast</span>
+          <div><div class="place-name">Bánh Mì Huỳnh Hoa <span class="place-slot">(Le Thi Rieng St)</span></div><div class="place-note">Loaded pork bánh mì, the city's most famous</div></div>
+          <span class="place-duration">~70k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 2 · lunch</span>
+          <div><div class="place-name">Phở Hòa Pasteur</div><div class="place-note">Beef phở, near the palace</div></div>
+          <span class="place-duration">80k–120k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 2 · afternoon</span>
+          <div><div class="place-name">Café on Book Street or Nguyen Hue</div><div class="place-note">Cà phê sữa đá (iced milk coffee), egg coffee</div></div>
+          <span class="place-duration">30k–60k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 2 · early dinner</span>
+          <div><div class="place-name">Any busy local spot near your bus pickup</div><div class="place-note">Bún thịt nướng (grilled pork noodles)</div></div>
+          <span class="place-duration">50k–90k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 4 · breakfast</span>
+          <div><div class="place-name">Near Pham Ngu Lao, before the 09:45 bus</div><div class="place-note">Phở or bánh mì; buy water and snacks for the border</div></div>
+          <span class="place-duration">40k–80k VND</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="places-city reveal">
+      <h3>🌲 Dalat</h3>
+      <div class="places-list">
+        <div class="place-row food-row">
+          <span class="place-slot">Day 3 · breakfast</span>
+          <div><div class="place-name">Near Dalat market</div><div class="place-note">Bánh căn (mini rice pancakes) + hot soy milk</div></div>
+          <span class="place-duration">30k–50k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 3 · lunch</span>
+          <div><div class="place-name">Local restaurant on Prenn Pass, near Datanla</div><div class="place-note">Lẩu gà lá é (chicken hotpot with é leaves), Dalat's signature dish; better with 2+</div></div>
+          <span class="place-duration">100k–200k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 3 · coffee</span>
+          <div><div class="place-name">Lakeside café, or Mê Linh Coffee Garden</div><div class="place-note">Local Arabica</div></div>
+          <span class="place-duration">30k–90k VND</span>
+        </div>
+        <div class="place-row food-row">
+          <span class="place-slot">Day 3 · dinner</span>
+          <div><div class="place-name">Dalat Night Market</div><div class="place-note">Bánh tráng nướng ("Dalat pizza") 15k–40k, hot soy milk 10k–15k, strawberries</div></div>
+          <span class="place-duration">60k–120k VND</span>
+        </div>
+      </div>
+      <div class="places-callout"><strong>Eat dinner at 17:30–18:30 on Dec 19.</strong> Once the festival crowds pour in, queues and prices around the lake go up.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BUDGET ═══════════ -->
+<section class="places-section" id="budget" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Money</div>
+      <h2 class="section-title">Estimated Budget</h2>
+      <p class="section-subtitle">Per person, Plan A, in US$. Mid-range comes to about <strong style="color:var(--gold-light)">US$305</strong> for the four days. Figures assume one person with their own room; sharing rooms and Grab rides takes ~20–25% off.</p>
+    </div>
+
+    <div class="places-city reveal">
+      <div class="places-list">
+        <div class="place-row budget-row table-head budget-head">
+          <span>Category</span>
+          <span>What it covers</span>
+          <span class="place-duration">Budget</span>
+          <span class="place-duration budget-mid">Mid-range</span>
+          <span class="place-duration">Comfort</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🚌 Buses (4 legs)</div>
+          <span class="place-slot">Budget: cheaper PP–Saigon lines + Futa · Mid: Giant Ibis + Futa · Comfort: Giant Ibis + VIP limousine/cabin to Dalat</span>
+          <span class="place-duration">$59</span>
+          <span class="place-duration budget-mid">$98</span>
+          <span class="place-duration">$128</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🏨 Hotels (2 nights)</div>
+          <span class="place-slot">Saigon Dec 17 + Dalat Dec 18 (for a room at 05:30 on Dec 19) · festival pricing in Dalat</span>
+          <span class="place-duration">$35</span>
+          <span class="place-duration budget-mid">$80</span>
+          <span class="place-duration">$170</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🍜 Food (3.5 days)</div>
+          <span class="place-slot">~$10 / $20 / $35 a day</span>
+          <span class="place-duration">$35</span>
+          <span class="place-duration budget-mid">$70</span>
+          <span class="place-duration">$125</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🚕 Local transport</div>
+          <span class="place-slot">Grab in Saigon; Grab/taxi to Prenn Pass sights in Dalat</span>
+          <span class="place-duration">$10</span>
+          <span class="place-duration budget-mid">$20</span>
+          <span class="place-duration">$40</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🎟️ Tickets</div>
+          <span class="place-slot">All Must + Recommended places</span>
+          <span class="place-duration">$8</span>
+          <span class="place-duration budget-mid">$18</span>
+          <span class="place-duration">$30</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">📱 Other</div>
+          <span class="place-slot">eSIM, water, snacks, tips</span>
+          <span class="place-duration">$10</span>
+          <span class="place-duration budget-mid">$20</span>
+          <span class="place-duration">$30</span>
+        </div>
+        <div class="place-row budget-row budget-total">
+          <div class="place-name">Total</div>
+          <span class="place-slot"></span>
+          <span class="place-duration">≈ $160</span>
+          <span class="place-duration budget-mid">≈ $305</span>
+          <span class="place-duration">≈ $520</span>
+        </div>
+        <div class="place-row budget-row">
+          <div class="place-name">🛂 E-visa (if not Cambodian)</div>
+          <span class="place-slot">Single entry at evisa.gov.vn</span>
+          <span class="place-duration">+$25</span>
+          <span class="place-duration budget-mid">+$25</span>
+          <span class="place-duration">+$25</span>
+        </div>
+      </div>
+      <div class="places-callout">Plan B (flying home from Dalat) adds roughly <strong>US$90–250</strong>: a second Dalat hotel night, the DLI–SGN flight, the airport taxi, and possibly the SGN–KTI flight.</div>
+    </div>
+
+    <div class="places-city reveal">
+      <div class="places-list">
+        <div class="save-head">💡 Money tips</div>
+        <ul class="budget-tips">
+          <li><strong>Bring US$ cash to change,</strong> or withdraw VND at a Saigon ATM on Day 1. Markets, street food and buses want cash.</li>
+          <li><strong>Use Grab</strong> in both cities: fixed price shown before you ride, no haggling.</li>
+          <li><strong>Get VND before Dalat's outer sights.</strong> Card payment is rare at Datanla and the markets.</li>
+          <li><strong>Keep small notes.</strong> Few street vendors can change a 500,000 VND note.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<section class="gallery-section" id="gallery">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Visual Journey</div>
+      <h2 class="section-title">Moments to Capture</h2>
+      <p class="section-subtitle">A preview of the sights along the way. Tap any photo to view it full-screen.</p>
+    </div>
+    <div class="gallery-filters reveal" role="group" aria-label="Filter gallery by city">
+      <button class="gallery-filter active" data-filter="all">All</button>
+      <button class="gallery-filter" data-filter="saigon">🛵 Saigon</button>
+      <button class="gallery-filter" data-filter="dalat">🌲 Dalat</button>
+      <button class="gallery-filter" data-filter="food">🍜 Food</button>
+    </div>
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <!-- Saigon -->
+      <button class="gallery-item big" data-city="saigon" data-caption="Saigon skyline at night" data-sub="Day 1 · District 1" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ho_Chi_Minh_City_Skyline_%28night%29.jpg/1920px-Ho_Chi_Minh_City_Skyline_%28night%29.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ho_Chi_Minh_City_Skyline_%28night%29.jpg/960px-Ho_Chi_Minh_City_Skyline_%28night%29.jpg" alt="Saigon skyline at night" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Saigon skyline at night</span></div>
+      </button>
+      <button class="gallery-item" data-city="saigon" data-caption="War Remnants Museum" data-sub="Day 2 · 07:30" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/War_Remnants_Museum%2C_HCMC%2C_front.JPG/1920px-War_Remnants_Museum%2C_HCMC%2C_front.JPG">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/War_Remnants_Museum%2C_HCMC%2C_front.JPG/960px-War_Remnants_Museum%2C_HCMC%2C_front.JPG" alt="War Remnants Museum" loading="lazy" />
+        <div class="gallery-item-overlay"><span>War Remnants Museum</span></div>
+      </button>
+      <button class="gallery-item" data-city="saigon" data-caption="Independence Palace" data-sub="Day 2 · 10:15" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG/1920px-Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG/960px-Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG" alt="Independence Palace" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Independence Palace</span></div>
+      </button>
+      <button class="gallery-item" data-city="saigon" data-caption="Notre-Dame Cathedral" data-sub="Day 2 · Colonial core" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ho_Chi_Minh_City%2C_Notre-Dame_Basilica%2C_2020-01_CN-01.jpg/1920px-Ho_Chi_Minh_City%2C_Notre-Dame_Basilica%2C_2020-01_CN-01.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ho_Chi_Minh_City%2C_Notre-Dame_Basilica%2C_2020-01_CN-01.jpg/960px-Ho_Chi_Minh_City%2C_Notre-Dame_Basilica%2C_2020-01_CN-01.jpg" alt="Notre-Dame Cathedral Basilica of Saigon" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Notre-Dame Cathedral</span></div>
+      </button>
+      <button class="gallery-item" data-city="saigon" data-caption="Saigon Central Post Office" data-sub="Day 2 · Colonial core" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Clock_and_exterior_of_Saigon_Central_Post_Office.JPG/1920px-Clock_and_exterior_of_Saigon_Central_Post_Office.JPG">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Clock_and_exterior_of_Saigon_Central_Post_Office.JPG/960px-Clock_and_exterior_of_Saigon_Central_Post_Office.JPG" alt="Saigon Central Post Office" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Central Post Office</span></div>
+      </button>
+      <button class="gallery-item wide" data-city="saigon" data-caption="Ben Thanh Market" data-sub="Day 1 · evening" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ben_Thanh_Market%2C_2023_%2805%29.jpg/1920px-Ben_Thanh_Market%2C_2023_%2805%29.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Ben_Thanh_Market%2C_2023_%2805%29.jpg/960px-Ben_Thanh_Market%2C_2023_%2805%29.jpg" alt="Ben Thanh Market" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Ben Thanh Market</span></div>
+      </button>
+      <!-- Dalat -->
+      <button class="gallery-item big" data-city="dalat" data-caption="Xuan Huong Lake" data-sub="Day 3 · 07:30" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Da_Lat_-_Xuan_Huong_Lake.jpg/1920px-Da_Lat_-_Xuan_Huong_Lake.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Da_Lat_-_Xuan_Huong_Lake.jpg/960px-Da_Lat_-_Xuan_Huong_Lake.jpg" alt="Xuan Huong Lake, Dalat" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Xuan Huong Lake</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Crazy House (Hang Nga Villa)" data-sub="Day 3 · 08:45" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Hang_Nga_guesthouse_2.jpg/1920px-Hang_Nga_guesthouse_2.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Hang_Nga_guesthouse_2.jpg/960px-Hang_Nga_guesthouse_2.jpg" alt="Crazy House, Dalat" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Crazy House</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Truc Lam Monastery" data-sub="Day 3 · via Robin Hill cable car" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Truc_Lam_Zen_Monastery_26.jpg/1920px-Truc_Lam_Zen_Monastery_26.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Truc_Lam_Zen_Monastery_26.jpg/960px-Truc_Lam_Zen_Monastery_26.jpg" alt="Truc Lam Zen Monastery" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Truc Lam Monastery</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Tuyen Lam Lake" data-sub="Day 3 · below the cable car" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tuyen_Lam_Lake_HDR.jpg/1920px-Tuyen_Lam_Lake_HDR.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Tuyen_Lam_Lake_HDR.jpg/960px-Tuyen_Lam_Lake_HDR.jpg" alt="Tuyen Lam Lake" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Tuyen Lam Lake</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Datanla Waterfall" data-sub="Day 3 · 13:30" data-full="https://upload.wikimedia.org/wikipedia/commons/8/8d/Datanla_Waterfall_1.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Datanla_Waterfall_1.jpg/960px-Datanla_Waterfall_1.jpg" alt="Datanla Waterfall" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Datanla Waterfall</span></div>
+      </button>
+      <button class="gallery-item wide" data-city="dalat" data-caption="Dalat Flower Festival" data-sub="Day 3 · opening night, 20:00" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Dalat_Flower_Festival_2012_-_Doi_Cu.jpg/1920px-Dalat_Flower_Festival_2012_-_Doi_Cu.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Dalat_Flower_Festival_2012_-_Doi_Cu.jpg/960px-Dalat_Flower_Festival_2012_-_Doi_Cu.jpg" alt="Dalat Flower Festival displays" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Dalat Flower Festival</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Dalat Night Market" data-sub="Day 3 · 17:30" data-full="https://upload.wikimedia.org/wikipedia/commons/4/4c/Dalat_night_market_-_panoramio.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Dalat_night_market_-_panoramio.jpg/960px-Dalat_night_market_-_panoramio.jpg" alt="Dalat Night Market" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Dalat Night Market</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Linh Phuoc Pagoda" data-sub="Optional · swap for Datanla" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Da_Lat_-_Linh_Phuoc_Temple_02.jpg/1920px-Da_Lat_-_Linh_Phuoc_Temple_02.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Da_Lat_-_Linh_Phuoc_Temple_02.jpg/960px-Da_Lat_-_Linh_Phuoc_Temple_02.jpg" alt="Linh Phuoc Pagoda" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Linh Phuoc Pagoda</span></div>
+      </button>
+      <button class="gallery-item" data-city="dalat" data-caption="Dalat railway station" data-sub="Optional · heritage train" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Da_Lat_Railway_Station-1.JPG/1920px-Da_Lat_Railway_Station-1.JPG">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Da_Lat_Railway_Station-1.JPG/960px-Da_Lat_Railway_Station-1.JPG" alt="Dalat railway station" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Dalat railway station</span></div>
+      </button>
+      <!-- Food -->
+      <button class="gallery-item" data-city="food" data-caption="Bánh mì" data-sub="Day 2 breakfast · Saigon" data-full="https://upload.wikimedia.org/wikipedia/commons/6/66/Banh_mi_PaMi_1.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Banh_mi_PaMi_1.jpg/960px-Banh_mi_PaMi_1.jpg" alt="Bánh mì" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Bánh mì</span></div>
+      </button>
+      <button class="gallery-item" data-city="food" data-caption="Phở bò" data-sub="Day 2 lunch · Saigon" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Beef_Pho_%28M%29_-_Milk_No_Sugar.jpg/1920px-Beef_Pho_%28M%29_-_Milk_No_Sugar.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Beef_Pho_%28M%29_-_Milk_No_Sugar.jpg/960px-Beef_Pho_%28M%29_-_Milk_No_Sugar.jpg" alt="Beef phở" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Phở bò</span></div>
+      </button>
+      <button class="gallery-item" data-city="food" data-caption="Cà phê sữa đá" data-sub="Day 2 afternoon · Book Street" data-full="https://upload.wikimedia.org/wikipedia/commons/e/ec/Ca_Phe_Sua_Da.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Ca_Phe_Sua_Da.jpg/960px-Ca_Phe_Sua_Da.jpg" alt="Vietnamese iced milk coffee" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Cà phê sữa đá</span></div>
+      </button>
+      <button class="gallery-item" data-city="food" data-caption="Bánh tráng nướng" data-sub="Day 3 dinner · Dalat Night Market" data-full="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng_TP._H%E1%BB%93_Ch%C3%AD_Minh_-_street_food_in_Ho_Chi_Minh_City%2C_Vietnam.jpg/1920px-B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng_TP._H%E1%BB%93_Ch%C3%AD_Minh_-_street_food_in_Ho_Chi_Minh_City%2C_Vietnam.jpg">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng_TP._H%E1%BB%93_Ch%C3%AD_Minh_-_street_food_in_Ho_Chi_Minh_City%2C_Vietnam.jpg/960px-B%C3%A1nh_tr%C3%A1ng_n%C6%B0%E1%BB%9Bng_TP._H%E1%BB%93_Ch%C3%AD_Minh_-_street_food_in_Ho_Chi_Minh_City%2C_Vietnam.jpg" alt="Bánh tráng nướng, Dalat pizza" loading="lazy" />
+        <div class="gallery-item-overlay"><span>Bánh tráng nướng</span></div>
+      </button>
+    </div>
+    <p class="photo-credit">Photos: Wikimedia Commons contributors (CC BY / CC BY-SA). Tap a photo for the full-size version.</p>
+  </div>
+</section>
+
+<!-- ═══════════ LIGHTBOX ═══════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <span class="lightbox-counter" id="lightboxCounter"></span>
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightboxImg" alt="" />
+    <figcaption class="lightbox-caption">
+      <strong id="lightboxCaption"></strong>
+      <span id="lightboxSub"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
+</div>
+
+<!-- ═══════════ CHECKLIST ═══════════ -->
+<section class="checklist-section" id="checklist">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Before You Go</div>
+      <h2 class="section-title">Pre-Trip Checklist</h2>
+      <p class="section-subtitle">Tick things off as you go. Your ticks are saved in this browser only.</p>
+    </div>
+    <div class="checklist-progress reveal">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <span class="progress-label" id="progressLabel">0 / 8 done</span>
+    </div>
+    <div class="places-list reveal" id="checklist-items">
+      <label class="check-item"><input type="checkbox" data-key="passport" /><span class="check-when">Now</span><span class="check-text">Check your <strong>passport has 6+ months' validity</strong>. Non-Cambodian passport → apply for the <strong>US$25 e-visa</strong> at evisa.gov.vn 2–3 weeks ahead, and <strong>print it</strong> (Giant Ibis won't board you without a printed copy).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="hotel-dalat" /><span class="check-when">Now</span><span class="check-text">Book the <strong>Dalat hotel for the night of Dec 18</strong> (free cancellation; near Xuan Huong Lake; ask for a room heater).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="hotel-saigon" /><span class="check-when">Now</span><span class="check-text">Book the <strong>Saigon hotel for Dec 17</strong> in District 1, with late check-out on Dec 18.</span></label>
+      <label class="check-item"><input type="checkbox" data-key="giant-ibis" /><span class="check-when">Early Nov</span><span class="check-text">Book <strong>Giant Ibis</strong> Phnom Penh ➔ Saigon (Dec 17, 08:00) and Saigon ➔ Phnom Penh (Dec 20, 09:45).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="futa" /><span class="check-when">By ~Nov 18</span><span class="check-text">Book both <strong>Futa sleeper buses</strong> (Dec 18 ~22:00 and Dec 19 ~22:30–23:00), with shuttle pickup.</span></label>
+      <label class="check-item"><input type="checkbox" data-key="festival" /><span class="check-when">Mid-Nov</span><span class="check-text">Check the published <strong>festival programme</strong> for Dec 19 (opening time, road closures around Lam Vien Square).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="apps" /><span class="check-when">Week before</span><span class="check-text">Install <strong>Grab</strong> and link a card; buy a Vietnam <strong>eSIM</strong> (Viettel coverage is best in the highlands).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="cash" /><span class="check-when">Day before</span><span class="check-text">Get <strong>US$ cash and small notes</strong>; download <strong>offline Google Maps</strong> for Saigon and Dalat.</span></label>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TIPS ═══════════ -->
+<section class="tips-section" id="tips" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Essentials</div>
+      <h2 class="section-title">Travel Tips &amp; Prep</h2>
+      <p class="section-subtitle">Entry rules, what to pack for two very different climates, and a few words of Vietnamese.</p>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card reveal">
+        <div class="tip-card-icon">🛂</div>
+        <h4>Entry to Vietnam</h4>
+        <ul>
+          <li><strong>Cambodian passport:</strong> no visa for a short stay (ASEAN exemption), free. Confirm with the Vietnamese embassy before you go.</li>
+          <li><strong>Other nationalities:</strong> single-entry e-visa at evisa.gov.vn, <strong>US$25</strong>, 3–5 working days. Apply 2–3 weeks ahead.</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.1s">
+        <div class="tip-card-icon">🧥</div>
+        <h4>What to Pack</h4>
+        <ul>
+          <li><strong>Warm jacket or fleece:</strong> Dalat is 22–24 °C by day but 10–13 °C at night, and most hotels have no heating.</li>
+          <li><strong>Light clothes</strong> for Saigon (low 30s °C).</li>
+          <li><strong>Closed shoes</strong> for walking and the night bus.</li>
+          <li><strong>Rain shell or umbrella</strong>, sunscreen (strong UV at 1,500 m).</li>
+        </ul>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.2s">
+        <div class="tip-card-icon">🛏️</div>
+        <h4>Sleeper Bus Bag</h4>
+        <p>Keep a small bag with you on board: <strong>jacket</strong> (the A/C is cold), charger, water, toothbrush, wet wipes. Berths are ~170 cm long. Ask Futa for the <strong>free hotel shuttle</strong> when you book.</p>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.3s">
+        <div class="tip-card-icon">💵</div>
+        <h4>Money &amp; Payments</h4>
+        <p>Vietnam is still <strong>cash-first</strong> at markets, street food and on buses. ~26,000 VND ≈ US$1. Withdraw at a Saigon ATM on Day 1 and keep 20k / 50k notes handy.</p>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.4s">
+        <div class="tip-card-icon">📱</div>
+        <h4>Apps</h4>
+        <p><strong>Grab</strong> for rides and food (fixed prices, no haggling). <strong>Google Maps</strong> offline for both cities. A Vietnam <strong>eSIM</strong>; Viettel has the best coverage in the highlands.</p>
+      </div>
+      <div class="tip-card reveal" style="transition-delay:0.5s">
+        <div class="tip-card-icon">🗣️</div>
+        <h4>Handy Phrases</h4>
+        <ul class="phrase-list">
+          <li><span class="viet-accent">Xin chào</span><span>Hello</span></li>
+          <li><span class="viet-accent">Cảm ơn</span><span>Thank you</span></li>
+          <li><span class="viet-accent">Bao nhiêu tiền?</span><span>How much?</span></li>
+          <li><span class="viet-accent">Không cay</span><span>Not spicy</span></li>
+          <li><span class="viet-accent">Một cà phê sữa đá</span><span>One iced milk coffee</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FULL MAP ═══════════ -->
+<section class="fullmap-section" id="map" style="padding-top:0;">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Overview Map</div>
+      <h2 class="section-title">The Full Route</h2>
+      <p class="section-subtitle">Phnom Penh → Saigon → Dalat and back, about 1,200 km of road in four days.</p>
+    </div>
+    <div class="fullmap-container reveal">
+      <iframe src="https://maps.google.com/maps?q=Da+Lat+Vietnam&t=&z=6&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Map of southern Vietnam and Cambodia" allowfullscreen></iframe>
+    </div>
+    <div class="map-links reveal">
+      <a class="map-link" href="https://www.google.com/maps/dir/Phnom+Penh/Ho+Chi+Minh+City/Da+Lat" target="_blank" rel="noopener">🧭 Full route directions</a>
+      <a class="map-link" href="https://maps.google.com/maps?q=District+1+Ho+Chi+Minh+City" target="_blank" rel="noopener">🛵 Saigon, District 1</a>
+      <a class="map-link" href="https://maps.google.com/maps?q=Da+Lat+Vietnam" target="_blank" rel="noopener">🌲 Dalat</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOURCES ═══════════ -->
+<section class="sources-section" id="sources">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Fact-checked Oct 2026</div>
+    </div>
+    <ul class="sources-list reveal">
+      <li><a href="https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh" target="_blank" rel="noopener">Giant Ibis: Phnom Penh ⇄ Ho Chi Minh route</a></li>
+      <li><a href="https://online.giantibis.com/blog/21ed19b7-9aff-8055-9d3d-e34e1d845ea1" target="_blank" rel="noopener">Giant Ibis: new departure times</a></li>
+      <li><a href="https://vietnamspot.ru/en/blog/da-lat-flower-festival" target="_blank" rel="noopener">VietnamSpot: Dalat Flower Festival 2026</a></li>
+      <li><a href="https://vietnamspot.ru/en/blog/da-lat-attractions" target="_blank" rel="noopener">VietnamSpot: Da Lat attractions 2026</a></li>
+      <li><a href="https://vietnamspot.ru/en/blog/ho-chi-minh-attractions" target="_blank" rel="noopener">VietnamSpot: Ho Chi Minh City attractions</a></li>
+      <li><a href="https://www.vietjetair.com/en/pages/news-1697697232035/good-news-vietjet-to-resume-5-routes-to-da-lat-from-august-1782955461438" target="_blank" rel="noopener">Vietjet: Da Lat routes resume Aug 2026</a></li>
+      <li><a href="https://www.vietnamvisa.com/guide/vietnam-e-visa.html" target="_blank" rel="noopener">Vietnamvisa.com: e-visa guide</a></li>
+      <li><a href="https://news.tuoitre.vn/ho-chi-minh-citys-first-museum-launches-online-ticketing-103260212102508811.htm" target="_blank" rel="noopener">Tuoi Tre: War Remnants Museum online tickets</a></li>
+      <li><a href="https://vinwonders.com/en/wonderpedia/news/datanla-waterfalls-dalat/" target="_blank" rel="noopener">VinWonders: Datanla Waterfall</a></li>
+      <li><a href="https://airconnect.live/en/buses/vietnam/ho-chi-minh-to-dalat" target="_blank" rel="noopener">Airconnect: Saigon–Dalat sleeper guide</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <p style="font-size:2rem;margin-bottom:12px;">🇻🇳</p>
+    <p class="footer-route">Phnom Penh 🚌 Saigon 🌙 Dalat 🌙 Saigon 🚌 Phnom Penh</p>
+    <p class="viet-accent" style="font-size:1.4rem;color:var(--gold);margin:12px 0;">
+      Thượng lộ bình an · Safe Travels
+    </p>
+    <p class="footer-copy">Saigon &amp; Dalat 2026 · Dec 17 – Dec 20 · <a href="../">See all trips</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+  // ─── Navbar scroll effect ───
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── Hero parallax ───
+  const heroBg = document.getElementById('heroBg');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      heroBg.style.transform = `scale(1.1) translateY(${y * 0.3}px)`;
+    }
+  });
+
+  // ─── Scroll reveal (Intersection Observer) ───
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ─── Mobile nav toggle ───
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ─── Gallery filters ───
+  const galleryItems = Array.from(document.querySelectorAll('#galleryGrid .gallery-item'));
+  document.querySelectorAll('.gallery-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.gallery-filter').forEach(b => b.classList.toggle('active', b === btn));
+      const city = btn.dataset.filter;
+      galleryItems.forEach(item => {
+        item.classList.toggle('hidden', city !== 'all' && item.dataset.city !== city);
+      });
+    });
+  });
+
+  // ─── Lightbox image viewer ───
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxSub = document.getElementById('lightboxSub');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  let lightboxList = [];
+  let lightboxIndex = 0;
+  let lastFocused = null;
+
+  function showLightboxImage() {
+    const item = lightboxList[lightboxIndex];
+    const thumb = item.querySelector('img');
+    lightboxImg.classList.add('loading');
+    lightboxImg.onload = () => lightboxImg.classList.remove('loading');
+    lightboxImg.onerror = () => {
+      lightboxImg.onerror = null;
+      lightboxImg.classList.remove('loading');
+      lightboxImg.src = thumb.src;
+    };
+    lightboxImg.src = item.dataset.full || thumb.src;
+    lightboxImg.alt = thumb.alt;
+    lightboxCaption.textContent = item.dataset.caption || thumb.alt;
+    lightboxSub.textContent = item.dataset.sub || '';
+    lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxList.length}`;
+  }
+  function openLightbox(item) {
+    lightboxList = galleryItems.filter(i => !i.classList.contains('hidden'));
+    lightboxIndex = lightboxList.indexOf(item);
+    lastFocused = document.activeElement;
+    showLightboxImage();
+    lightbox.classList.add('open');
+    requestAnimationFrame(() => lightbox.classList.add('visible'));
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lightboxClose').focus();
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('visible');
+    setTimeout(() => lightbox.classList.remove('open'), 300);
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+  function stepLightbox(dir) {
+    lightboxIndex = (lightboxIndex + dir + lightboxList.length) % lightboxList.length;
+    showLightboxImage();
+  }
+
+  galleryItems.forEach(item => item.addEventListener('click', () => openLightbox(item)));
+  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+  document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') stepLightbox(-1);
+    else if (e.key === 'ArrowRight') stepLightbox(1);
+  });
+
+  // Swipe left/right on touch screens
+  let touchStartX = null;
+  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    if (touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) stepLightbox(dx < 0 ? 1 : -1);
+    touchStartX = null;
+  });
+
+  // ─── Checklist (saved per browser) ───
+  const CHECK_KEY = 'vn2026-checklist';
+  const checkboxes = Array.from(document.querySelectorAll('#checklist-items input'));
+  let checked = {};
+  try { checked = JSON.parse(localStorage.getItem(CHECK_KEY)) || {}; } catch (e) { checked = {}; }
+  function updateProgress() {
+    const done = checkboxes.filter(c => c.checked).length;
+    document.getElementById('progressFill').style.width = `${(done / checkboxes.length) * 100}%`;
+    document.getElementById('progressLabel').textContent = `${done} / ${checkboxes.length} done`;
+  }
+  checkboxes.forEach(box => {
+    box.checked = !!checked[box.dataset.key];
+    box.addEventListener('change', () => {
+      checked[box.dataset.key] = box.checked;
+      try { localStorage.setItem(CHECK_KEY, JSON.stringify(checked)); } catch (e) { /* storage unavailable */ }
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  // ─── Counter animation for hero stats ───
+  function animateCounters() {
+    document.querySelectorAll('.hero-stat-value').forEach(el => {
+      const target = el.textContent;
+      const num = parseInt(target);
+      if (isNaN(num)) return;
+      const suffix = target.replace(/\d+/g, '');
+      let current = 0;
+      const step = Math.max(1, Math.floor(num / 30));
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= num) { current = num; clearInterval(timer); }
+        el.textContent = current + suffix;
+      }, 40);
+    });
+  }
+  setTimeout(animateCounters, 800);
+</script>
+
+</body>
+</html>
