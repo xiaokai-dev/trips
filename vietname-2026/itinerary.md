@@ -17,7 +17,7 @@ Four days, two night buses, one hotel night in Saigon: Phnom Penh to Saigon by b
 | Cambodian | No visa for a short stay (ASEAN exemption) | Free | Confirm with the Vietnamese embassy before you go |
 | Other nationalities | E-visa at evisa.gov.vn, single entry | US$25 | Processing 3–5 working days; apply 2–3 weeks ahead. [Vietnamvisa.com guide](https://www.vietnamvisa.com/guide/vietnam-e-visa.html) |
 
-> **Print your e-visa.** Giant Ibis will not let you board without a printed copy. Their Phnom Penh office prints it for free. ([Giant Ibis](https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh))
+> **Print your e-visa.** Bus crews collect passports at the border, and Giant Ibis will not let you board without a printed copy; carry one for the VET bus too. Giant Ibis's Phnom Penh office prints it for free. ([Giant Ibis](https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh))
 
 *Planning rate: \~26,000 VND ≈ US$1. Prices marked \* are estimates; check them when you book.*
 
@@ -27,8 +27,8 @@ The plan below is Plan A (all by bus, home on Dec 20). Plan B, which swaps the l
 
 | Day | Date | City | Morning | Afternoon | Evening & Night |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| **Day 1** | **Thu, Dec 17** | **Phnom Penh ➔ Saigon** | **08:00:** Giant Ibis bus from Phnom Penh (border at Bavet / Moc Bai) | \~14:00–15:00 arrive Pham Ngu Lao, District 1 ➔ hotel check-in | Nguyen Hue Walking Street ➔ Ben Thanh area dinner |
-| **Day 2** | **Fri, Dec 18** | **Saigon** | War Remnants Museum (opens 07:30) ➔ Independence Palace | Notre-Dame Cathedral, Central Post Office, Book Street ➔ coffee & rest | Early dinner ➔ **\~22:00 sleeper bus to Dalat** |
+| **Day 1** | **Thu, Dec 17** | **Phnom Penh ➔ Saigon** | **05:30:** ✅ VET Airbus Express from Cannon Rifle Roundabout Park (border at Bavet / Moc Bai) | **12:30** arrive Pham Ngu Lao #301 ➔ lunch ➔ hotel bags ➔ Ben Thanh Market | Nguyen Hue Walking Street ➔ Ben Thanh area dinner ➔ **21:00 The Gangs Central** (87 Nguyễn Huệ) |
+| **Day 2** | **Fri, Dec 18** | **Saigon** | Sleep in ➔ **10:00** late breakfast ➔ War Remnants Museum | Lunch ➔ Independence Palace ➔ Notre-Dame Cathedral, Central Post Office, Book Street ➔ rest | Early dinner ➔ **\~22:00 sleeper bus to Dalat** |
 | **Day 3** | **Sat, Dec 19** | **Dalat** | \~05:30 arrive ➔ hotel, shower, breakfast ➔ Xuan Huong Lake ➔ Crazy House ➔ Robin Hill cable car (before 11:30) | Truc Lam Monastery ➔ Datanla Waterfall & alpine coaster ➔ rest | Night market dinner ➔ **Flower Festival opening, 20:00** ➔ **\~22:30–23:00 sleeper bus to Saigon** |
 | **Day 4** | **Sun, Dec 20** | **Saigon ➔ Phnom Penh** | \~05:30–07:00 arrive Saigon ➔ phở breakfast ➔ **09:45 Giant Ibis bus** | \~16:00 arrive Phnom Penh | Home! |
 
@@ -40,13 +40,13 @@ You get one full day in each city, so drop places from the bottom up: ⭐ **Must
 
 | Priority | Place | Suggested time | Planned slot | Hours / Notes |
 | :-- | :-- | :-- | :-- | :-- |
-| ⭐ Must | **War Remnants Museum** | 2–2.5 h | Day 2, 07:30–10:00 | Daily 07:30–17:30, last entry 17:00. Graphic photos inside. Online tickets available. ([Tuoi Tre](https://news.tuoitre.vn/ho-chi-minh-citys-first-museum-launches-online-ticketing-103260212102508811.htm)) |
-| ⭐ Must | **Independence Palace** | 1–1.5 h | Day 2, 10:15–11:45 | \~07:30–16:00. 700 m from the War Remnants Museum, so walk between them. ([VietnamSpot](https://vietnamspot.ru/en/blog/ho-chi-minh-attractions)) |
+| ⭐ Must | **War Remnants Museum** | 2–2.5 h | Day 2, 10:45–12:45 | Daily 07:30–17:30, last entry 17:00. Graphic photos inside. Online tickets available. ([Tuoi Tre](https://news.tuoitre.vn/ho-chi-minh-citys-first-museum-launches-online-ticketing-103260212102508811.htm)) |
+| ⭐ Must | **Independence Palace** | 1–1.5 h | Day 2, 14:00–15:15 | \~07:30–16:00; arrive by 15:00. 700 m from the War Remnants Museum. ([VietnamSpot](https://vietnamspot.ru/en/blog/ho-chi-minh-attractions)) |
 | ⭐ Must | **Nguyen Hue Walking Street** | 1–1.5 h | Day 1 evening | Free. Best after dark; good spot for the first dinner. |
-| 👍 Recommended | **Notre-Dame Cathedral & Central Post Office** | 45 min | Day 2, 13:30–14:15 | Free. Across the road from each other. The cathedral may still be partly under scaffolding, so see the post office inside and the cathedral from outside. |
-| 👍 Recommended | **Book Street (Nguyen Van Binh)** | 30 min | Day 2, 14:15–14:45 | Free. Shaded lane next to the post office, with cafés. |
-| ➕ Optional | **Ben Thanh Market** | 1 h | Day 1 evening or Day 2 afternoon | Indoor market \~06:00–18:00; night stalls outside after 18:00. Bargain hard. |
-| ➕ Optional | **Cu Chi Tunnels (half-day tour)** | 5–6 h | Day 2 morning, *instead of* the museums | \~40 km out. Only if you'd rather see the tunnels than the two museums; it leaves you tired before a night bus. |
+| 👍 Recommended | **Notre-Dame Cathedral & Central Post Office** | 45 min | Day 2, 15:30–16:15 | Free. Across the road from each other. The cathedral may still be partly under scaffolding, so see the post office inside and the cathedral from outside. |
+| 👍 Recommended | **Book Street (Nguyen Van Binh)** | 30 min | Day 2, 16:15–16:30 | Free. Shaded lane next to the post office, with cafés. |
+| ➕ Optional | **Ben Thanh Market** | 1 h | Day 1, 14:30–16:30 | Indoor market \~06:00–18:00; night stalls outside after 18:00. Bargain hard. |
+| ➕ Optional | **Cu Chi Tunnels (half-day tour)** | 5–6 h | Day 2, 10:00–16:00, *instead of* the museums | \~40 km out. Only if you'd rather see the tunnels than the two museums; it leaves you tired before a night bus. |
 
 ### Dalat (Dec 19)
 
@@ -67,7 +67,7 @@ Book the two Dalat sleeper buses about a month ahead (by \~Nov 18): seats for De
 
 | Leg | Date | Recommended option | Time | Price (approx.) | Book |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| Phnom Penh ➔ Saigon | Thu Dec 17 | **Giant Ibis** VIP bus from the Street 106 terminal (night market) | Departs 04:45, 08:00 or 09:45; \~6–7 h | From \~US$34 | [giantibis.com](https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh) |
+| Phnom Penh ➔ Saigon | Thu Dec 17 | ✅ **Booked: VET Airbus Express** from Cannon Rifle Roundabout Park (St. 76 corner St. 47) to Pham Ngu Lao #301 | **05:30 ➔ 12:30**; \~7 h | Paid | Booked |
 | Saigon ➔ Dalat | Fri Dec 18 | **Futa (Phuong Trang)** sleeper bus, night departure | \~22:00 ➔ \~05:30; 7–8 h | 280,000–450,000 VND (\~US$11–18) | futabus.vn or 12go.asia |
 | Dalat ➔ Saigon | Sat Dec 19 | **Futa** sleeper bus, late departure | \~22:30–23:00 ➔ \~05:30–07:00 | \~US$12–18 | futabus.vn or 12go.asia |
 | Saigon ➔ Phnom Penh | Sun Dec 20 | **Giant Ibis** from Pham Ngu Lao, District 1 | **09:45** (backup 15:45); \~6–7 h | From \~US$34 | [giantibis.com](https://online.giantibis.com/blog/21ed19b7-9aff-8055-9d3d-e34e1d845ea1) |
@@ -98,7 +98,8 @@ Only the buses and the Dalat hotel need booking ahead; every sight sells tickets
 
 | What | Price | When to book |
 | :-- | :-- | :-- |
-| **Giant Ibis, Dec 17 and Dec 20** | From \~US$34 each way | Now – early November |
+| ~~VET Airbus Express, Dec 17~~ | ✅ Booked | Done |
+| **Giant Ibis, Dec 20** | From \~US$34 | Now – early November |
 | **Futa sleeper buses, Dec 18 and Dec 19** | \~US$11–18 each | By \~Nov 18 (festival dates sell out) |
 | **Dalat hotel, night of Dec 18** | Festival rates +30–50% | Now, with free cancellation |
 | **War Remnants Museum** *(optional)* | 40,000–60,000 VND\* | Online the day before, or at the gate |
@@ -129,8 +130,8 @@ Food is cheap: plan on \~US$15–25 a day per person. Prices are estimates\*; st
 | When | Where / what | What to order | VND / person\* |
 | :-- | :-- | :-- | :-- |
 | Day 1 dinner | Street food around Ben Thanh / Nguyen Hue | Cơm tấm (broken rice with grilled pork), bánh xèo | 50,000–120,000 |
-| Day 2 breakfast | **Bánh Mì Huỳnh Hoa** (Le Thi Rieng St) | Loaded pork bánh mì, the city's most famous | \~70,000 |
-| Day 2 lunch (near the palace) | **Phở Hòa Pasteur** | Beef phở | 80,000–120,000 |
+| Day 2 late breakfast (10:00) | **Bánh Mì Huỳnh Hoa** (Le Thi Rieng St) | Loaded pork bánh mì, the city's most famous | \~70,000 |
+| Day 2 lunch (between the museum and the palace) | **Phở Hòa Pasteur** | Beef phở | 80,000–120,000 |
 | Day 2 afternoon | Café on Book Street or Nguyen Hue | Cà phê sữa đá (iced milk coffee), egg coffee | 30,000–60,000 |
 | Day 2 early dinner | Any busy local spot near your bus pickup | Bún thịt nướng (grilled pork noodles) | 50,000–90,000 |
 | Day 4 breakfast | Near Pham Ngu Lao, before the 09:45 bus | Phở or bánh mì; buy water and snacks for the border | 40,000–80,000 |
@@ -152,7 +153,7 @@ Mid-range comes to about **US$305** for the four days; add US$25 if you need an 
 
 | Category | Budget | **Mid-range** | Comfort | What it covers |
 | :-- | --: | --: | --: | :-- |
-| Buses (4 legs) | $59 | **$98** | $128 | Budget: cheaper Phnom Penh–Saigon lines + Futa. Mid: Giant Ibis + Futa. Comfort: Giant Ibis + VIP limousine/cabin to Dalat |
+| Buses (4 legs) | $59 | **$98** | $128 | Budget: cheaper Phnom Penh–Saigon lines + Futa. Mid: VET Airbus (booked) + Futa + Giant Ibis home. Comfort: Giant Ibis + VIP limousine/cabin to Dalat |
 | Hotels (2 nights) | $35 | **$80** | $170 | Saigon Dec 17 + Dalat Dec 18 (for a room at 05:30 on Dec 19). Dalat has festival pricing |
 | Food (3.5 days) | $35 | **$70** | $125 | \~$10 / $20 / $35 a day |
 | Local transport | $10 | **$20** | $40 | Grab in Saigon; Grab/taxi to Prenn Pass sights in Dalat |
@@ -174,21 +175,23 @@ Mid-range comes to about **US$305** for the four days; add US$25 if you need an 
 
 ### Day 1: Thursday, December 17 – Phnom Penh to Saigon
 
-- **07:30:** Arrive at the Giant Ibis terminal, Street 106 near the night market (30 min before departure). Passport, printed e-visa if needed, some US$ cash.
-- **08:00 – \~14:30 | Bus to Saigon:** At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry. Lunch at a roadside stop isn't included (\~US$3–4).
-- **\~14:30:** Arrive at the Giant Ibis office on Pham Ngu Lao, District 1. Take a Grab or walk to your hotel (book in District 1 so everything is walkable). Buy a SIM or activate your eSIM; withdraw VND.
-- **17:00 – 21:00 | Nguyen Hue Walking Street & Ben Thanh:** Walk the pedestrian boulevard from the Opera House towards the river at dusk, then dinner on street food around Ben Thanh Market.
+- **05:00:** Arrive at the VET Airbus Express pickup point, **Cannon Rifle Roundabout Park** (corner of Okhna Dekcho Ei St. 76 and France St. 47). Book a PassApp/Grab the night before; it's dark at this hour. Passport, printed e-visa if needed, some US$ cash, a snack for breakfast.
+- **05:30 – 12:30 | ✅ VET Airbus Express to Saigon (booked):** At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry.
+- **12:30:** Arrive at **Pham Ngu Lao #301**, District 1. Lunch nearby, then Grab or walk to your hotel and leave your bags (check-in is usually 14:00). Activate your eSIM; withdraw VND.
+- **14:30 – 16:30 | Ben Thanh Market:** The early arrival gives you a free afternoon, and the indoor market closes at \~18:00. Then rest at the hotel.
+- **17:30 – 20:30 | Nguyen Hue Walking Street:** Walk the pedestrian boulevard from the Opera House towards the river at dusk, then dinner on street food around Ben Thanh's night stalls.
+- **21:00 – 23:59 | The Gangs Central:** Drinks and live music at 87 Nguyễn Huệ (also 98 Hồ Tùng Mậu), right on the walking street, so just walk over. Open 17:00–23:59, rooftop available. Book a table on 0937 565 557 (or Zalo / hotline 1900 6404). [thegangszone.com](https://thegangszone.com). Grab back to the hotel; Day 2 starts at 10:00, so sleep in.
 
 ### Day 2: Friday, December 18 – Saigon, then night bus to Dalat
 
-- *Why this order:* both museums open at 07:30 and are cooler and quieter early. Ask the hotel for a late check-out (or leave bags at reception) since your bus leaves at night.
-- **07:00:** Bánh mì breakfast.
-- **07:30 – 10:00 | War Remnants Museum:** Tanks and aircraft in the yard; the indoor galleries are heavy. Allow 2–2.5 h.
-- **10:15 – 11:45 | Independence Palace:** Walk 700 m. The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker.
-- **12:00 – 13:15 | Lunch:** Phở nearby.
-- **13:30 – 15:00 | Colonial core:** Notre-Dame Cathedral (outside), Central Post Office (inside), then iced coffee on Book Street.
-- **15:00 – 18:00 | Rest:** Back to the hotel to shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.
-- **18:00 – 20:30 | Early dinner,** then go to the Futa office or meet the free shuttle (check the pickup time on your ticket).
+- *Late start after The Gangs:* the day begins at 10:00. Both museums are open all day, so they still fit, just with more visitors than first thing in the morning. Ask the hotel for a late check-out (or leave bags at reception) since your bus leaves at night.
+- **10:00:** Late breakfast: bánh mì and iced coffee. Check out or arrange a late check-out.
+- **10:45 – 12:45 | War Remnants Museum:** Tanks and aircraft in the yard; the indoor galleries are heavy. Allow 2 h.
+- **12:45 – 13:45 | Lunch:** Phở Hòa Pasteur, \~1 km away.
+- **14:00 – 15:15 | Independence Palace:** The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker. Closes \~16:00, so don't arrive after 15:00.
+- **15:30 – 16:30 | Colonial core:** Notre-Dame Cathedral (outside), Central Post Office (inside), then iced coffee on Book Street.
+- **16:30 – 18:30 | Rest:** Back to the hotel to shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.
+- **18:30 – 20:30 | Early dinner,** then go to the Futa office or meet the free shuttle (check the pickup time on your ticket).
 - **\~22:00 | Sleeper bus to Dalat** (7–8 h, through Bao Loc).
 
 ### Day 3: Saturday, December 19 – Dalat & Flower Festival opening
@@ -219,7 +222,8 @@ Mid-range comes to about **US$305** for the four days; add US$25 if you need an 
 - [ ] **Now:** Check your passport has 6+ months' validity. Non-Cambodian passport → apply for the US$25 e-visa at evisa.gov.vn 2–3 weeks ahead, and print it.
 - [ ] **Now:** Book the **Dalat hotel for the night of Dec 18** (free cancellation; near Xuan Huong Lake; ask for a room heater).
 - [ ] **Now:** Book the **Saigon hotel for Dec 17** in District 1, with late check-out on Dec 18.
-- [ ] **Early November:** Book **Giant Ibis** Phnom Penh ➔ Saigon (Dec 17, 08:00) and Saigon ➔ Phnom Penh (Dec 20, 09:45).
+- [x] **Done:** **VET Airbus Express** Phnom Penh ➔ Saigon (Dec 17, 05:30 ➔ 12:30).
+- [ ] **Early November:** Book **Giant Ibis** Saigon ➔ Phnom Penh (Dec 20, 09:45).
 - [ ] **By \~Nov 18:** Book both **Futa sleeper buses** (Dec 18 \~22:00 and Dec 19 \~22:30–23:00), with shuttle pickup.
 - [ ] **Mid-November:** Check the published festival programme for Dec 19 (opening time, road closures around Lam Vien Square).
 - [ ] **Week before:** Install **Grab** and link a card; buy a Vietnam **eSIM** (Viettel coverage is best in the highlands).

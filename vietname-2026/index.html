@@ -423,6 +423,12 @@
     .budget-tips li strong { color: var(--text); }
     .save-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px; }
     .save-head { padding: 16px 24px 0; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.05rem; }
+    .booked-badge {
+      display: inline-block; margin-right: 8px; padding: 1px 8px; border-radius: 50px;
+      font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.5px;
+      vertical-align: middle; white-space: nowrap;
+      background: rgba(var(--accent-pine-rgb),0.12); color: var(--accent-pine); border: 1px solid rgba(var(--accent-pine-rgb),0.35);
+    }
     .plan-tag {
       display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 50px;
       font-family: 'Inter', sans-serif; font-size: 0.65rem; font-weight: 600; letter-spacing: 1px;
@@ -723,9 +729,9 @@
       <div class="route-node">
         <div class="route-node-icon">🏠</div>
         <div class="route-node-city">Phnom Penh</div>
-        <div class="route-node-dates">Dec 17</div>
+        <div class="route-node-dates">Dec 17, 05:30</div>
       </div>
-      <div class="route-connector"><span>🚌 ~6.5 h</span></div>
+      <div class="route-connector"><span>🚌 7 h</span></div>
       <div class="route-node">
         <div class="route-node-icon">🛵</div>
         <div class="route-node-city">Saigon</div>
@@ -818,28 +824,38 @@
           <div class="timeline-card-body">
             <div class="timeline-highlights">
               <div class="highlight-item">
-                <span class="highlight-time">07:30</span>
-                <span class="highlight-text"><strong>Giant Ibis terminal</strong>, Street 106 near the night market (30 min before departure). Passport, printed e-visa if needed, some US$ cash.</span>
+                <span class="highlight-time">05:00</span>
+                <span class="highlight-text"><strong>VET Airbus Express pickup: Cannon Rifle Roundabout Park</strong>, corner of Okhna Dekcho Ei St. 76 and France St. 47. Book a PassApp/Grab the night before; it's dark at this hour. Passport, printed e-visa if needed, some US$ cash, a snack for breakfast.</span>
               </div>
               <div class="highlight-item key">
-                <span class="highlight-time">08:00 – ~14:30</span>
-                <span class="highlight-text"><strong>Bus to Saigon.</strong> At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry. Lunch at a roadside stop isn't included (~US$3–4).</span>
+                <span class="highlight-time">05:30 – 12:30</span>
+                <span class="highlight-text"><span class="booked-badge">✅ Booked</span><strong>VET Airbus Express to Saigon.</strong> At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-time">~14:30</span>
-                <span class="highlight-text">Arrive at the <strong>Giant Ibis office, Pham Ngu Lao, District 1</strong>. Grab or walk to your hotel (book in District 1 so everything is walkable). Activate your eSIM; withdraw VND.</span>
+                <span class="highlight-time">12:30</span>
+                <span class="highlight-text">Arrive at <strong>Pham Ngu Lao #301, District 1</strong>. Lunch nearby, then Grab or walk to your hotel and leave your bags (check-in is usually 14:00). Activate your eSIM; withdraw VND.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-time">17:00 – 21:00</span>
-                <span class="highlight-text"><strong>Nguyen Hue Walking Street &amp; Ben Thanh.</strong> Walk the pedestrian boulevard from the Opera House towards the river at dusk, then street-food dinner around Ben Thanh Market: cơm tấm, bánh xèo.</span>
+                <span class="highlight-time">14:30 – 16:30</span>
+                <span class="highlight-text"><strong>Ben Thanh Market.</strong> The early arrival gives you a free afternoon, and the indoor market closes at ~18:00. Then rest at the hotel.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">17:30 – 20:30</span>
+                <span class="highlight-text"><strong>Nguyen Hue Walking Street.</strong> Walk the pedestrian boulevard from the Opera House towards the river at dusk, then street-food dinner at Ben Thanh's night stalls: cơm tấm, bánh xèo.</span>
+              </div>
+              <div class="highlight-item key">
+                <span class="highlight-time">21:00 – 23:59</span>
+                <span class="highlight-text"><strong>🍻 The Gangs Central, 87 Nguyễn Huệ.</strong> Drinks and live music right on the walking street, so just walk over. Open 17:00–23:59, rooftop available. Book a table on <a href="tel:+84937565557">0937 565 557</a> or via <a href="https://thegangszone.com" target="_blank" rel="noopener">thegangszone.com</a>. Grab back to the hotel; Day 2 starts at 10:00, so sleep in.</span>
               </div>
             </div>
             <div class="map-container">
               <iframe src="https://maps.google.com/maps?q=Nguyen+Hue+Walking+Street+Ho+Chi+Minh+City&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" title="Map of Nguyen Hue Walking Street" allowfullscreen></iframe>
             </div>
             <div class="map-links">
-              <a class="map-link" href="https://maps.google.com/maps?q=Giant+Ibis+Transport+Phnom+Penh" target="_blank" rel="noopener">📍 Giant Ibis, Phnom Penh</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=Cannon+Rifle+Roundabout+Park+Phnom+Penh" target="_blank" rel="noopener">📍 Bus pickup, Phnom Penh</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=301+Pham+Ngu+Lao+District+1+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 Drop-off, 301 Pham Ngu Lao</a>
               <a class="map-link" href="https://maps.google.com/maps?q=Nguyen+Hue+Walking+Street+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 Nguyen Hue Walking Street</a>
+              <a class="map-link" href="https://maps.google.com/maps?q=87+Nguyen+Hue+Ben+Nghe+District+1+Ho+Chi+Minh+City" target="_blank" rel="noopener">📍 The Gangs Central</a>
             </div>
           </div>
         </div>
@@ -856,34 +872,34 @@
         <div class="timeline-card">
           <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG/960px-Palacio_de_la_Reunificaci%C3%B3n%2C_Ciudad_Ho_Chi_Minh%2C_Vietnam%2C_2013-08-14%2C_DD_03.JPG" alt="Independence Palace, Saigon" loading="lazy" />
           <div class="timeline-card-body">
-            <p class="timeline-why">Why this order: both museums open at 07:30 and are cooler and quieter early. Ask the hotel for a late check-out (or leave bags at reception) since your bus leaves at night.</p>
+            <p class="timeline-why">Late start after The Gangs: the day begins at 10:00. Both museums are open all day, so they still fit, just with more visitors than first thing in the morning. Ask the hotel for a late check-out (or leave bags at reception) since your bus leaves at night.</p>
             <div class="timeline-highlights">
               <div class="highlight-item">
-                <span class="highlight-time">07:00</span>
-                <span class="highlight-text"><strong>Bánh mì breakfast</strong> (Bánh Mì Huỳnh Hoa is the famous one).</span>
+                <span class="highlight-time">10:00</span>
+                <span class="highlight-text"><strong>Late breakfast:</strong> bánh mì (Bánh Mì Huỳnh Hoa is the famous one) and iced coffee. Check out or arrange a late check-out.</span>
               </div>
               <div class="highlight-item key">
-                <span class="highlight-time">07:30 – 10:00</span>
-                <span class="highlight-text"><strong>War Remnants Museum.</strong> Tanks and aircraft in the yard; the indoor galleries are heavy going. Allow 2–2.5 h.</span>
+                <span class="highlight-time">10:45 – 12:45</span>
+                <span class="highlight-text"><strong>War Remnants Museum.</strong> Tanks and aircraft in the yard; the indoor galleries are heavy going. Allow 2 h.</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-time">12:45 – 13:45</span>
+                <span class="highlight-text"><strong>Lunch:</strong> beef phở at Phở Hòa Pasteur, ~1 km away.</span>
               </div>
               <div class="highlight-item key">
-                <span class="highlight-time">10:15 – 11:45</span>
-                <span class="highlight-text"><strong>Independence Palace</strong>, a 700 m walk. The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker.</span>
+                <span class="highlight-time">14:00 – 15:15</span>
+                <span class="highlight-text"><strong>Independence Palace.</strong> The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker. <em>Closes ~16:00, so don't arrive after 15:00.</em></span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-time">12:00 – 13:15</span>
-                <span class="highlight-text"><strong>Lunch:</strong> beef phở at Phở Hòa Pasteur.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">13:30 – 15:00</span>
+                <span class="highlight-time">15:30 – 16:30</span>
                 <span class="highlight-text"><strong>Colonial core:</strong> Notre-Dame Cathedral (outside), Central Post Office (inside), then iced coffee on Book Street.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-time">15:00 – 18:00</span>
+                <span class="highlight-time">16:30 – 18:30</span>
                 <span class="highlight-text"><strong>Rest.</strong> Shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.</span>
               </div>
               <div class="highlight-item">
-                <span class="highlight-time">18:00 – 20:30</span>
+                <span class="highlight-time">18:30 – 20:30</span>
                 <span class="highlight-text"><strong>Early dinner</strong> (bún thịt nướng), then the Futa office or its free shuttle. Check the pickup time on your ticket.</span>
               </div>
               <div class="highlight-item key">
@@ -1037,13 +1053,13 @@
           <span class="priority priority-must">⭐ Must</span>
           <div><div class="place-name">War Remnants Museum</div><div class="place-note">Daily 07:30–17:30, last entry 17:00 · graphic photos · online tickets available</div></div>
           <span class="place-duration">2 – 2.5 h</span>
-          <span class="place-slot">Day 2 · 07:30 – 10:00</span>
+          <span class="place-slot">Day 2 · 10:45 – 12:45</span>
         </div>
         <div class="place-row">
           <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Independence Palace</div><div class="place-note">~07:30–16:00 · 700 m from the War Remnants Museum, so walk</div></div>
+          <div><div class="place-name">Independence Palace</div><div class="place-note">~07:30–16:00, arrive by 15:00 · 700 m from the War Remnants Museum</div></div>
           <span class="place-duration">1 – 1.5 h</span>
-          <span class="place-slot">Day 2 · 10:15 – 11:45</span>
+          <span class="place-slot">Day 2 · 14:00 – 15:15</span>
         </div>
         <div class="place-row">
           <span class="priority priority-must">⭐ Must</span>
@@ -1055,25 +1071,25 @@
           <span class="priority priority-rec">👍 Recommended</span>
           <div><div class="place-name">Notre-Dame Cathedral &amp; Central Post Office</div><div class="place-note">Free · across the road from each other · cathedral may still be under scaffolding</div></div>
           <span class="place-duration">45 min</span>
-          <span class="place-slot">Day 2 · 13:30 – 14:15</span>
+          <span class="place-slot">Day 2 · 15:30 – 16:15</span>
         </div>
         <div class="place-row">
           <span class="priority priority-rec">👍 Recommended</span>
           <div><div class="place-name">Book Street (Nguyen Van Binh)</div><div class="place-note">Free · shaded lane next to the post office, with cafés</div></div>
           <span class="place-duration">30 min</span>
-          <span class="place-slot">Day 2 · 14:15 – 14:45</span>
+          <span class="place-slot">Day 2 · 16:15 – 16:30</span>
         </div>
         <div class="place-row">
           <span class="priority priority-opt">➕ Optional</span>
           <div><div class="place-name">Ben Thanh Market</div><div class="place-note">Indoor ~06:00–18:00 · night stalls outside after 18:00 · bargain hard</div></div>
           <span class="place-duration">1 h</span>
-          <span class="place-slot">Day 1 evening or Day 2 afternoon</span>
+          <span class="place-slot">Day 1 · 14:30 – 16:30</span>
         </div>
         <div class="place-row">
           <span class="priority priority-opt">➕ Optional</span>
           <div><div class="place-name">Cu Chi Tunnels (half-day tour)</div><div class="place-note">~40 km out · only <em>instead of</em> the two museums · tiring before a night bus</div></div>
           <span class="place-duration">5 – 6 h</span>
-          <span class="place-slot">Day 2 · morning</span>
+          <span class="place-slot">Day 2 · 10:00 – 16:00</span>
         </div>
       </div>
     </div>
@@ -1151,9 +1167,9 @@
         </div>
         <div class="place-row leg-row">
           <div><div class="place-name">Phnom Penh ➔ Saigon</div><div class="place-note">Thu, Dec 17</div></div>
-          <div><div class="place-name">Giant Ibis VIP bus</div><div class="place-note">Street 106 terminal (night market) · <a href="https://online.giantibis.com/routes/phnom-penh-to-ho-chi-minh" target="_blank" rel="noopener">giantibis.com</a></div></div>
-          <span class="place-slot">Departs 04:45, <strong>08:00</strong> or 09:45 · ~6–7 h</span>
-          <span class="place-duration">from ~US$34</span>
+          <div><div class="place-name"><span class="booked-badge">✅ Booked</span>VET Airbus Express</div><div class="place-note">Cannon Rifle Roundabout Park (St. 76 corner St. 47) ➔ Pham Ngu Lao #301</div></div>
+          <span class="place-slot"><strong>05:30 ➔ 12:30</strong> · ~7 h</span>
+          <span class="place-duration">Paid</span>
         </div>
         <div class="place-row leg-row">
           <div><div class="place-name">Saigon ➔ Dalat</div><div class="place-note">Fri, Dec 18</div></div>
@@ -1220,8 +1236,13 @@
       <div class="places-list">
         <div class="place-row ticket-row table-head"><span>What</span><span>Price</span><span>When to book</span></div>
         <div class="place-row ticket-row">
-          <div class="place-name">Giant Ibis, Dec 17 and Dec 20</div>
-          <span class="place-duration">from ~US$34 each way</span>
+          <div class="place-name"><span class="booked-badge">✅ Booked</span>VET Airbus Express, Dec 17</div>
+          <span class="place-duration">Paid</span>
+          <span class="place-slot">Done</span>
+        </div>
+        <div class="place-row ticket-row">
+          <div class="place-name">Giant Ibis, Dec 20</div>
+          <span class="place-duration">from ~US$34</span>
           <span class="place-slot">Now – early November</span>
         </div>
         <div class="place-row ticket-row">
@@ -1278,7 +1299,7 @@
           <span class="place-duration">50k–120k VND</span>
         </div>
         <div class="place-row food-row">
-          <span class="place-slot">Day 2 · breakfast</span>
+          <span class="place-slot">Day 2 · late breakfast</span>
           <div><div class="place-name">Bánh Mì Huỳnh Hoa <span class="place-slot">(Le Thi Rieng St)</span></div><div class="place-note">Loaded pork bánh mì, the city's most famous</div></div>
           <span class="place-duration">~70k VND</span>
         </div>
@@ -1354,7 +1375,7 @@
         </div>
         <div class="place-row budget-row">
           <div class="place-name">🚌 Buses (4 legs)</div>
-          <span class="place-slot">Budget: cheaper PP–Saigon lines + Futa · Mid: Giant Ibis + Futa · Comfort: Giant Ibis + VIP limousine/cabin to Dalat</span>
+          <span class="place-slot">Budget: cheaper PP–Saigon lines + Futa · Mid: VET Airbus (booked) + Futa + Giant Ibis home · Comfort: Giant Ibis + VIP limousine/cabin to Dalat</span>
           <span class="place-duration">$59</span>
           <span class="place-duration budget-mid">$98</span>
           <span class="place-duration">$128</span>
@@ -1550,13 +1571,14 @@
     </div>
     <div class="checklist-progress reveal">
       <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-      <span class="progress-label" id="progressLabel">0 / 8 done</span>
+      <span class="progress-label" id="progressLabel">1 / 9 done</span>
     </div>
     <div class="places-list reveal" id="checklist-items">
-      <label class="check-item"><input type="checkbox" data-key="passport" /><span class="check-when">Now</span><span class="check-text">Check your <strong>passport has 6+ months' validity</strong>. Non-Cambodian passport → apply for the <strong>US$25 e-visa</strong> at evisa.gov.vn 2–3 weeks ahead, and <strong>print it</strong> (Giant Ibis won't board you without a printed copy).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="passport" /><span class="check-when">Now</span><span class="check-text">Check your <strong>passport has 6+ months' validity</strong>. Non-Cambodian passport → apply for the <strong>US$25 e-visa</strong> at evisa.gov.vn 2–3 weeks ahead, and <strong>print it</strong> (bus crews check it at the border).</span></label>
       <label class="check-item"><input type="checkbox" data-key="hotel-dalat" /><span class="check-when">Now</span><span class="check-text">Book the <strong>Dalat hotel for the night of Dec 18</strong> (free cancellation; near Xuan Huong Lake; ask for a room heater).</span></label>
       <label class="check-item"><input type="checkbox" data-key="hotel-saigon" /><span class="check-when">Now</span><span class="check-text">Book the <strong>Saigon hotel for Dec 17</strong> in District 1, with late check-out on Dec 18.</span></label>
-      <label class="check-item"><input type="checkbox" data-key="giant-ibis" /><span class="check-when">Early Nov</span><span class="check-text">Book <strong>Giant Ibis</strong> Phnom Penh ➔ Saigon (Dec 17, 08:00) and Saigon ➔ Phnom Penh (Dec 20, 09:45).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="bus-out" checked disabled /><span class="check-when">Done</span><span class="check-text">Book <strong>VET Airbus Express</strong> Phnom Penh ➔ Saigon (Dec 17, 05:30 ➔ 12:30).</span></label>
+      <label class="check-item"><input type="checkbox" data-key="giant-ibis" /><span class="check-when">Early Nov</span><span class="check-text">Book <strong>Giant Ibis</strong> Saigon ➔ Phnom Penh (Dec 20, 09:45).</span></label>
       <label class="check-item"><input type="checkbox" data-key="futa" /><span class="check-when">By ~Nov 18</span><span class="check-text">Book both <strong>Futa sleeper buses</strong> (Dec 18 ~22:00 and Dec 19 ~22:30–23:00), with shuttle pickup.</span></label>
       <label class="check-item"><input type="checkbox" data-key="festival" /><span class="check-when">Mid-Nov</span><span class="check-text">Check the published <strong>festival programme</strong> for Dec 19 (opening time, road closures around Lam Vien Square).</span></label>
       <label class="check-item"><input type="checkbox" data-key="apps" /><span class="check-when">Week before</span><span class="check-text">Install <strong>Grab</strong> and link a card; buy a Vietnam <strong>eSIM</strong> (Viettel coverage is best in the highlands).</span></label>
@@ -1808,6 +1830,7 @@
     document.getElementById('progressLabel').textContent = `${done} / ${checkboxes.length} done`;
   }
   checkboxes.forEach(box => {
+    if (box.disabled) return; // already done, fixed in the HTML
     box.checked = !!checked[box.dataset.key];
     box.addEventListener('change', () => {
       checked[box.dataset.key] = box.checked;
