@@ -27,7 +27,7 @@ The plan below is Plan A (all by bus, home on Dec 20). Plan B, which swaps the l
 
 | Day | Date | City | Morning | Afternoon | Evening & Night |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| **Day 1** | **Thu, Dec 17** | **Phnom Penh ➔ Saigon** | **05:30:** ✅ VET Airbus Express from Cannon Rifle Roundabout Park (border at Bavet / Moc Bai) | **12:30** arrive Pham Ngu Lao #301 ➔ lunch ➔ hotel bags ➔ Ben Thanh Market | Nguyen Hue Walking Street ➔ Ben Thanh area dinner ➔ **21:00 The Gangs Central** (87 Nguyễn Huệ) |
+| **Day 1** | **Thu, Dec 17** | **Phnom Penh ➔ Saigon** | **05:30:** ✅ VET Airbus Express from Cannon Rifle Roundabout Park (border at Bavet / Moc Bai) | **12:30** arrive Pham Ngu Lao #301 ➔ hotel bags ➔ **lunch at Ben Thanh Market** ➔ check in & rest ➔ The Café Apartment | Dinner ➔ **20:00** Nguyen Hue Walking Street ➔ **21:00 The Gangs Central** (87 Nguyễn Huệ) |
 | **Day 2** | **Fri, Dec 18** | **Saigon** | Sleep in ➔ **10:00** late breakfast ➔ War Remnants Museum | Lunch ➔ Independence Palace ➔ Notre-Dame Cathedral, Central Post Office, Book Street ➔ rest | Early dinner ➔ **\~22:00 sleeper bus to Dalat** |
 | **Day 3** | **Sat, Dec 19** | **Dalat** | \~05:30 arrive ➔ hotel, shower, breakfast ➔ Xuan Huong Lake ➔ Crazy House ➔ Robin Hill cable car (before 11:30) | Truc Lam Monastery ➔ Datanla Waterfall & alpine coaster ➔ rest | Night market dinner ➔ **Flower Festival opening, 20:00** ➔ **\~22:30–23:00 sleeper bus to Saigon** |
 | **Day 4** | **Sun, Dec 20** | **Saigon ➔ Phnom Penh** | \~05:30–07:00 arrive Saigon ➔ phở breakfast ➔ **09:45 Giant Ibis bus** | \~16:00 arrive Phnom Penh | Home! |
@@ -42,10 +42,11 @@ You get one full day in each city, so drop places from the bottom up: ⭐ **Must
 | :-- | :-- | :-- | :-- | :-- |
 | ⭐ Must | **War Remnants Museum** | 2–2.5 h | Day 2, 10:45–12:45 | Daily 07:30–17:30, last entry 17:00. Graphic photos inside. Online tickets available. ([Tuoi Tre](https://news.tuoitre.vn/ho-chi-minh-citys-first-museum-launches-online-ticketing-103260212102508811.htm)) |
 | ⭐ Must | **Independence Palace** | 1–1.5 h | Day 2, 14:00–15:15 | \~07:30–16:00; arrive by 15:00. 700 m from the War Remnants Museum. ([VietnamSpot](https://vietnamspot.ru/en/blog/ho-chi-minh-attractions)) |
-| ⭐ Must | **Nguyen Hue Walking Street** | 1–1.5 h | Day 1 evening | Free. Best after dark; good spot for the first dinner. |
+| ⭐ Must | **Nguyen Hue Walking Street** | 1 h | Day 1, 20:00–21:00 | Free. Best after dark. |
+| ⭐ Must | **The Café Apartment (42 Nguyễn Huệ)** | 1–1.5 h | Day 1, 16:30–18:00 | Free to enter; buy a drink in one of the cafés. Old apartment block on the walking street; balconies face the boulevard. |
 | 👍 Recommended | **Notre-Dame Cathedral & Central Post Office** | 45 min | Day 2, 15:30–16:15 | Free. Across the road from each other. The cathedral may still be partly under scaffolding, so see the post office inside and the cathedral from outside. |
 | 👍 Recommended | **Book Street (Nguyen Van Binh)** | 30 min | Day 2, 16:15–16:30 | Free. Shaded lane next to the post office, with cafés. |
-| ➕ Optional | **Ben Thanh Market** | 1 h | Day 1, 14:30–16:30 | Indoor market \~06:00–18:00; night stalls outside after 18:00. Bargain hard. |
+| 👍 Recommended | **Ben Thanh Market (lunch)** | 1 h | Day 1, 13:00–14:00 | Indoor market \~06:00–18:00. Food stalls inside are touristy but easy; bargain hard at the other stalls. |
 | ➕ Optional | **Cu Chi Tunnels (half-day tour)** | 5–6 h | Day 2, 10:00–16:00, *instead of* the museums | \~40 km out. Only if you'd rather see the tunnels than the two museums; it leaves you tired before a night bus. |
 
 ### Dalat (Dec 19)
@@ -129,7 +130,9 @@ Food is cheap: plan on \~US$15–25 a day per person. Prices are estimates\*; st
 
 | When | Where / what | What to order | VND / person\* |
 | :-- | :-- | :-- | :-- |
-| Day 1 dinner | Street food around Ben Thanh / Nguyen Hue | Cơm tấm (broken rice with grilled pork), bánh xèo | 50,000–120,000 |
+| Day 1 lunch (13:00) | **Ben Thanh Market** food stalls | Phở, bánh xèo, cơm tấm, chè for dessert | 60,000–120,000 |
+| Day 1 coffee (16:30) | **The Café Apartment**, 42 Nguyễn Huệ | Cà phê sữa đá or coconut coffee with a balcony view | 40,000–80,000 |
+| Day 1 dinner (18:00) | Bánh Xèo 46A (Đinh Công Tráng) or street food near Nguyen Hue | Bánh xèo, cơm tấm (broken rice with grilled pork) | 50,000–120,000 |
 | Day 2 late breakfast (10:00) | **Bánh Mì Huỳnh Hoa** (Le Thi Rieng St) | Loaded pork bánh mì, the city's most famous | \~70,000 |
 | Day 2 lunch (between the museum and the palace) | **Phở Hòa Pasteur** | Beef phở | 80,000–120,000 |
 | Day 2 afternoon | Café on Book Street or Nguyen Hue | Cà phê sữa đá (iced milk coffee), egg coffee | 30,000–60,000 |
@@ -177,9 +180,12 @@ Mid-range comes to about **US$305** for the four days; add US$25 if you need an 
 
 - **05:00:** Arrive at the VET Airbus Express pickup point, **Cannon Rifle Roundabout Park** (corner of Okhna Dekcho Ei St. 76 and France St. 47). Book a PassApp/Grab the night before; it's dark at this hour. Passport, printed e-visa if needed, some US$ cash, a snack for breakfast.
 - **05:30 – 12:30 | ✅ VET Airbus Express to Saigon (booked):** At the Bavet / Moc Bai border you get off for the Cambodian exit stamp; the crew collects passports for Vietnamese entry.
-- **12:30:** Arrive at **Pham Ngu Lao #301**, District 1. Lunch nearby, then Grab or walk to your hotel and leave your bags (check-in is usually 14:00). Activate your eSIM; withdraw VND.
-- **14:30 – 16:30 | Ben Thanh Market:** The early arrival gives you a free afternoon, and the indoor market closes at \~18:00. Then rest at the hotel.
-- **17:30 – 20:30 | Nguyen Hue Walking Street:** Walk the pedestrian boulevard from the Opera House towards the river at dusk, then dinner on street food around Ben Thanh's night stalls.
+- **12:30:** Arrive at **Pham Ngu Lao #301**, District 1. Walk or Grab to your hotel and leave your bags at reception (check-in is usually 14:00). Activate your eSIM; withdraw VND.
+- **13:00 – 14:00 | Lunch at Ben Thanh Market:** \~1 km from the drop-off. The food stalls inside sell phở, bánh xèo, cơm tấm and chè, \~60,000–120,000 VND a dish; check prices before ordering. Browse the stalls after, and bargain hard.
+- **14:00 – 16:00 | Check in & rest:** You've been up since before 05:00.
+- **16:30 – 18:00 | The Café Apartment (42 Nguyễn Huệ):** An old apartment block full of small cafés; pick one with a balcony for sunset over the boulevard. Iced coffee \~40,000–80,000 VND\*.
+- **18:00 – 20:00 | Dinner hunt:** Cơm tấm or bánh xèo in District 1, e.g. Bánh Xèo 46A (Đinh Công Tráng), or whatever looks busy near Nguyen Hue.
+- **20:00 – 21:00 | Nguyen Hue Walking Street:** Walk the pedestrian boulevard from the Opera House towards the river, lit up at night.
 - **21:00 – 23:59 | The Gangs Central:** Drinks and live music at 87 Nguyễn Huệ (also 98 Hồ Tùng Mậu), right on the walking street, so just walk over. Open 17:00–23:59, rooftop available. Book a table on 0937 565 557 (or Zalo / hotline 1900 6404). [thegangszone.com](https://thegangszone.com). Grab back to the hotel; Day 2 starts at 10:00, so sleep in.
 
 ### Day 2: Friday, December 18 – Saigon, then night bus to Dalat
@@ -190,8 +196,8 @@ Mid-range comes to about **US$305** for the four days; add US$25 if you need an 
 - **12:45 – 13:45 | Lunch:** Phở Hòa Pasteur, \~1 km away.
 - **14:00 – 15:15 | Independence Palace:** The 1960s presidential palace where the war ended on 30 April 1975; don't skip the basement command bunker. Closes \~16:00, so don't arrive after 15:00.
 - **15:30 – 16:30 | Colonial core:** Notre-Dame Cathedral (outside), Central Post Office (inside), then iced coffee on Book Street.
-- **16:30 – 18:30 | Rest:** Back to the hotel to shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.
-- **18:30 – 20:30 | Early dinner,** then go to the Futa office or meet the free shuttle (check the pickup time on your ticket).
+- **16:30 – 19:00 | Rest:** Back to the hotel to shower and repack. Put a jacket, toothbrush and charger in your small bag for the bus.
+- **19:00 – 20:30 | Early dinner,** then go to the Futa office or meet the free shuttle (check the pickup time on your ticket).
 - **\~22:00 | Sleeper bus to Dalat** (7–8 h, through Bao Loc).
 
 ### Day 3: Saturday, December 19 – Dalat & Flower Festival opening
