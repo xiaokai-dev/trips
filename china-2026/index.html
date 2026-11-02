@@ -1,2076 +1,1036 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11-Day China Winter Journey | Beijing · Harbin · Shanghai</title>
-  <meta name="description" content="An unforgettable 11-day winter adventure across China — from the imperial grandeur of Beijing, through Harbin's magical ice kingdom, to Shanghai's dazzling skyline." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    /* ───────── RESET & BASE ───────── */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eleven Days Through Winter China</title>
+<meta name="description" content="An 11-day winter itinerary across Beijing, Harbin, Snow Town, and Shanghai — Dec 19–29, 2026." />
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f5f5f7;
+    --ink: #1d1d1f;
+    --muted: #86868b;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+  }
+  @media (prefers-color-scheme: dark) {
     :root {
-      --bg-deep: #06080f;
-      --bg-card: #0d1117;
-      --bg-card-alt: #131a24;
-      --glass: rgba(13,17,23,0.65);
-      --glass-border: rgba(255,255,255,0.08);
-      --gold: #d4a853;
-      --gold-light: #f0d48a;
-      --accent-red: #e74c3c;
-      --accent-ice: #5ecef6;
-      --accent-neon: #a78bfa;
-      --text: #e8e6e3;
-      --text-muted: #8b949e;
-      --text-dim: #484f58;
-      --radius: 16px;
-      --radius-sm: 10px;
-      --shadow: 0 8px 32px rgba(0,0,0,0.45);
-      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --bg: #000000;
+      --bg-alt: #161617;
+      --ink: #f5f5f7;
+      --muted: #a1a1a6;
+      --accent: #2997ff;
+      --border: #3a3a3c;
     }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-deep);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-    img { display: block; max-width: 100%; }
-    a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
-    a:hover { color: var(--gold-light); }
-    h1,h2,h3,h4,h5 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
-    .chinese-accent { font-family: 'Noto Serif SC', serif; }
+  }
 
-    /* ───────── UTILITY ───────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--gold); font-weight: 600; margin-bottom: 12px;
-    }
-    .section-label::before {
-      content: ''; width: 32px; height: 1px; background: var(--gold);
-    }
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800;
-      background: linear-gradient(135deg, #fff 0%, var(--gold-light) 50%, var(--gold) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text; margin-bottom: 16px;
-    }
-    .section-subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin-bottom: 48px; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  h1, h2, h3 { font-weight: 600; letter-spacing: -0.015em; text-wrap: balance; margin: 0; color: var(--ink); }
 
-    /* ───────── SCROLL ANIMATIONS ───────── */
-    .reveal {
-      opacity: 0; transform: translateY(40px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .reveal-left.visible { opacity: 1; transform: translateX(0); }
-    .reveal-right { opacity: 0; transform: translateX(60px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 22px; }
+  .wrap-wide { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
 
-    /* ───────── NAVBAR ───────── */
-    .navbar {
-      position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-      padding: 16px 0;
-      background: transparent;
-      transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
-    }
-    .navbar.scrolled {
-      background: rgba(6,8,15,0.85);
-      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      padding: 10px 0;
-      border-bottom: 1px solid var(--glass-border);
-    }
-    .navbar .container {
-      display: flex; align-items: center; justify-content: space-between;
-    }
-    .nav-brand {
-      font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.25rem;
-      color: #fff; display: flex; align-items: center; gap: 8px;
-    }
-    .nav-brand span { font-size: 1.5rem; }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
-    .nav-links a {
-      color: rgba(255,255,255,0.7); font-size: 0.875rem; font-weight: 500;
-      letter-spacing: 0.5px; position: relative; padding: 4px 0;
-    }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--gold);
-      transition: width 0.3s ease;
-    }
-    .nav-links a:hover { color: #fff; }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-mobile-toggle {
-      display: none; background: none; border: none; color: #fff;
-      font-size: 1.5rem; cursor: pointer;
-    }
+  section { padding: 100px 0; }
+  .section-head { margin-bottom: 44px; text-align: center; }
+  .section-head .eyebrow { display: block; font-size: 0.95rem; font-weight: 600; color: var(--accent); margin-bottom: 10px; }
+  .section-head h2 { font-size: clamp(2rem, 4vw, 2.6rem); }
+  .section-head p { color: var(--muted); margin: 14px auto 0; max-width: 56ch; font-size: 1.1rem; }
 
-    /* ───────── HERO ───────── */
-    .hero {
-      position: relative; height: 100vh; min-height: 700px;
-      display: flex; align-items: center; justify-content: center;
-      overflow: hidden;
-    }
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;
-      transform: scale(1.1);
-      transition: transform 0.1s linear;
-    }
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg,
-        rgba(6,8,15,0.3) 0%,
-        rgba(6,8,15,0.15) 30%,
-        rgba(6,8,15,0.5) 70%,
-        rgba(6,8,15,1) 100%
-      );
-    }
-    .hero-content {
-      position: relative; z-index: 2; text-align: center;
-      padding: 0 24px; max-width: 900px;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(212,168,83,0.15); border: 1px solid rgba(212,168,83,0.3);
-      padding: 8px 20px; border-radius: 50px; font-size: 0.8rem;
-      color: var(--gold-light); font-weight: 500; letter-spacing: 1px;
-      text-transform: uppercase; margin-bottom: 24px;
-      backdrop-filter: blur(10px);
-    }
-    .hero-badge .dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--gold); animation: pulse-dot 2s infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.5); }
-    }
-    .hero h1 {
-      font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 900;
-      line-height: 1.05; margin-bottom: 20px;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.5);
-    }
-    .hero h1 .line1 { color: #fff; display: block; }
-    .hero h1 .line2 {
-      display: block;
-      background: linear-gradient(90deg, var(--gold-light), var(--gold), #e8a030);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-desc {
-      font-size: 1.15rem; color: rgba(255,255,255,0.75);
-      max-width: 650px; margin: 0 auto 36px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-    .hero-stats {
-      display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
-    }
-    .hero-stat {
-      text-align: center;
-    }
-    .hero-stat-value {
-      font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 800;
-      color: #fff;
-    }
-    .hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1.5px; }
-    .scroll-indicator {
-      position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
-      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
-      color: rgba(255,255,255,0.4); font-size: 0.7rem; letter-spacing: 2px;
-      text-transform: uppercase; animation: float 3s ease-in-out infinite;
-    }
-    .scroll-indicator .arrow {
-      width: 24px; height: 24px; border-right: 2px solid rgba(255,255,255,0.4);
-      border-bottom: 2px solid rgba(255,255,255,0.4);
-      transform: rotate(45deg); margin-top: -8px;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(10px); }
-    }
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
-    /* ───────── ROUTE OVERVIEW ───────── */
-    .route-section { padding: 100px 0; }
-    .route-path {
-      display: flex; align-items: center; justify-content: center;
-      gap: 0; flex-wrap: wrap; margin-bottom: 60px;
-    }
-    .route-node {
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      padding: 16px 20px; position: relative;
-    }
-    .route-node-icon {
-      width: 56px; height: 56px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      background: var(--bg-card-alt); border: 2px solid var(--glass-border);
-      transition: all 0.3s;
-    }
-    .route-node:hover .route-node-icon {
-      border-color: var(--gold); transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(212,168,83,0.3);
-    }
-    .route-node-city {
-      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.9rem;
-    }
-    .route-node-dates { font-size: 0.7rem; color: var(--text-muted); }
-    .route-connector {
-      width: 50px; height: 2px;
-      background: linear-gradient(90deg, var(--gold) 0%, transparent 50%, var(--gold) 100%);
-      background-size: 12px 2px;
-      opacity: 0.4; margin-bottom: 28px;
-    }
+  /* ---- Nav ---- */
+  nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--border); }
+  .nav-inner { max-width: 1060px; margin: 0 auto; padding: 0 22px; display: flex; align-items: center; gap: 28px; height: 48px; overflow-x: auto; white-space: nowrap; scrollbar-width: none; }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-brand { font-weight: 600; font-size: 0.95rem; margin-right: auto; color: var(--ink); }
+  .nav-inner a { font-size: 0.78rem; color: var(--muted); }
+  .nav-inner a:hover { color: var(--ink); text-decoration: none; }
 
-    /* ───────── CITY SHOWCASE ───────── */
-    .cities-section { padding: 60px 0 100px; }
-    .city-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .city-card {
-      position: relative; border-radius: var(--radius); overflow: hidden;
-      height: 480px; cursor: pointer;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-    .city-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); }
-    .city-card-img {
-      position: absolute; inset: 0;
-      background-size: cover; background-position: center;
-      transition: transform 0.6s ease;
-    }
-    .city-card:hover .city-card-img { transform: scale(1.08); }
-    .city-card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 30%, rgba(6,8,15,0.9) 100%);
-    }
-    .city-card-content {
-      position: absolute; bottom: 0; left: 0; right: 0;
-      padding: 32px; z-index: 2;
-    }
-    .city-card-tag {
-      display: inline-block; padding: 4px 12px; border-radius: 50px;
-      font-size: 0.65rem; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; margin-bottom: 12px;
-    }
-    .tag-beijing { background: rgba(231,76,60,0.2); color: #ff6b6b; border: 1px solid rgba(231,76,60,0.3); }
-    .tag-harbin { background: rgba(94,206,246,0.15); color: var(--accent-ice); border: 1px solid rgba(94,206,246,0.3); }
-    .tag-shanghai { background: rgba(167,139,250,0.15); color: var(--accent-neon); border: 1px solid rgba(167,139,250,0.3); }
-    .city-card h3 {
-      font-size: 1.8rem; font-weight: 700; margin-bottom: 6px;
-    }
-    .city-card-sub { color: var(--text-muted); font-size: 0.85rem; }
-    .city-card-temp {
-      position: absolute; top: 20px; right: 20px; z-index: 3;
-      background: var(--glass); backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border); border-radius: var(--radius-sm);
-      padding: 10px 14px; text-align: center;
-    }
-    .city-card-temp .temp {
-      font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem;
-    }
-    .city-card-temp .temp-label { font-size: 0.6rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+  /* ---- Hero ---- */
+  .hero-text { text-align: center; padding: 86px 22px 46px; max-width: 880px; margin: 0 auto; }
+  .hero-eyebrow { font-size: 1.1rem; font-weight: 600; color: var(--muted); margin-bottom: 14px; }
+  .hero-text h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); line-height: 1.04; }
+  .hero-sub { margin: 20px auto 0; color: var(--muted); font-size: 1.3rem; max-width: 46ch; line-height: 1.4; }
+  .hero-photo { overflow: hidden; }
+  .hero-photo img { width: 100%; height: 58vh; max-height: 620px; object-fit: cover; transform: scale(1.08); will-change: transform; }
 
-    /* ───────── TIMELINE / ITINERARY ───────── */
-    .timeline-section { padding: 100px 0; }
-    .timeline {
-      position: relative; padding-left: 60px;
-    }
-    .timeline::before {
-      content: ''; position: absolute; left: 23px; top: 0; bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, var(--gold) 0%, var(--accent-ice) 50%, var(--accent-neon) 100%);
-      opacity: 0.3;
-    }
-    .timeline-day {
-      position: relative; margin-bottom: 64px;
-    }
-    .timeline-dot {
-      position: absolute; left: -48px; top: 6px;
-      width: 16px; height: 16px; border-radius: 50%;
-      border: 3px solid var(--gold); background: var(--bg-deep);
-      z-index: 2;
-    }
-    .timeline-day:nth-child(5) .timeline-dot,
-    .timeline-day:nth-child(6) .timeline-dot,
-    .timeline-day:nth-child(7) .timeline-dot { border-color: var(--accent-ice); }
-    .timeline-day:nth-child(8) .timeline-dot,
-    .timeline-day:nth-child(9) .timeline-dot,
-    .timeline-day:nth-child(10) .timeline-dot,
-    .timeline-day:nth-child(11) .timeline-dot { border-color: var(--accent-neon); }
+  /* ---- Stat row ---- */
+  .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 880px; margin: 0 auto; padding: 0 22px; }
+  .stat { text-align: center; padding: 8px 10px; border-left: 1px solid var(--border); }
+  .stat:first-child { border-left: none; }
+  .stat .n { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em; }
+  .stat .l { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 640px) { .stat-row { grid-template-columns: repeat(2, 1fr); row-gap: 28px; } .stat:nth-child(3) { border-left: none; } }
 
-    .timeline-day-header {
-      display: flex; align-items: baseline; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
-    }
-    .timeline-day-num {
-      font-family: 'Outfit', sans-serif; font-weight: 800;
-      font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;
-      color: var(--gold);
-    }
-    .timeline-day:nth-child(5) .timeline-day-num,
-    .timeline-day:nth-child(6) .timeline-day-num,
-    .timeline-day:nth-child(7) .timeline-day-num { color: var(--accent-ice); }
-    .timeline-day:nth-child(8) .timeline-day-num,
-    .timeline-day:nth-child(9) .timeline-day-num,
-    .timeline-day:nth-child(10) .timeline-day-num,
-    .timeline-day:nth-child(11) .timeline-day-num { color: var(--accent-neon); }
+  /* ---- Tables ---- */
+  .table-wrap { border-top: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  thead th { text-align: left; font-weight: 600; color: var(--ink); padding: 14px 16px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  tbody td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; color: var(--ink); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.time, th.time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td.num .usd { display: block; font-size: 0.8em; font-weight: 400; color: var(--muted); margin-top: 1px; }
+  td.num .split { display: block; font-size: 0.78em; font-weight: 400; color: var(--accent); margin-top: 3px; }
 
-    .timeline-day-date { font-size: 0.8rem; color: var(--text-muted); }
-    .timeline-day-title {
-      font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700;
-      margin-bottom: 20px;
-    }
-    .timeline-card {
-      background: var(--bg-card);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-      overflow: hidden;
-      transition: border-color 0.3s;
-    }
-    .timeline-card:hover { border-color: rgba(212,168,83,0.3); }
-    .timeline-card-body { padding: 24px; }
-    .timeline-card-img {
-      width: 100%; height: 260px; object-fit: cover;
-      border-bottom: 1px solid var(--glass-border);
-    }
-    .timeline-highlights {
-      display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px;
-    }
-    .highlight-item {
-      display: flex; align-items: flex-start; gap: 12px;
-    }
-    .highlight-time {
-      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.75rem;
-      color: var(--gold); white-space: nowrap; min-width: 100px;
-      padding-top: 2px;
-    }
-    .timeline-day:nth-child(5) .highlight-time,
-    .timeline-day:nth-child(6) .highlight-time,
-    .timeline-day:nth-child(7) .highlight-time { color: var(--accent-ice); }
-    .timeline-day:nth-child(8) .highlight-time,
-    .timeline-day:nth-child(9) .highlight-time,
-    .timeline-day:nth-child(10) .highlight-time,
-    .timeline-day:nth-child(11) .highlight-time { color: var(--accent-neon); }
+  /* ---- Budget table ---- */
+  .budget-table .usd { font-weight: 400; color: var(--muted); }
+  .budget-table .mid-col { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+  .budget-table thead th.mid-col { color: var(--accent); }
+  .budget-table .pill { display: inline-block; margin-top: 5px; padding: 2px 8px; border-radius: 9px; background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); font-size: 0.72em; font-weight: 600; white-space: nowrap; }
+  .budget-table tr.total-row td { border-top: 2px solid var(--border); font-weight: 700; padding-top: 18px; }
+  .budget-table tr.total-row .muted-sub { display: block; font-size: 0.74em; font-weight: 400; color: var(--muted); margin-top: 2px; }
+  .muted { color: var(--muted); }
+  .table-scroll { overflow-x: auto; }
 
-    .highlight-text { font-size: 0.9rem; color: var(--text-muted); }
-    .highlight-text strong { color: var(--text); font-weight: 600; }
-    .map-container {
-      width: 100%; height: 220px; border-radius: var(--radius-sm);
-      overflow: hidden; border: 1px solid var(--glass-border); margin-top: 16px;
-    }
-    .map-container iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
-    .map-link {
-      display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
-      font-size: 0.8rem; color: var(--gold); font-weight: 500;
-      padding: 8px 16px; border-radius: 50px;
-      background: rgba(212,168,83,0.08); border: 1px solid rgba(212,168,83,0.2);
-      transition: all 0.3s;
-    }
-    .map-link:hover {
-      background: rgba(212,168,83,0.15); border-color: rgba(212,168,83,0.4);
-      color: var(--gold-light);
-    }
+  .card {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04), 0 16px 32px -14px rgba(0,0,0,0.18);
+  }
+  .note { margin-top: 18px; padding: 18px 20px; font-size: 0.95rem; color: var(--muted); }
+  .note.card { margin-top: 18px; }
+  .note strong { color: var(--ink); }
 
-    .highlight-text em { color: var(--text-dim); font-style: normal; }
-    .optional-badge {
-      display: inline-block; padding: 1px 8px; margin-right: 6px; border-radius: 50px;
-      font-size: 0.65rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
-      color: var(--text-muted); border: 1px dashed var(--text-dim); vertical-align: middle;
-    }
+  /* ---- Guide ---- */
+  .guide { list-style: none; margin: 0; padding: 0; counter-reset: g; border-top: 1px solid var(--border); }
+  .guide li { counter-increment: g; display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+  .guide li::before { content: counter(g); flex: 0 0 auto; font-weight: 600; color: var(--accent); min-width: 1.4em; }
+  .guide li span { color: var(--muted); }
+  .guide li strong { color: var(--ink); }
 
-    /* ───────── PLACES / PRIORITY ───────── */
-    .places-section { padding: 100px 0; }
-    .priority-legend { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
-    .priority {
-      display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
-      padding: 3px 10px; border-radius: 50px; font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    .priority-must { background: rgba(212,168,83,0.15); color: var(--gold-light); border: 1px solid rgba(212,168,83,0.35); }
-    .priority-rec { background: rgba(94,206,246,0.1); color: var(--accent-ice); border: 1px solid rgba(94,206,246,0.3); }
-    .priority-opt { background: transparent; color: var(--text-muted); border: 1px dashed var(--text-dim); }
-    .places-city { margin-bottom: 48px; }
-    .places-city h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
-    .places-list {
-      background: var(--bg-card); border: 1px solid var(--glass-border);
-      border-radius: var(--radius); overflow: hidden;
-    }
-    .place-row {
-      display: grid; grid-template-columns: 130px 1.4fr 110px 1fr; gap: 16px;
-      align-items: start; padding: 16px 24px;
-      border-bottom: 1px solid var(--glass-border);
-    }
-    .place-row:last-child { border-bottom: none; }
-    .place-name { font-weight: 600; font-size: 0.95rem; }
-    .place-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 2px; }
-    .place-duration { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.85rem; }
-    .place-slot { font-size: 0.8rem; color: var(--text-muted); }
-    .food-row { grid-template-columns: 170px 1.6fr 130px; }
-    .places-callout {
-      margin-top: 12px; padding: 12px 16px; border-radius: var(--radius-sm);
-      background: rgba(212,168,83,0.06); border: 1px solid rgba(212,168,83,0.18);
-      font-size: 0.85rem; color: var(--text-muted);
-    }
-    .places-callout strong { color: var(--gold-light); }
-    .free-list { padding: 16px 24px; font-size: 0.9rem; color: var(--text-muted); }
-    .budget-row { grid-template-columns: 1.1fr 2fr 90px 100px 90px; align-items: center; }
-    .budget-row .place-duration { text-align: right; }
-    .budget-head { font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
-    .budget-head .place-duration { font-size: 0.7rem; }
-    .budget-mid { color: var(--gold-light); }
-    .budget-total { background: rgba(212,168,83,0.06); }
-    .budget-total .place-name, .budget-total .place-duration { font-size: 1.05rem; }
-    .budget-tips { list-style: none; display: flex; flex-direction: column; gap: 10px; padding: 20px 24px; }
-    .budget-tips li { font-size: 0.875rem; color: var(--text-muted); }
-    .budget-tips li strong { color: var(--text); }
-    .save-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 16px; }
-    .save-head {
-      padding: 16px 24px 0; font-family: 'Outfit', sans-serif;
-      font-weight: 700; font-size: 1.05rem;
-    }
+  /* ---- Route steps (from → to, by what) ---- */
+  .route-steps { list-style: none; margin: 0 0 40px; padding: 0; border-top: 1px solid var(--border); }
+  .route-steps > li { border-bottom: 1px solid var(--border); }
+  .route-steps > li.stop { padding: 16px 0; font-size: 1.05rem; }
+  .route-steps > li.stop .sub { display: block; font-weight: 400; color: var(--muted); font-size: 0.9rem; margin-top: 3px; }
+  .route-steps > li.via { padding: 10px 0 10px 22px; position: relative; color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+  .route-steps > li.via::before { content: "\2193"; position: absolute; left: 0; top: 9px; font-weight: 700; }
 
-    /* ───────── GALLERY ───────── */
-    .gallery-section { padding: 100px 0; background: var(--bg-card); }
-    .gallery-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
-    .gallery-filter {
-      font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 600;
-      padding: 8px 18px; border-radius: 50px; cursor: pointer;
-      background: transparent; color: var(--text-muted);
-      border: 1px solid var(--glass-border); transition: all 0.3s;
-    }
-    .gallery-filter:hover { color: var(--text); border-color: rgba(212,168,83,0.4); }
-    .gallery-filter.active { background: rgba(212,168,83,0.15); color: var(--gold-light); border-color: rgba(212,168,83,0.4); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 220px;
-      grid-auto-flow: dense;
-      gap: 12px;
-    }
-    .gallery-item {
-      border-radius: var(--radius-sm); overflow: hidden; position: relative;
-      cursor: zoom-in; padding: 0; border: 0; background: var(--bg-card-alt);
-      font: inherit; color: inherit; text-align: left;
-    }
-    .gallery-item.hidden { display: none; }
-    .gallery-item.big { grid-column: span 2; grid-row: span 2; }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-    .gallery-item img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .gallery-item:hover img { transform: scale(1.1); }
-    .gallery-item-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.7) 100%);
-      opacity: 0; transition: opacity 0.3s;
-      display: flex; align-items: flex-end; padding: 16px;
-    }
-    .gallery-item:hover .gallery-item-overlay,
-    .gallery-item:focus-visible .gallery-item-overlay { opacity: 1; }
-    .gallery-item-overlay span { font-size: 0.85rem; font-weight: 500; }
+  /* ---- Banners ---- */
+  .banner { margin: 48px 0; border-radius: 18px; }
+  .banner .photo { overflow: hidden; border-radius: 18px; }
+  .banner img { width: 100%; height: 320px; object-fit: cover; transform: scale(1.08); will-change: transform; display: block; }
+  .banner .cap { margin-top: 12px; text-align: center; }
+  .banner .cap .big { font-weight: 600; font-size: 1.15rem; }
+  .banner .cap .small { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
 
-    /* ───────── LIGHTBOX ───────── */
-    .lightbox {
-      position: fixed; inset: 0; z-index: 2000;
-      background: rgba(3,4,8,0.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-      display: none; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox.visible { opacity: 1; }
-    .lightbox-figure {
-      margin: 0; max-width: min(1200px, 92vw); display: flex; flex-direction: column;
-      align-items: center; gap: 14px;
-    }
-    .lightbox-img {
-      max-width: 100%; max-height: 78vh; object-fit: contain;
-      border-radius: var(--radius-sm); box-shadow: var(--shadow);
-      transition: opacity 0.25s;
-    }
-    .lightbox-img.loading { opacity: 0.2; }
-    .lightbox-caption { text-align: center; }
-    .lightbox-caption strong { font-family: 'Outfit', sans-serif; font-size: 1.1rem; display: block; }
-    .lightbox-caption span { font-size: 0.8rem; color: var(--text-muted); }
-    .lightbox-btn {
-      position: absolute; background: var(--glass); color: #fff;
-      border: 1px solid var(--glass-border); border-radius: 50%;
-      width: 48px; height: 48px; font-size: 1.4rem; line-height: 1;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.3s, border-color 0.3s;
-    }
-    .lightbox-btn:hover { background: rgba(212,168,83,0.2); border-color: rgba(212,168,83,0.5); }
-    .lightbox-close { top: 20px; right: 20px; }
-    .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
-    .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
-    .lightbox-counter {
-      position: absolute; top: 32px; left: 24px;
-      font-family: 'Outfit', sans-serif; font-size: 0.8rem; color: var(--text-muted); letter-spacing: 1px;
-    }
+  /* ---- Days ---- */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline::before { content: ""; position: absolute; left: 0; top: 10px; bottom: 10px; width: 1px; background: var(--border); }
+  .day { position: relative; padding: 36px 0; border-top: 1px solid var(--border); }
+  .day:first-of-type { border-top: none; }
+  .day::before { content: ""; position: absolute; left: -34.5px; top: 44px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg-alt); }
+  .day-meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 6px; }
+  .day h3 { font-size: 1.6rem; margin-bottom: 18px; }
+  .day-list { list-style: none; margin: 0; padding: 0; }
+  .day-list li { display: flex; gap: 20px; padding: 10px 0; align-items: baseline; opacity: 0; transform: translateY(8px); transition: opacity .5s ease, transform .5s ease; }
+  .day.in .day-list li { opacity: 1; transform: none; }
+  .day.in .day-list li:nth-child(1) { transition-delay: .05s; }
+  .day.in .day-list li:nth-child(2) { transition-delay: .12s; }
+  .day.in .day-list li:nth-child(3) { transition-delay: .19s; }
+  .day.in .day-list li:nth-child(4) { transition-delay: .26s; }
+  .day.in .day-list li:nth-child(5) { transition-delay: .33s; }
+  @media (prefers-reduced-motion: reduce) { .day-list li { opacity: 1; transform: none; transition: none; } }
+  .day-list .t { flex: 0 0 140px; font-weight: 600; font-size: 0.92rem; }
+  .day-list .d { flex: 1; font-size: 0.98rem; color: var(--muted); }
+  .day-list .d strong { color: var(--ink); font-weight: 500; }
+  .flag { font-size: 0.78rem; color: var(--accent); margin-left: 4px; }
 
-    /* ───────── TIPS SECTION ───────── */
-    .tips-section { padding: 100px 0; }
-    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .tip-card {
-      background: var(--bg-card); border: 1px solid var(--glass-border);
-      border-radius: var(--radius); padding: 28px;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .tip-card:hover { border-color: rgba(212,168,83,0.25); transform: translateY(-4px); }
-    .tip-card-icon { font-size: 2rem; margin-bottom: 16px; }
-    .tip-card h4 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
-    .tip-card p { color: var(--text-muted); font-size: 0.875rem; }
+  @media (max-width: 600px) {
+    .day-list li { flex-direction: column; gap: 2px; }
+    .day-list .t { flex: none; color: var(--ink); }
+  }
 
-    /* ───────── MAP SECTION ───────── */
-    .fullmap-section { padding: 80px 0; }
-    .fullmap-container {
-      width: 100%; height: 450px; border-radius: var(--radius);
-      overflow: hidden; border: 1px solid var(--glass-border);
-    }
-    .fullmap-container iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9); }
+  .map-wrap { border: 1px solid var(--border); border-radius: 18px; overflow: hidden; margin-top: 24px; }
+  .map-wrap iframe { width: 100%; height: 320px; border: 0; display: block; }
+  .map-wrap.sm iframe { height: 200px; }
+  .map-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; margin-top: 18px; font-size: 0.92rem; }
 
-    /* ───────── FOOTER ───────── */
-    .footer {
-      padding: 60px 0 40px;
-      border-top: 1px solid var(--glass-border);
-      text-align: center;
-    }
-    .footer-route {
-      font-family: 'Outfit', sans-serif; font-size: 1.1rem;
-      color: var(--text-muted); margin-bottom: 8px;
-    }
-    .footer-copy { font-size: 0.75rem; color: var(--text-dim); }
+  .locator-wrap { max-width: 640px; margin: 36px auto 44px; }
+  .locator-map { width: 100%; height: auto; display: block; aspect-ratio: 460 / 240; }
+  .locator-outline { fill: var(--bg-alt); stroke: var(--border); stroke-width: 1; stroke-linejoin: round; }
+  .locator-pin-ring { fill: var(--bg); stroke: var(--accent); stroke-width: 1.3; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.16)); }
+  .locator-pin { fill: var(--accent); }
+  .locator-badge { fill: var(--bg); stroke: var(--border); stroke-width: 0.75; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.12)); }
+  .locator-label { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em; fill: var(--ink); }
+  .locator-label.sm { font-size: 12px; }
+  .locator-sub { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 8.5px; fill: var(--muted); }
+  .locator-via-chip { fill: var(--accent); }
+  .locator-via { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; font-size: 8.5px; font-weight: 600; fill: #fff; }
 
-    /* ───────── RESPONSIVE ───────── */
-    @media (max-width: 900px) {
-      .city-grid { grid-template-columns: 1fr; }
-      .city-card { height: 360px; }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
-      .gallery-item.big { grid-column: span 2; grid-row: span 1; }
-      .gallery-item.wide { grid-column: span 1; }
-      .route-connector { width: 24px; }
-      .nav-links { display: none; }
-      .nav-mobile-toggle { display: block; }
-      .hero h1 { font-size: clamp(2rem, 8vw, 3.5rem); }
-      .place-row { grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 16px; }
-      .place-row .priority { grid-column: 1 / -1; justify-self: start; }
-      .food-row { grid-template-columns: 1fr auto; }
-      .food-row > .place-slot:first-child { grid-column: 1 / -1; }
-      .budget-row { grid-template-columns: 1fr 1fr 1fr; }
-      .budget-row > div:first-child, .budget-row > .place-slot { grid-column: 1 / -1; }
-      .budget-head > span:nth-child(-n+2), .budget-total > .place-slot { display: none; }
-      .budget-row .place-duration { text-align: left; }
-    }
-    @media (max-width: 600px) {
-      .hero-stats { gap: 24px; }
-      .timeline { padding-left: 40px; }
-      .timeline::before { left: 13px; }
-      .timeline-dot { left: -34px; width: 12px; height: 12px; }
-      .route-path { gap: 0; }
-      .route-node { padding: 8px 10px; }
-      .route-node-icon { width: 42px; height: 42px; font-size: 1.1rem; }
-      .route-connector { width: 16px; }
-      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
-      .gallery-item.big, .gallery-item.wide { grid-column: span 1; grid-row: span 1; }
-      .lightbox-prev, .lightbox-next { top: auto; bottom: 24px; transform: none; }
-      .lightbox-prev { left: calc(50% - 60px); }
-      .lightbox-next { right: calc(50% - 60px); }
-      .lightbox-img { max-height: 65vh; }
-    }
-  </style>
+  .route-wrap { max-width: 680px; margin: 36px auto 10px; }
+  .route-map { width: 100%; height: auto; display: block; aspect-ratio: 800 / 600; }
+  .route-line { fill: none; stroke: var(--accent); stroke-width: 2.25; stroke-linecap: round; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.16)); }
+  .route-spur { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 3 4; }
+  .route-map a { cursor: pointer; }
+  .route-map a .locator-label, .route-map a .locator-sub { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+
+  /* ---- Spotlight card (trending spot, image + text) ---- */
+  .spot-card { margin: 22px 0; overflow: hidden; }
+  .spot-card .spot-photo { overflow: hidden; }
+  .spot-card .spot-photo img { width: 100%; height: 230px; object-fit: cover; display: block; }
+  .spot-card .spot-body { padding: 20px 22px; }
+  .spot-card .spot-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .spot-card h4 { font-size: 1.1rem; margin: 0 0 6px; }
+  .spot-card p { margin: 0; font-size: 0.93rem; color: var(--muted); line-height: 1.5; }
+  .spot-card p strong { color: var(--ink); font-weight: 500; }
+  .spot-card .spot-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 12px; font-size: 0.82rem; color: var(--muted); }
+  .spot-card .spot-meta strong { color: var(--ink); font-weight: 600; }
+
+  /* ---- Checklist ---- */
+  .checklist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+  .checklist > li { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .checklist .box { flex: 0 0 18px; height: 18px; margin-top: 3px; border: 1.5px solid var(--border); border-radius: 50%; }
+  .checklist .box.done { background: var(--accent); border-color: var(--accent); }
+  .checklist .label strong { display: block; margin-bottom: 2px; font-weight: 500; }
+  .checklist .label span { color: var(--muted); font-size: 0.92rem; }
+
+  .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 36px; }
+  @media (max-width: 640px) { .cols-2 { grid-template-columns: 1fr; gap: 30px; } }
+  .cols-2 h4 { font-size: 1rem; font-weight: 600; margin: 0 0 14px; }
+  .cols-2 ul { margin: 0; padding-left: 1.1em; font-size: 0.95rem; color: var(--muted); }
+  .cols-2 li { margin-bottom: 9px; }
+  .cols-2 li strong { color: var(--ink); }
+
+  .subhead { font-size: 1.3rem; font-weight: 600; margin: 56px 0 18px; text-align: center; }
+  .subhead:first-of-type { margin-top: 0; }
+
+  footer { padding: 48px 0; text-align: center; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+  footer .route { font-size: 0.8rem; margin-bottom: 8px; }
+</style>
 </head>
 <body>
 
-<!-- ═══════════ NAVBAR ═══════════ -->
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="#" class="nav-brand"><span>🇨🇳</span> China Winter 2026</a>
-    <ul class="nav-links">
-      <li><a href="#route">Route</a></li>
-      <li><a href="#cities">Cities</a></li>
-      <li><a href="#itinerary">Itinerary</a></li>
-      <li><a href="#places">Places</a></li>
-      <li><a href="#tickets">Tickets</a></li>
-      <li><a href="#food">Food</a></li>
-      <li><a href="#budget">Budget</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#tips">Tips</a></li>
-      <li><a href="#map">Map</a></li>
-    </ul>
-    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">☰</button>
+<nav>
+  <div class="nav-inner">
+    <span class="nav-brand">China, Winter</span>
+    <a href="#schedule">Schedule</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#snowtown">Snow Town</a>
+    <a href="#places">Places</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#food">Food</a>
+    <a href="#budget">Budget</a>
+    <a href="#pack">Booking &amp; Pack</a>
+    <a href="#map">Map</a>
   </div>
 </nav>
 
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero" id="hero">
-  <div class="hero-bg" id="heroBg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge"><div class="dot"></div> Winter Adventure · Dec 19 – 29, 2026</div>
-    <h1>
-      <span class="line1">Journey Through</span>
-      <span class="line2">Ancient China</span>
-    </h1>
-    <p class="hero-desc">
-      From the frozen grandeur of the Great Wall to Harbin's magical ice kingdom
-      and Shanghai's electric skyline — 11 unforgettable days across the Middle Kingdom.
-    </p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-value">11</div>
-        <div class="hero-stat-label">Days</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">3</div>
-        <div class="hero-stat-label">Cities</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">5</div>
-        <div class="hero-stat-label">Flights</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-value">15+</div>
-        <div class="hero-stat-label">Landmarks</div>
+<header>
+  <div class="hero-text">
+    <div class="hero-eyebrow">Dec 19 – 29, 2026</div>
+    <h1>Eleven days through winter China.</h1>
+    <p class="hero-sub">Imperial Beijing, the ice kingdom of Harbin, a remote snow village, and the Shanghai skyline.</p>
+  </div>
+  <div class="hero-photo">
+    <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80&auto=format&fit=crop" alt="The Great Wall of China in winter" />
+  </div>
+</header>
+
+<div class="stat-row reveal" style="margin-top: 56px;">
+  <div class="stat"><div class="n">11</div><div class="l">Days</div></div>
+  <div class="stat"><div class="n">4</div><div class="l">Regions</div></div>
+  <div class="stat"><div class="n">5</div><div class="l">Flights booked</div></div>
+  <div class="stat"><div class="n">2</div><div class="l">Trains to book</div></div>
+</div>
+
+<main>
+
+<!-- SCHEDULE -->
+<section id="schedule" style="background: var(--bg-alt);">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">At a glance</span>
+      <h2>Flight &amp; train schedule</h2>
+      <p>Every flight, train, and bus, departure to arrival. <strong style="color:var(--ink)">(+1)</strong> lands the next calendar day. Rows marked <em>not booked</em> are planning targets, not real tickets yet.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Date</th><th class="time">Departs</th><th class="time">Arrives</th><th>Route</th><th>Mode</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Dec 19</td><td class="time">4:10 PM</td><td class="time">8:05 PM</td><td>HCMC (SGN) → Guangzhou (CAN)</td><td>Flight</td><td class="muted">CZ374</td></tr>
+            <tr><td>Dec 19→20</td><td class="time">10:00 PM</td><td class="time">12:55 AM <span class="muted">+1</span></td><td>Guangzhou (CAN) → Beijing (PKX)</td><td>Flight</td><td class="muted">CZ3165</td></tr>
+            <tr><td>Dec 22→23</td><td class="time">~9:26 PM</td><td class="time">~7:48 AM <span class="muted">+1</span></td><td>Beijing → Harbin</td><td>Sleeper train Z17</td><td class="muted">Not booked, but real — Beijing Railway Station → Harbin, ~10 h</td></tr>
+            <tr><td>Dec 23</td><td class="time">~7:48 AM</td><td class="time">~9:00 AM</td><td>Winter-gear shopping in Harbin</td><td>On foot</td><td class="muted">Breakfast, then wait for shops to open</td></tr>
+            <tr><td>Dec 23</td><td class="time">~10:30 AM*</td><td class="time">~12:00 PM*</td><td>Harbin → Yabuli West</td><td>Train</td><td class="muted">Not booked — later than the 6:27 AM D7963</td></tr>
+            <tr><td>Dec 23</td><td class="time">~1:00 PM*</td><td class="time">~3:30 PM*</td><td>Yabuli West → Snow Town</td><td>Bus</td><td class="muted">~¥85 at the counter</td></tr>
+            <tr><td>Dec 24</td><td class="time">~9:00 AM</td><td class="time">~2:00 PM</td><td>Snow Town → Harbin</td><td>Direct bus</td><td class="muted">~¥120, confirm with your guesthouse</td></tr>
+            <tr><td>Dec 25→26</td><td class="time">9:55 PM</td><td class="time">12:55 AM <span class="muted">+1</span></td><td>Harbin (HRB) → Shanghai (PVG)</td><td>Flight</td><td class="muted">9C6190, Spring Airlines</td></tr>
+            <tr><td>Dec 29</td><td class="time">9:30 AM</td><td class="time">12:40 PM</td><td>Shanghai (PVG) → Hong Kong (HKG)</td><td>Flight</td><td class="muted">CX365</td></tr>
+            <tr><td>Dec 29</td><td class="time">4:00 PM</td><td class="time">5:45 PM</td><td>Hong Kong (HKG) → Phnom Penh (KTI)</td><td>Flight</td><td class="muted">CX605</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-  <div class="scroll-indicator">
-    <span>Scroll</span>
-    <div class="arrow"></div>
+
+    <div class="note card reveal"><strong>Why the later train:</strong> shops aren't open at 7:48 AM when Z17 lands, so there's a shopping window before Snow Town. Prefer the 6:27 AM train instead? Shop Dec 25 afternoon or Dec 24 evening instead.</div>
+    <div class="note card reveal"><strong>Not fixed timetables:</strong> Snow Town bus times are informal shuttles, not fixed schedules — reconfirm locally. The sleeper and Yabuli train aren't booked yet; confirm on 12306.</div>
   </div>
 </section>
 
-<!-- ═══════════ ROUTE OVERVIEW ═══════════ -->
-<section class="route-section" id="route">
-  <div class="container">
-    <div class="reveal" style="text-align:center;">
-      <div class="section-label">Route Overview</div>
-      <h2 class="section-title" style="margin:0 auto 16px;">The Journey</h2>
-      <p class="section-subtitle" style="margin:0 auto 48px;">Spanning 4,000 km from tropical Saigon through imperial Beijing, frozen Harbin, cosmopolitan Shanghai, and back via Hong Kong.</p>
-    </div>
-    <div class="route-path reveal">
-      <div class="route-node">
-        <div class="route-node-icon">🛫</div>
-        <div class="route-node-city">Ho Chi Minh</div>
-        <div class="route-node-dates">Dec 19</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">🏛️</div>
-        <div class="route-node-city">Guangzhou</div>
-        <div class="route-node-dates">Transit</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">🏯</div>
-        <div class="route-node-city">Beijing</div>
-        <div class="route-node-dates">Dec 20–23</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">❄️</div>
-        <div class="route-node-city">Harbin</div>
-        <div class="route-node-dates">Dec 23–25</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">🌃</div>
-        <div class="route-node-city">Shanghai</div>
-        <div class="route-node-dates">Dec 26–29</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">✈️</div>
-        <div class="route-node-city">Hong Kong</div>
-        <div class="route-node-dates">Transit</div>
-      </div>
-      <div class="route-connector"></div>
-      <div class="route-node">
-        <div class="route-node-icon">🏠</div>
-        <div class="route-node-city">Phnom Penh</div>
-        <div class="route-node-dates">Dec 29</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ CITIES SHOWCASE ═══════════ -->
-<section class="cities-section" id="cities">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Destinations</div>
-      <h2 class="section-title">Three Iconic Cities</h2>
-      <p class="section-subtitle">Each city offers a dramatically different winter experience — ancient grandeur, frozen fantasy, and neon-lit modernity.</p>
-    </div>
-    <div class="city-grid">
-      <!-- Beijing -->
-      <div class="city-card reveal" onclick="document.getElementById('day2').scrollIntoView({behavior:'smooth'})">
-        <div class="city-card-img" style="background-image:url('https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=900&q=80&auto=format&fit=crop')"></div>
-        <div class="city-card-overlay"></div>
-        <div class="city-card-temp">
-          <div class="temp">-4°C</div>
-          <div class="temp-label">Avg Dec</div>
-        </div>
-        <div class="city-card-content">
-          <div class="city-card-tag tag-beijing">Imperial Capital</div>
-          <h3>Beijing</h3>
-          <p class="city-card-sub">Forbidden City · Great Wall · Summer Palace · Temple of Heaven</p>
-        </div>
-      </div>
-      <!-- Harbin -->
-      <div class="city-card reveal" style="transition-delay:0.15s" onclick="document.getElementById('day5').scrollIntoView({behavior:'smooth'})">
-        <div class="city-card-img" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg/960px-Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg')"></div>
-        <div class="city-card-overlay"></div>
-        <div class="city-card-temp">
-          <div class="temp" style="color:var(--accent-ice)">-22°C</div>
-          <div class="temp-label">Avg Dec</div>
-        </div>
-        <div class="city-card-content">
-          <div class="city-card-tag tag-harbin">Ice Kingdom</div>
-          <h3>Harbin</h3>
-          <p class="city-card-sub">Ice & Snow World · Tiger Park · Russian Heritage · Frozen River</p>
-        </div>
-      </div>
-      <!-- Shanghai -->
-      <div class="city-card reveal" style="transition-delay:0.3s" onclick="document.getElementById('day8').scrollIntoView({behavior:'smooth'})">
-        <div class="city-card-img" style="background-image:url('https://images.unsplash.com/photo-1548919973-5cef591cdbc9?w=900&q=80&auto=format&fit=crop')"></div>
-        <div class="city-card-overlay"></div>
-        <div class="city-card-temp">
-          <div class="temp" style="color:var(--accent-neon)">7°C</div>
-          <div class="temp-label">Avg Dec</div>
-        </div>
-        <div class="city-card-content">
-          <div class="city-card-tag tag-shanghai">Modern Marvel</div>
-          <h3>Shanghai</h3>
-          <p class="city-card-sub">The Bund · Yu Garden · French Concession · Lujiazui Skyline</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ ITINERARY TIMELINE ═══════════ -->
-<section class="timeline-section" id="itinerary">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Day by Day</div>
-      <h2 class="section-title">The Complete Itinerary</h2>
-      <p class="section-subtitle">Every landmark, every meal, every magical moment — carefully planned for the ultimate winter experience.</p>
+<!-- ITINERARY -->
+<section id="itinerary">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Day by day</span>
+      <h2>The itinerary</h2>
+      <p>Eleven days, in order. Times are the plan, not a promise — build in slack around anything marked unbooked.</p>
     </div>
 
     <div class="timeline">
+    <div class="day reveal">
+      <div class="day-meta">Day 01 — Sat, Dec 19</div>
+      <h3>Transit to Beijing</h3>
+      <ul class="day-list">
+        <li><span class="t">4:10–8:05 PM</span><span class="d">Fly <strong>SGN → Guangzhou (CAN)</strong>, China Southern CZ374.</span></li>
+        <li><span class="t">8:05–10:00 PM</span><span class="d">Layover at CAN — clear immigration, confirm your bag tag reads PKX.</span></li>
+        <li><span class="t">10:00 PM–12:55 AM</span><span class="d">Fly <strong>CAN → Beijing Daxing (PKX)</strong>, CZ3165. Lands early Dec 20 — book your Beijing hotel from Dec 19 and ask for a ~2:30 AM check-in, or use an airport hotel/pod.</span></li>
+      </ul>
+    </div>
 
-      <!-- ─── DAY 1 ─── -->
-      <div class="timeline-day reveal" id="day1">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 01</span>
-          <span class="timeline-day-date">Saturday, December 19</span>
-        </div>
-        <h3 class="timeline-day-title">✈️ Departure & Transit to Beijing</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Beijing_Daxing_International_Airport_Terminal_20191005.jpg/960px-Beijing_Daxing_International_Airport_Terminal_20191005.jpg" alt="Beijing Daxing Airport terminal" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">16:10 – 20:05</span>
-                <span class="highlight-text">Fly <strong>SGN → Guangzhou (CAN)</strong> on China Southern CZ374</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">22:00 – 00:55</span>
-                <span class="highlight-text">Connect <strong>CAN → Beijing Daxing (PKX)</strong> on CZ3165. Arrive at 00:55 AM.</span>
-              </div>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Beijing+Daxing+International+Airport" target="_blank" rel="noopener">📍 View Beijing Daxing Airport on Google Maps</a>
+    <div class="banner reveal">
+      <div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg/960px-Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg" alt="The Forbidden City seen from Jingshan Park"></div>
+      <div class="cap"><div class="big">Beijing</div><div class="small">Dec 20 – 22</div></div>
+    </div>
+
+    <div class="day reveal">
+      <div class="day-meta">Day 02 — Sun, Dec 20</div>
+      <h3>Imperial central axis</h3>
+      <ul class="day-list">
+        <li><span class="t">Morning</span><span class="d">Sleep in after the late arrival.</span></li>
+        <li><span class="t">11:30–12:30</span><span class="d"><strong>Tiananmen Square</strong> — reservation required (free, 1–7 days ahead via WeChat, passport needed).</span></li>
+        <li><span class="t">12:30–4:00 PM</span><span class="d"><strong>The Forbidden City</strong> — closed Mondays, so today's essential. Winter hours 8:30 AM–4:30 PM, last entry 3:30 PM.</span></li>
+        <li><span class="t">4:15–5:00 PM</span><span class="d"><strong>Jingshan Park</strong> — climb to Wanchun Pavilion for sunset (~4:50 PM) over the palace roofs.</span></li>
+        <li><span class="t">6:00–9:00 PM</span><span class="d"><strong>Wangfujing Avenue</strong> — copper-pot lamb hotpot dinner; Peking Duck is saved for Day 4.</span></li>
+      </ul>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://images.unsplash.com/photo-1517009832553-cfcd067adf81?w=1200&q=80&auto=format&fit=crop" alt="Red paper lanterns strung over a Beijing street at night"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>Longfu Temple Street 隆福寺街区</h4>
+          <p>A 2026 breakout — a guochao (national-style) night market with neon signage layered over a centuries-old temple street. Record Spring Festival crowds this year (~130k visitors on the busiest day). A 15-minute walk from Wangfujing.</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> NW corner of Dongsi, Dongcheng</span>
+            <span><strong>Best</strong> After dark, for the lights</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- ─── DAY 2 ─── -->
-      <div class="timeline-day reveal" id="day2">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 02</span>
-          <span class="timeline-day-date">Sunday, December 20</span>
-        </div>
-        <h3 class="timeline-day-title">🏯 Beijing's Imperial Central Axis</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg/960px-Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg" alt="Forbidden City seen from Jingshan Park" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">11:30 – 12:30</span>
-                <span class="highlight-text"><strong>Tiananmen Square</strong> — Free, but reserve 1–7 days ahead (WeChat, by passport). Pass security with the same passport, walk north toward the Meridian Gate.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">12:30 – 16:00</span>
-                <span class="highlight-text"><strong>The Forbidden City (Palace Museum)</strong> — Walk the central imperial axis, explore the Treasure Gallery. <em>Last entry 15:30.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">16:15 – 17:00</span>
-                <span class="highlight-text"><strong>Jingshan Park</strong> — Climb to Wanchun Pavilion for a panoramic sunset (~16:50) over the golden roofs.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">18:00 – 21:00</span>
-                <span class="highlight-text"><strong>Wangfujing Avenue</strong> — Copper-pot lamb hotpot dinner & stroll the pedestrian shopping avenue.</span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Forbidden+City+Beijing&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Forbidden+City+Beijing" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+    <div class="day reveal">
+      <div class="day-meta">Day 03 — Mon, Dec 21</div>
+      <h3>The Great Wall</h3>
+      <ul class="day-list">
+        <li><span class="t">8:30 AM–3:30 PM</span><span class="d"><strong>Mutianyu Great Wall</strong> — the Forbidden City and Temple of Heaven are closed Mondays, so today's the day for the Wall. Cable car up to Tower 14, walk to Tower 20, toboggan or chairlift down from Tower 6.<span class="flag">No toboggan if snowing</span></span></li>
+        <li><span class="t">4:30–8:30 PM</span><span class="d"><strong>Shichahai Lakes &amp; Hutongs</strong> — Yandai Xiejie, lakeside bars, dinner in the courtyard alleys.</span></li>
+      </ul>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://images.unsplash.com/photo-1539738084316-53d142fca864?w=1200&q=80&auto=format&fit=crop" alt="Chinese lanterns lit up over a narrow street at night"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>Wudaoying Hutong 五道营胡同</h4>
+          <p>Called "the next Nanluoguxiang" but quieter and more artsy — a 632 m hutong near the Lama Temple packed with boutique cafes, bookshops and bars. A gentler, more photogenic alternative to Shichahai if you want fewer crowds.</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> Andingmen, near Yonghegong</span>
+            <span><strong>Best</strong> Late afternoon into evening</span>
           </div>
         </div>
       </div>
-
-      <!-- ─── DAY 3 ─── -->
-      <div class="timeline-day reveal" id="day3">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 03</span>
-          <span class="timeline-day-date">Monday, December 21</span>
-        </div>
-        <h3 class="timeline-day-title">🧱 The Great Wall & Lakeside Hutongs</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://images.unsplash.com/photo-1608037521244-f1c6c7635194?w=900&q=80&auto=format&fit=crop" alt="Great Wall of China" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">08:30 – 15:30</span>
-                <span class="highlight-text"><strong>Mutianyu Great Wall</strong> — Cable car up to Watchtower 14, walk to Watchtower 20 (highest point), toboggan slide down! <em>Toboggan doesn't run in snow/rain — chairlift instead.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">16:30 – 20:30</span>
-                <span class="highlight-text"><span class="optional-badge">Optional</span><strong>Shichahai Lakes & Hutongs</strong> — Yandai Xiejie, lakeside bars, dinner in historic courtyard alleys. <em>Ice rinks usually open late Dec–mid Jan, so no skating yet.</em></span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Mutianyu+Great+Wall&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Mutianyu+Great+Wall" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://images.unsplash.com/photo-1766650551665-45f1998bd671?w=1200&q=80&auto=format&fit=crop" alt="Crowd dancing under lights at an EDM nightclub"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>Super Miami 超级迈阿密</h4>
+          <p>Gongti's top-ranked EDM club right now — 18 m ceiling, a spring-loaded dance floor, big-name DJ nights. <strong>No cover</strong>, pay as you go at the bar (tables need a minimum spend and advance booking on weekends).</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> Gongti West Rd 6, 2F</span>
+            <span><strong>Hours</strong> 5 PM – 6 AM</span>
           </div>
         </div>
       </div>
+      <p class="muted reveal" style="margin-top: 4px; font-size: 0.88rem; text-align: center;">Out late? Summer Palace on Day 4 is already flagged as the first thing to drop — sleep in instead.</p>
+    </div>
 
-      <!-- ─── DAY 4 ─── -->
-      <div class="timeline-day reveal" id="day4">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 04</span>
-          <span class="timeline-day-date">Tuesday, December 22</span>
-        </div>
-        <h3 class="timeline-day-title">🏔️ Imperial Gardens & Southern Heritage</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Longevity_Hill_of_the_Summer_Palace.jpg/960px-Longevity_Hill_of_the_Summer_Palace.jpg" alt="Summer Palace Beijing" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">09:00 – 12:30</span>
-                <span class="highlight-text"><strong>Summer Palace</strong> — Longevity Hill, the 728m painted Long Corridor, frozen Kunming Lake.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">14:00 – 16:00</span>
-                <span class="highlight-text"><strong>Temple of Heaven</strong> — Hall of Prayer for Good Harvests, Echo Wall, Circular Mound Altar. <em>Halls last entry 16:30.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">17:00 – 21:00</span>
-                <span class="highlight-text"><strong>Qianmen Street & Dashilar</strong> — ~2 km NW (walk or Metro Line 8). Street snacks, legendary Peking Duck dinner.</span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Temple+of+Heaven+Beijing&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Temple+of+Heaven+Beijing" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+    <div class="day reveal">
+      <div class="day-meta">Day 04 — Tue, Dec 22</div>
+      <h3>Last Beijing day, then the overnight sleeper</h3>
+      <ul class="day-list">
+        <li><span class="t">9:00–12:30 PM</span><span class="d"><strong>Summer Palace</strong> — Longevity Hill, the Long Corridor, frozen Kunming Lake. First to drop if the day feels rushed.</span></li>
+        <li><span class="t">2:00–4:00 PM</span><span class="d"><strong>Temple of Heaven</strong> — halls close at 5:00 PM, last entry 4:30 PM.</span></li>
+        <li><span class="t">5:00–7:30 PM</span><span class="d"><strong>Qianmen Street &amp; Dashilar</strong> — Peking Duck dinner, kept efficient, a train to catch.</span></li>
+        <li><span class="t">~9:26 PM</span><span class="d">Board <strong>Z17</strong>, Beijing Railway Station → Harbin, ~10 h.<span class="flag">Not booked</span> Confirm the arrival station when booking — sources disagree on Harbin vs. Harbin West.</span></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="banner reveal">
+      <div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg/960px-Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg" alt="Saint Sophia Cathedral during the Harbin Ice and Snow Festival"></div>
+      <div class="cap"><div class="big">Harbin &amp; Snow Town</div><div class="small">Dec 23 – 25</div></div>
+    </div>
+
+    <div class="timeline">
+    <div class="day reveal">
+      <div class="day-meta">Day 05 — Wed, Dec 23</div>
+      <h3>Shopping, then on to Snow Town</h3>
+      <ul class="day-list">
+        <li><span class="t">~7:48 AM</span><span class="d">Arrive in Harbin on <strong>Z17</strong> — bundle up immediately, drop bags at left-luggage, grab breakfast.</span></li>
+        <li><span class="t">~9:00–10:00 AM</span><span class="d">Winter-gear shopping once stores open — boots, gloves, extra thermals, heat packs near Zhongyang Street.</span></li>
+        <li><span class="t">~10:30–11:00 AM</span><span class="d">Train to <strong>Yabuli West</strong>.<span class="flag">Not booked</span> Later than the 6:27 AM D7963.</span></li>
+        <li><span class="t">~1:00 PM</span><span class="d">Bus to <strong>Snow Town</strong>, ~¥85 — reconfirm the schedule the moment you arrive at Yabuli West.</span></li>
+        <li><span class="t">~3:30 PM–eve.</span><span class="d">Settle into your guesthouse, then walk <strong>Xueyun Street</strong> lit up after dark. Sleep early — tomorrow starts before dawn.</span></li>
+      </ul>
+      <p style="margin-top: 16px; font-size: 0.92rem;"><a href="#snowtown">↓ Full step-by-step guide to this leg</a></p>
+    </div>
+
+    <div class="day reveal">
+      <div class="day-meta">Day 06 — Thu, Dec 24</div>
+      <h3>Bangchuishan sunrise, back for Ice World</h3>
+      <ul class="day-list">
+        <li><span class="t">~6:00–7:30 AM</span><span class="d"><strong>Bangchuishan sunrise hike</strong> — the classic shot. Headlamp needed; ask your host for the trailhead.</span></li>
+        <li><span class="t">~9:00–9:30 AM</span><span class="d">Direct bus back to Harbin, ~¥120, ~4.5–5.5 h.</span></li>
+        <li><span class="t">~2:00–3:00 PM</span><span class="d">Back in Harbin — check into your hotel, warm up.</span></li>
+        <li><span class="t">~3:30–8:00 PM</span><span class="d"><strong>Harbin Ice &amp; Snow World</strong> — arriving later than a full day allows, so mostly after dark. Scan the WeChat QR on arrival for the queue.</span></li>
+        <li><span class="t">Evening</span><span class="d"><strong>Zhongyang Street &amp; Songhua River</strong> — Madieer popsicle, Russian dinner.</span></li>
+      </ul>
+    </div>
+
+    <div class="day reveal">
+      <div class="day-meta">Day 07 — Fri, Dec 25</div>
+      <h3>Tigers, St. Sophia's, fly to Shanghai</h3>
+      <ul class="day-list">
+        <li><span class="t">9:00–11:00 AM</span><span class="d"><strong>Siberian Tiger Park</strong> — caged safari bus through snowy habitats.</span></li>
+        <li><span class="t">11:30–12:30 PM</span><span class="d"><strong>St. Sophia's Church</strong> — daylight visit this time.</span></li>
+        <li><span class="t">12:30–6:00 PM</span><span class="d">Check out, lunch, pack, rest — your one slack block of the trip.</span></li>
+        <li><span class="t">9:55 PM–12:55 AM</span><span class="d">Fly <strong>Harbin (HRB) → Shanghai (PVG)</strong>, Spring Airlines 9C6190.<span class="flag">7 kg carry-on</span></span></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="banner reveal">
+      <div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/The_Bund%2C_Shanghai_at_night.jpg/960px-The_Bund%2C_Shanghai_at_night.jpg" alt="The Bund in Shanghai at night"></div>
+      <div class="cap"><div class="big">Shanghai</div><div class="small">Dec 26 – 28</div></div>
+    </div>
+
+    <div class="timeline">
+    <div class="day reveal">
+      <div class="day-meta">Day 08 — Sat, Dec 26</div>
+      <h3>Nanjing Road, Lujiazui, the Bund</h3>
+      <ul class="day-list">
+        <li><span class="t">11:30–2:00 PM</span><span class="d"><strong>People's Square &amp; Nanjing Road</strong> — shengjianbao or xiaolongbao for lunch.</span></li>
+        <li><span class="t">2:30–5:30 PM</span><span class="d"><strong>Lujiazui</strong> — the skybridge around Oriental Pearl Tower and Shanghai Tower.</span></li>
+        <li><span class="t">5:45–9:00 PM</span><span class="d">Ferry across the river as the skyline lights come on (~6 PM), then walk <strong>the Bund</strong>.</span></li>
+      </ul>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/%E4%B8%8A%E6%B5%B7%E7%99%BD%E7%8E%89%E5%85%B0%E5%B9%BF%E5%9C%BA.jpg/960px-%E4%B8%8A%E6%B5%B7%E7%99%BD%E7%8E%89%E5%85%B0%E5%B9%BF%E5%9C%BA.jpg" alt="White Magnolia Plaza tower on the North Bund, Shanghai"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>The Stage, White Magnolia Plaza 北外滩白玉兰观景台</h4>
+          <p>Shanghai's newest skyline viewpoint — a 320 m open-air deck on the North Bund that opened in 2025 and has been the city's most-photographed sunset/night spot since. 360° views of both riverbanks, just upstream from where you're already standing tonight.</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> North Bund, Int'l Cruise Terminal (M12)</span>
+            <span><strong>Price</strong> ~¥230, ~¥320 sunset slot</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- ─── DAY 5 ─── -->
-      <div class="timeline-day reveal" id="day5">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 05</span>
-          <span class="timeline-day-date">Wednesday, December 23</span>
-        </div>
-        <h3 class="timeline-day-title">🚄 Bullet Train to Harbin & Russian Downtown</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Saint_Sophia_Cathedral%2C_Harbin_4.jpg/960px-Saint_Sophia_Cathedral%2C_Harbin_4.jpg" alt="Saint Sophia Church Harbin" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">08:00 – 13:00</span>
-                <span class="highlight-text"><strong>High-speed train Beijing Chaoyang → Harbin West</strong> — ~4.5–5.5 h bullet train (e.g. G901), then 30–40 min to Daoli District.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">15:30 – 16:30</span>
-                <span class="highlight-text"><strong>Saint Sophia's Church</strong> — 1907 Neo-Byzantine cathedral, red brick glowing at dusk.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">17:30 – 21:00</span>
-                <span class="highlight-text"><strong>Zhongyang Street & Songhua River</strong> — Madieer popsicle in -20°C, Russian dinner, frozen river walk.</span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Saint+Sophia+Cathedral+Harbin&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Zhongyang+Street+Harbin" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+    <div class="day reveal">
+      <div class="day-meta">Day 09 — Sun, Dec 27</div>
+      <h3>Yu Garden &amp; the French Concession</h3>
+      <ul class="day-list">
+        <li><span class="t">9:00–12:00 PM</span><span class="d"><strong>Yu Garden</strong> — closed Mondays, so today's your one shot.</span></li>
+        <li><span class="t">12:30–2:30 PM</span><span class="d"><strong>Xintiandi &amp; Tianzifang</strong>.</span></li>
+        <li><span class="t">3:00–5:00 PM</span><span class="d"><strong>Anfu Road &amp; Wukang Road</strong>, Former French Concession.</span></li>
+        <li><span class="t">5:30–9:00 PM</span><span class="d"><strong>Jing'an Temple</strong> lit up, dinner on Nanjing West Road.</span></li>
+      </ul>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Appearance_of_Tank_Shanghai%2CJul_2020.jpg/960px-Appearance_of_Tank_Shanghai%2CJul_2020.jpg" alt="Tank Shanghai, a converted oil-tank contemporary art space on the West Bund"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>Tank Shanghai 油罐艺术中心</h4>
+          <p>Five disused oil tanks on the West Bund turned into a contemporary art park — grounds and lawn are free to walk even without an exhibition ticket, and it sits right along the Xuhui riverside art strip, a short ride from Wukang Road.</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> Longteng Ave 2380, Xuhui (M11 Yunjin Rd)</span>
+            <span><strong>Hours</strong> Tue–Fri 12–6, Sat–Sun 10–6, closed Mon</span>
           </div>
         </div>
       </div>
-
-      <!-- ─── DAY 6 ─── -->
-      <div class="timeline-day reveal" id="day6">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 06</span>
-          <span class="timeline-day-date">Thursday, December 24</span>
-        </div>
-        <h3 class="timeline-day-title">🏰 Tigers & Ice World Magic</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E5%93%88%E5%B0%94%E6%BB%A8%E5%86%B0%E9%9B%AA%E5%A4%A7%E4%B8%96%E7%95%8C%E3%80%81The_Eleventh_Harbin_Ice_Snow_World%E3%80%81IMG_0027.JPG/960px-%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E5%93%88%E5%B0%94%E6%BB%A8%E5%86%B0%E9%9B%AA%E5%A4%A7%E4%B8%96%E7%95%8C%E3%80%81The_Eleventh_Harbin_Ice_Snow_World%E3%80%81IMG_0027.JPG" alt="Harbin Ice and Snow World" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">09:00 – 11:00</span>
-                <span class="highlight-text"><strong>Siberian Tiger Park</strong> — Caged safari bus through snowy habitats with Amur tigers. <em>Taxi ~25 min from Daoli.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">11:30 – 13:30</span>
-                <span class="highlight-text"><span class="optional-badge">Optional</span><strong>Sun Island Snow Sculpture Expo</strong> — Only if open (opened Dec 27 in 2024 & 2025). Otherwise: long hot lunch, head to Ice World early.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">14:00 – 20:00</span>
-                <span class="highlight-text"><strong>Harbin Ice & Snow World</strong> — Crystal ice castles, new Frozen-themed zone, Super Ice Slide, Ferris Wheel, lights on at dusk! <em>2026 opening date TBA (2025: Dec 17).</em></span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Harbin+Ice+and+Snow+World&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Harbin+Ice+and+Snow+World" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+      <div class="card spot-card reveal">
+        <div class="spot-photo"><img src="https://images.unsplash.com/photo-1743203559734-b6ac14e5e0a1?w=1200&q=80&auto=format&fit=crop" alt="Dancers under colorful nightclub lights"></div>
+        <div class="spot-body">
+          <span class="spot-tag">Optional · trending in 2026</span>
+          <h4>INS LAND INS新乐园</h4>
+          <p>Shanghai's viral nightlife complex inside Fuxing Park — ~10 clubs and bars across multiple floors under one all-access pass, a new theme every 45 days. The clubbing story of the year on Xiaohongshu and Douyin.</p>
+          <div class="spot-meta">
+            <span><strong>Where</strong> 109 Yandang Rd, Fuxing Park, Huangpu</span>
+            <span><strong>Hours</strong> 3 PM – 6 AM</span>
+            <span><strong>Pass</strong> ~¥288 all-floor</span>
           </div>
         </div>
       </div>
+      <p class="muted reveal" style="margin-top: 4px; font-size: 0.88rem; text-align: center;">Day 10 is already a flexible remote-work day — easy to sleep in and work from bed if you're out late.</p>
+    </div>
 
-      <!-- ─── DAY 7 ─── -->
-      <div class="timeline-day reveal" id="day7">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 07</span>
-          <span class="timeline-day-date">Friday, December 25</span>
-        </div>
-        <h3 class="timeline-day-title">🎄 Russian Estate & Flight to Shanghai</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Zhongyang_Street%2C_Central_Street%2C_Harbin_06.01.2026.jpg/960px-Zhongyang_Street%2C_Central_Street%2C_Harbin_06.01.2026.jpg" alt="Zhongyang Street, Harbin in winter" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">09:00 – 13:00</span>
-                <span class="highlight-text"><span class="optional-badge">Optional</span><strong>Volga Manor</strong> — Snow-covered Russian estate, St. Nicholas replicas, birch forests & snow tubing. <em>45–60 min each way, leave by 13:00.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">14:00 – 17:30</span>
-                <span class="highlight-text"><strong>Laodaowai Baroque Quarter</strong> — European facades hiding Chinese courtyards, pork dumplings & iron-pot stew.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">21:55 – 00:55</span>
-                <span class="highlight-text">Fly <strong>Harbin (HRB) → Shanghai Pudong (PVG)</strong> on Spring Airlines 9C6190.</span>
-              </div>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Volga+Manor+Harbin" target="_blank" rel="noopener">📍 View Volga Manor on Google Maps</a>
-          </div>
-        </div>
-      </div>
+    <div class="day reveal">
+      <div class="day-meta">Day 10 — Mon, Dec 28</div>
+      <h3>Remote work day</h3>
+      <ul class="day-list">
+        <li><span class="t">All day</span><span class="d">Indoors — test your VPN early, order delivery via Meituan or Ele.me.</span></li>
+        <li><span class="t">6:15–9:30 PM</span><span class="d">Easy dinner nearby, last souvenirs, pack for tomorrow.</span></li>
+      </ul>
+    </div>
 
-      <!-- ─── DAY 8 ─── -->
-      <div class="timeline-day reveal" id="day8">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 08</span>
-          <span class="timeline-day-date">Saturday, December 26</span>
-        </div>
-        <h3 class="timeline-day-title">🌃 Nanjing Road, Lujiazui & The Bund</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/The_Bund%2C_Shanghai_at_night.jpg/960px-The_Bund%2C_Shanghai_at_night.jpg" alt="Shanghai Bund at night" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">11:30 – 14:00</span>
-                <span class="highlight-text"><strong>People's Square & Nanjing Road</strong> — Shengjianbao & xiaolongbao for lunch, stroll east toward the river.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">14:30 – 17:30</span>
-                <span class="highlight-text"><strong>Lujiazui Financial District</strong> — Oriental Pearl Tower, Shanghai Tower 118th-floor observation deck, skybridge walk.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">17:45 – 21:00</span>
-                <span class="highlight-text"><strong>2 RMB Ferry & The Bund</strong> — Cross Huangpu River at sunset, walk the legendary Bund promenade as the skyline blazes.</span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=The+Bund+Shanghai&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=The+Bund+Shanghai" target="_blank" rel="noopener">📍 Open in Google Maps</a>
-          </div>
-        </div>
-      </div>
+    <div class="day reveal">
+      <div class="day-meta">Day 11 — Tue, Dec 29</div>
+      <h3>Home via Hong Kong</h3>
+      <ul class="day-list">
+        <li><span class="t">6:00–6:45 AM</span><span class="d">To PVG — taxi, or the 6:45 AM first Maglev from Longyang Road.</span></li>
+        <li><span class="t">9:30 AM–12:40 PM</span><span class="d">Fly <strong>PVG → HKG</strong>, Cathay Pacific CX365.</span></li>
+        <li><span class="t">12:40–4:00 PM</span><span class="d">Layover — bags checked through. Roast goose or dim sum in T1.</span></li>
+        <li><span class="t">4:00–5:45 PM</span><span class="d">Fly <strong>HKG → Phnom Penh</strong>, CX605. Arrive home.</span></li>
+      </ul>
+    </div>
+    </div>
 
-      <!-- ─── DAY 9 ─── -->
-      <div class="timeline-day reveal" id="day9">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 09</span>
-          <span class="timeline-day-date">Sunday, December 27</span>
-        </div>
-        <h3 class="timeline-day-title">🏮 Yu Garden & French Concession</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Shanghai_-_Yu_Garden_-_0034.jpg/960px-Shanghai_-_Yu_Garden_-_0034.jpg" alt="Yu Garden Shanghai" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">09:00 – 12:00</span>
-                <span class="highlight-text"><strong>Classical Yu Garden & Bazaar</strong> — Ming Dynasty garden, Zig-Zag Bridge, Yuyuan Old Street treasures. <em>Closed Mondays; last entry 16:00.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">12:30 – 14:30</span>
-                <span class="highlight-text"><strong>Xintiandi → Tianzifang</strong> — Restored Shikumen lanes and alley shops, 15 min walk apart (Metro Line 10 from Yu Garden).</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">15:00 – 17:00</span>
-                <span class="highlight-text"><strong>Anfu Road → Wukang Road</strong> — Plane-tree streets of the Former French Concession, Wukang Mansion photo stop.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">17:30 – 21:00</span>
-                <span class="highlight-text"><span class="optional-badge">Optional</span><strong>Jing'an Temple & Nanjing West</strong> — Metro Line 7 from Changshu Rd. Golden temple exterior at night, Starbucks Reserve Roastery.</span>
-              </div>
-            </div>
-            <div class="map-container">
-              <iframe src="https://maps.google.com/maps?q=Yu+Garden+Shanghai&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Yu+Garden+Shanghai" target="_blank" rel="noopener">📍 Open in Google Maps</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ─── DAY 10 ─── -->
-      <div class="timeline-day reveal" id="day10">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 10</span>
-          <span class="timeline-day-date">Monday, December 28</span>
-        </div>
-        <h3 class="timeline-day-title">💻 Remote Work & Evening Unwind</h3>
-        <div class="timeline-card">
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">All Day</span>
-                <span class="highlight-text"><strong>Indoors / Remote Work</strong> — Order warm local lunch via Meituan or Ele.me (Alipay mini-app).</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">18:15 – 21:30</span>
-                <span class="highlight-text"><strong>Evening dinner & packing</strong> — Crab roe noodles, Haidilao Hotpot, or optional Huangpu River night cruise.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ─── DAY 11 ─── -->
-      <div class="timeline-day reveal" id="day11">
-        <div class="timeline-dot"></div>
-        <div class="timeline-day-header">
-          <span class="timeline-day-num">Day 11</span>
-          <span class="timeline-day-date">Tuesday, December 29</span>
-        </div>
-        <h3 class="timeline-day-title">🛬 Departure via Hong Kong → Home</h3>
-        <div class="timeline-card">
-          <img class="timeline-card-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Victoria_Harbour_skyscrapers.jpg/960px-Victoria_Harbour_skyscrapers.jpg" alt="Hong Kong skyline" loading="lazy" />
-          <div class="timeline-card-body">
-            <div class="timeline-highlights">
-              <div class="highlight-item">
-                <span class="highlight-time">06:00</span>
-                <span class="highlight-text">Check out & transfer to <strong>PVG Airport</strong> (option: 06:45 AM Maglev train — 8 min to airport!). <em>Check T1/T2 on your Cathay booking.</em></span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">09:30 – 12:40</span>
-                <span class="highlight-text">Fly <strong>Shanghai (PVG) → Hong Kong (HKG)</strong> on Cathay Pacific CX365.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">12:40 – 16:00</span>
-                <span class="highlight-text"><strong>HKG Layover</strong> — Roast goose & dim sum at the airport, walk the SkyBridge.</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-time">16:00 – 17:45</span>
-                <span class="highlight-text">Fly <strong>Hong Kong (HKG) → Phnom Penh (KTI)</strong> on Cathay Pacific CX605. 🏠 Welcome home!</span>
-              </div>
-            </div>
-            <a class="map-link" href="https://maps.google.com/maps?q=Hong+Kong+International+Airport" target="_blank" rel="noopener">📍 View Hong Kong Airport on Google Maps</a>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /timeline -->
   </div>
 </section>
 
-<!-- ═══════════ PLACES & PRIORITY ═══════════ -->
-<section class="places-section" id="places">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Pick &amp; Choose</div>
-      <h2 class="section-title">Places &amp; Suggested Time</h2>
-      <p class="section-subtitle">You won't fit everything in, so each place has a priority. When the day runs long or it's too cold, drop the optional ones first.</p>
-      <div class="priority-legend">
-        <span class="priority priority-must">⭐ Must</span>
-        <span class="priority priority-rec">👍 Recommended</span>
-        <span class="priority priority-opt">➕ Optional</span>
+<!-- SNOW TOWN GUIDE -->
+<section id="snowtown" style="background: var(--bg-alt);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Zooming in on Day 5–6</span>
+      <h2>Getting to Snow Town</h2>
+      <p>Snow Town (雪乡, officially Shuangfeng Forest Farm) is a remote village ~280 km southeast of Harbin, known for snow-capped roofs and the Bangchuishan sunrise. The full chain, step by step:</p>
+    </div>
+
+    <div class="locator-wrap reveal">
+      <svg class="locator-map" viewBox="130 250 460 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Simplified outline map of Heilongjiang province with the route from Harbin to Yabuli West by train, then to Snow Town by bus">
+        <defs>
+          <g id="lm-train" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="-6" y="-7" width="12" height="11" rx="2"></rect>
+            <line x1="-6" y1="-1" x2="6" y2="-1"></line>
+            <circle cx="-3" cy="6" r="1.4" fill="currentColor" stroke="none"></circle>
+            <circle cx="3" cy="6" r="1.4" fill="currentColor" stroke="none"></circle>
+          </g>
+          <g id="lm-bus" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="-8" y="-5" width="16" height="9" rx="2"></rect>
+            <line x1="-8" y1="-1.5" x2="8" y2="-1.5"></line>
+            <line x1="-2" y1="-5" x2="-2" y2="4"></line>
+            <circle cx="-4.5" cy="5" r="1.4" fill="currentColor" stroke="none"></circle>
+            <circle cx="4.5" cy="5" r="1.4" fill="currentColor" stroke="none"></circle>
+          </g>
+        </defs>
+
+        <!-- Heilongjiang province outline (simplified) -->
+        <path class="locator-outline" d="M80,60 L160,40 L260,55 L340,35 L420,45 L480,30 L520,65
+          L555,110 L575,160 L585,210 L570,260 L545,305 L555,350
+          L520,390 L470,410 L430,435 L380,445 L330,430 L290,440
+          L230,445 L170,420 L130,390 L150,350 L110,330 L85,290
+          L95,240 L60,210 L55,160 L75,110 Z"></path>
+
+        <!-- route: Harbin → Yabuli West → Snow Town -->
+        <path d="M230,320 C270,330 300,338 332,344 C360,350 380,360 400,370 C412,378 422,394 430,415"
+              fill="none" stroke="var(--accent)" stroke-width="2.25" stroke-linecap="round"
+              style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.16));"></path>
+
+        <!-- mode badge: train -->
+        <circle class="locator-badge" cx="315" cy="345" r="11"></circle>
+        <g transform="translate(315,345) scale(0.68)" color="var(--accent)"><use href="#lm-train"></use></g>
+        <rect class="locator-via-chip" x="278" y="371" width="74" height="15" rx="7.5"></rect>
+        <text x="315" y="382" text-anchor="middle" class="locator-via">Train · ~1.5 h</text>
+
+        <!-- mode badge: bus -->
+        <circle class="locator-badge" cx="415" cy="392" r="11"></circle>
+        <g transform="translate(415,392) scale(0.68)" color="var(--accent)"><use href="#lm-bus"></use></g>
+        <rect class="locator-via-chip" x="321" y="402" width="74" height="15" rx="7.5"></rect>
+        <text x="358" y="413" text-anchor="middle" class="locator-via">Bus · ~2–2.5 h</text>
+
+        <!-- Harbin -->
+        <circle class="locator-pin-ring" cx="230" cy="320" r="6"></circle>
+        <circle class="locator-pin" cx="230" cy="320" r="2.5"></circle>
+        <text x="230" y="304" text-anchor="middle" class="locator-label sm">Harbin</text>
+
+        <!-- Yabuli West -->
+        <circle class="locator-pin-ring" cx="400" cy="370" r="6"></circle>
+        <circle class="locator-pin" cx="400" cy="370" r="2.5"></circle>
+        <text x="400" y="340" text-anchor="middle" class="locator-label sm">Yabuli West</text>
+        <text x="400" y="353" text-anchor="middle" class="locator-sub">Railway station</text>
+
+        <!-- Snow Town -->
+        <circle class="locator-pin-ring" cx="430" cy="415" r="6"></circle>
+        <circle class="locator-pin" cx="430" cy="415" r="2.5"></circle>
+        <text x="446" y="412" text-anchor="start" class="locator-label sm">Snow Town</text>
+        <text x="452" y="428" text-anchor="start" class="locator-sub">Guesthouse</text>
+      </svg>
+    </div>
+
+    <ol class="route-steps reveal">
+      <li class="stop"><strong>Harbin</strong> — hotel in Daoli district <span class="sub">Shop for winter gear once stores open (~9 AM)</span></li>
+      <li class="via">Train to Yabuli West — not booked yet, ~1.5 h</li>
+      <li class="stop"><strong>Yabuli West Railway Station</strong> <span class="sub">Transfer straight to the bus — don't wander off</span></li>
+      <li class="via">Bus to Snow Town — ~¥85, ~2–2.5 h on mountain roads</li>
+      <li class="stop"><strong>Snow Town</strong> — guesthouse on Xueyun Street <span class="sub">Overnight, then the Bangchuishan sunrise hike at dawn</span></li>
+      <li class="via">Direct bus back to Harbin — ~¥120, ~4.5–5.5 h</li>
+    </ol>
+
+    <ol class="guide reveal">
+      <li><span><strong>Confirm the Harbin station.</strong> The overnight sleeper may land at a different station than the Yabuli train departs from — check when booking, and budget 20–30 min by taxi if they differ.</span></li>
+      <li><span><strong>Book the Harbin → Yabuli West train the moment tickets open</strong> — 12306 or Trip.com, 15 days ahead. Christmas-week demand is high. Bring your passport.</span></li>
+      <li><span><strong>At Yabuli West, find the licensed shuttle, not a taxi tout.</strong> ~¥85, pay at the counter — cash or Alipay, since small-town counters aren't always card-friendly.</span></li>
+      <li><span><strong>The bus ride is ~2–2.5 hours</strong> on mountain roads and can run slow in snow — don't book anything time-sensitive right after.</span></li>
+      <li><span><strong>Book your guesthouse (农家院) well ahead.</strong> Rooms on Xueyun Street sell out over Christmas week; confirm whether meals are included.</span></li>
+      <li><span><strong>Ask your host about Bangchuishan sunrise timing</strong> the night you arrive — conditions shift with weather. Bring a headlamp for the pre-dawn hike.</span></li>
+      <li><span><strong>The trip back is a different, direct bus</strong> (~¥120) that skips the Yabuli transfer — confirm the pickup time, then reconfirm again that morning.</span></li>
+      <li><span><strong>Pack for this leg specifically:</strong> passport, cash + Alipay, a charged power bank, and your heaviest gear — Snow Town runs colder than Harbin city itself.</span></li>
+    </ol>
+
+  </div>
+</section>
+
+<!-- PLACES -->
+<section id="places">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">Flex points</span>
+      <h2>Places to visit</h2>
+      <p><strong style="color:var(--ink)">Must</strong> — the reason to be there. Recommended — worth it with energy to spare. <em>Optional</em> — first to cut.</p>
+    </div>
+
+    <h3 class="subhead reveal">Beijing · Dec 20–23</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Priority</th><th>Place</th><th>Time</th><th>Slot</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Must</strong></td><td>Forbidden City</td><td>3–3.5 h</td><td>Day 2</td><td class="muted">8:30 AM–4:30 PM, last entry 3:30 PM. Closed Mondays.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Tiananmen Square</td><td>30–45 min</td><td>Day 2</td><td class="muted">Free, reservation 1–7 days ahead, passport.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Mutianyu Great Wall</td><td>full day</td><td>Day 3</td><td class="muted">8:00 AM–5:30 PM. Toboggan closed if snowing.</td></tr>
+            <tr><td>Recommended</td><td>Temple of Heaven</td><td>1.5–2 h</td><td>Day 4</td><td class="muted">Last entry 4:30 PM, closed Mondays in winter.</td></tr>
+            <tr><td>Recommended</td><td>Summer Palace</td><td>2.5–3 h</td><td>Day 4</td><td class="muted">First to drop if Day 4 feels rushed.</td></tr>
+            <tr><td>Recommended</td><td>Jingshan Park</td><td>45 min</td><td>Day 2</td><td class="muted">Best free view in the city. Sunset ~4:50 PM.</td></tr>
+            <tr><td><em class="muted">Optional</em></td><td>Shichahai Lakes &amp; Hutongs</td><td>2–3 h</td><td>Day 3</td><td class="muted">No skating yet on Dec 21 — just the lakes and dinner.</td></tr>
+            <tr><td><em class="muted">Optional</em></td><td>Qianmen Street &amp; Dashilar</td><td>1.5–2 h</td><td>Day 4</td><td class="muted">Peking Duck dinner, then straight to the station.</td></tr>
+            <tr><td><em class="muted">Optional</em></td><td>Wangfujing Avenue</td><td>1–2 h</td><td>Day 2</td><td class="muted">Skip if tired, eat near the hotel instead.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>Longfu Temple Street</td><td>1–1.5 h</td><td>Day 2 late</td><td class="muted">2026's breakout guochao night market, 15 min from Wangfujing.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>Wudaoying Hutong</td><td>1–2 h</td><td>Day 3 evening</td><td class="muted">Quieter, artsier alternative to Shichahai, near the Lama Temple.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>Super Miami (club)</td><td>2+ h</td><td>Day 3 late</td><td class="muted">Gongti EDM club, no cover. Costs you Day 4's early start.</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Beijing -->
-    <div class="places-city reveal">
-      <h3>🏯 Beijing <span class="place-slot">· Dec 20 – 23</span></h3>
-      <div class="places-list">
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Forbidden City</div><div class="place-note">Last entry 15:30 · closed Mon · tickets 7 days ahead at 20:00</div></div>
-          <span class="place-duration">3 – 3.5 h</span>
-          <span class="place-slot">Day 2 · 12:30 – 16:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Tiananmen Square</div><div class="place-note">Free, reserve 1–7 days ahead on WeChat with passport</div></div>
-          <span class="place-duration">30 – 45 min</span>
-          <span class="place-slot">Day 2 · 11:30 – 12:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Mutianyu Great Wall</div><div class="place-note">Winter 08:00 – 17:30 · ~1.5 h each way · toboggan off in snow</div></div>
-          <span class="place-duration">Full day</span>
-          <span class="place-slot">Day 3 · 08:30 – 15:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Temple of Heaven</div><div class="place-note">Halls last entry 16:30 · halls closed Mon in winter</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 4 · 14:00 – 16:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Summer Palace</div><div class="place-note">Farthest sight (NW) — drop first for a slower Day 4</div></div>
-          <span class="place-duration">2.5 – 3 h</span>
-          <span class="place-slot">Day 4 · 09:00 – 12:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Jingshan Park</div><div class="place-note">Opposite Forbidden City north gate · sunset ~16:50</div></div>
-          <span class="place-duration">45 min</span>
-          <span class="place-slot">Day 2 · 16:15 – 17:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Shichahai Lakes &amp; Hutongs</div><div class="place-note">No skating yet — rinks open late Dec to mid Jan</div></div>
-          <span class="place-duration">2 – 3 h</span>
-          <span class="place-slot">Day 3 · evening</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Qianmen &amp; Dashilar</div><div class="place-note">~2 km NW of Temple of Heaven · Peking Duck dinner</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 4 · evening</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Wangfujing Avenue</div><div class="place-note">Dinner &amp; stroll — skip if tired</div></div>
-          <span class="place-duration">1 – 2 h</span>
-          <span class="place-slot">Day 2 · evening</span>
-        </div>
+
+    <h3 class="subhead reveal">Harbin &amp; Snow Town · Dec 23–25</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Priority</th><th>Place</th><th>Time</th><th>Slot</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Must</strong></td><td>Snow Town (Xue Xiang)</td><td>~27 h</td><td>Day 5–6</td><td class="muted">Train + bus to Yabuli, Xueyun St at night, Bangchuishan at dawn. Book the train &amp; guesthouse early.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Harbin Ice &amp; Snow World</td><td>4–6 h</td><td>Day 6</td><td class="muted">2026–27 opening TBA. Arriving back from Snow Town that afternoon, mostly after dark.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Zhongyang Street &amp; Songhua River</td><td>2–3 h</td><td>Day 6</td><td class="muted">Flood Control Monument, Madieer popsicle.</td></tr>
+            <tr><td><strong>Must</strong></td><td>St. Sophia's Church</td><td>30–60 min</td><td>Day 7</td><td class="muted">Daylight visit, paired with the Tiger Park.</td></tr>
+            <tr><td>Recommended</td><td>Siberian Tiger Park</td><td>2 h + taxi</td><td>Day 7</td><td class="muted">Last entry ~3:30 PM. Taxi, not metro.</td></tr>
+            <tr><td><em class="muted">Cut</em></td><td>Laodaowai Baroque Quarter</td><td>2–3 h</td><td>—</td><td class="muted">No slot left after Tiger Park + St. Sophia's + packing.</td></tr>
+            <tr><td><em class="muted">Cut</em></td><td>Sun Island Snow Expo</td><td>1.5–2 h</td><td>—</td><td class="muted">Replaced by the Snow Town trip this time.</td></tr>
+            <tr><td><em class="muted">Cut</em></td><td>Volga Manor</td><td>4 h</td><td>—</td><td class="muted">Replaced by the Snow Town trip this time.</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Harbin -->
-    <div class="places-city reveal">
-      <h3>❄️ Harbin <span class="place-slot">· Dec 23 – 25</span></h3>
-      <div class="places-list">
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Harbin Ice &amp; Snow World</div><div class="place-note">2026 opening TBA (2025: Dec 17) · new Frozen-themed zone</div></div>
-          <span class="place-duration">4 – 6 h</span>
-          <span class="place-slot">Day 6 · 14:00 – 20:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Zhongyang Street &amp; Songhua River</div><div class="place-note">Flood Control Monument · Madieer popsicle</div></div>
-          <span class="place-duration">2 – 3 h</span>
-          <span class="place-slot">Day 5 · evening</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">St. Sophia's Church</div><div class="place-note">Arrive just before sunset (~15:50)</div></div>
-          <span class="place-duration">30 – 60 min</span>
-          <span class="place-slot">Day 5 · 15:30 – 16:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Siberian Tiger Park</div><div class="place-note">Taxi ~25 min · last entry ~15:30</div></div>
-          <span class="place-duration">2 h</span>
-          <span class="place-slot">Day 6 · 09:00 – 11:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Laodaowai Baroque Quarter</div><div class="place-note">Early dinner: dumplings, iron-pot stew</div></div>
-          <span class="place-duration">2 – 3 h</span>
-          <span class="place-slot">Day 7 · 14:00 – 17:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Sun Island Snow Sculpture Expo</div><div class="place-note">Only if open — opened Dec 27 in 2024 &amp; 2025; check mid-Dec</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 6 · 11:30 – 13:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Volga Manor</div><div class="place-note">~30 km out · 45–60 min each way · leave by 13:00</div></div>
-          <span class="place-duration">4 h total</span>
-          <span class="place-slot">Day 7 · 09:00 – 13:00</span>
-        </div>
+    <h3 class="subhead reveal">Shanghai · Dec 26–28</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Priority</th><th>Place</th><th>Time</th><th>Slot</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Must</strong></td><td>The Bund (at night)</td><td>1.5–2 h</td><td>Day 8</td><td class="muted">Skyline lights come on ~6:00 PM.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Yu Garden &amp; Old Street</td><td>2–3 h</td><td>Day 9</td><td class="muted">Closed Mondays — Sunday is your only chance.</td></tr>
+            <tr><td><strong>Must</strong></td><td>Nanjing Road (East)</td><td>1–1.5 h</td><td>Day 8</td><td class="muted">On the way to the Bund — lunch here.</td></tr>
+            <tr><td>Recommended</td><td>Lujiazui + Shanghai Tower deck</td><td>2–3 h</td><td>Day 8</td><td class="muted">~1 h for the 118th-floor deck.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>The Stage, White Magnolia Plaza</td><td>1–1.5 h</td><td>Day 8 evening</td><td class="muted">320 m North Bund deck, opened 2025 — ~¥230, ~¥320 sunset slot.</td></tr>
+            <tr><td>Recommended</td><td>Xintiandi &amp; Tianzifang</td><td>1.5–2 h</td><td>Day 9</td><td class="muted">15-minute walk apart — do them together.</td></tr>
+            <tr><td>Recommended</td><td>Anfu Road &amp; Wukang Road</td><td>1.5–2 h</td><td>Day 9</td><td class="muted">Former French Concession, Wukang Mansion photo spot.</td></tr>
+            <tr><td><em class="muted">Optional</em></td><td>Jing'an Temple</td><td>45 min</td><td>Day 9</td><td class="muted">Interior closes ~5 PM — exterior lit up at night.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>Tank Shanghai</td><td>1–1.5 h</td><td>Day 9 afternoon</td><td class="muted">Converted oil-tank art park on the West Bund, free grounds, near Wukang Rd.</td></tr>
+            <tr><td><em class="muted">🔥 Trending</em></td><td>INS LAND (club)</td><td>2+ h</td><td>Day 9 late</td><td class="muted">Fuxing Park nightlife complex, ~¥288 all-floor pass. Day 10 is a flex recovery day.</td></tr>
+            <tr><td><em class="muted">Optional</em></td><td>Huangpu River night cruise</td><td>50 min</td><td>Day 10</td><td class="muted">From Shiliupu Pier, easy after a workday.</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
-    <!-- Shanghai -->
-    <div class="places-city reveal">
-      <h3>🌃 Shanghai <span class="place-slot">· Dec 26 – 28</span></h3>
-      <div class="places-list">
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">The Bund at night</div><div class="place-note">Skyline lights from ~18:00</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 8 · 17:45 – 20:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Yu Garden &amp; Old Street</div><div class="place-note">09:00 – 16:30 · closed Mon — Sunday is the only chance</div></div>
-          <span class="place-duration">2 – 3 h</span>
-          <span class="place-slot">Day 9 · 09:00 – 12:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">⭐ Must</span>
-          <div><div class="place-name">Nanjing Road (East)</div><div class="place-note">On the way to the Bund · xiaolongbao lunch</div></div>
-          <span class="place-duration">1 – 1.5 h</span>
-          <span class="place-slot">Day 8 · 11:30 – 14:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Lujiazui + Shanghai Tower deck</div><div class="place-note">Deck ~1 h · Line 2, one stop from East Nanjing Rd</div></div>
-          <span class="place-duration">2 – 3 h</span>
-          <span class="place-slot">Day 8 · 14:30 – 17:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Xintiandi &amp; Tianzifang</div><div class="place-note">15 min walk apart — do together</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 9 · 12:30 – 14:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">👍 Recommended</span>
-          <div><div class="place-name">Anfu Road &amp; Wukang Road</div><div class="place-note">French Concession streets · Wukang Mansion</div></div>
-          <span class="place-duration">1.5 – 2 h</span>
-          <span class="place-slot">Day 9 · 15:00 – 17:00</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Jing'an Temple</div><div class="place-note">Interior usually closes ~17:00 — exterior lit at night</div></div>
-          <span class="place-duration">45 min</span>
-          <span class="place-slot">Day 9 · 17:30</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Starbucks Roastery / Nanjing West</div><div class="place-note">~15 min walk from Jing'an Temple</div></div>
-          <span class="place-duration">1 h</span>
-          <span class="place-slot">Day 9 · evening</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-opt">➕ Optional</span>
-          <div><div class="place-name">Huangpu River night cruise</div><div class="place-note">From Shiliupu Pier</div></div>
-          <span class="place-duration">50 min</span>
-          <span class="place-slot">Day 10 · evening</span>
-        </div>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section id="tickets" style="background: var(--bg-alt);">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">Logistics</span>
+      <h2>Tickets &amp; booking</h2>
+      <p>Winter prices per adult. ¥100 ≈ US$15 at today's market rate (~¥6.7/$1). Items marked * are estimates.</p>
+    </div>
+
+    <h3 class="subhead reveal">Book ahead — sells out or gate-only otherwise</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>What</th><th class="num">Price</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td>Forbidden City</td><td class="num">¥40</td><td class="muted">Exactly 7 days ahead, 8:00 PM Beijing time (Dec 13)</td></tr>
+            <tr><td>Tiananmen Square</td><td class="num">Free</td><td class="muted">1–7 days ahead, WeChat, passport</td></tr>
+            <tr><td>Mutianyu Great Wall</td><td class="num">¥165–205</td><td class="muted">A few days ahead on Trip.com</td></tr>
+            <tr><td>Harbin Ice &amp; Snow World</td><td class="num">~¥328</td><td class="muted">As soon as sales open (TBA)</td></tr>
+            <tr><td>Yu Garden</td><td class="num">¥30</td><td class="muted">A few days ahead, for Dec 27</td></tr>
+            <tr><td>Shanghai Tower 118F deck</td><td class="num">~¥180</td><td class="muted">Day before, online</td></tr>
+            <tr><td>Temple of Heaven</td><td class="num">~¥28</td><td class="muted">Day before or same day</td></tr>
+            <tr><td>Beijing → Harbin sleeper train (Z17)</td><td class="num">¥280–430*</td><td class="muted">On 12306, 15 days ahead = Dec 7 — hard sleeper ~¥263–281, soft ~¥411–429</td></tr>
+            <tr><td>Harbin → Yabuli West train (D7963)</td><td class="num">¥72–83*</td><td class="muted">On 12306, 15 days ahead = Dec 8 — 2nd class, varies by boarding station</td></tr>
+            <tr><td>Snow Town guesthouse</td><td class="num">¥800–1,500*/night</td><td class="muted">As early as possible — Dec/Christmas week is peak, not low season</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="note card reveal"><strong>Mutianyu tip:</strong> the cable car and the chairlift/toboggan are different operators — a round-trip on one doesn't cover the other.</div>
+
+    <h3 class="subhead reveal">Buy on the day</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>What</th><th class="num">Price</th></tr></thead>
+          <tbody>
+            <tr><td>Jingshan Park</td><td class="num muted">A few ¥</td></tr>
+            <tr><td>Siberian Tiger Park</td><td class="num muted">~¥90</td></tr>
+            <tr><td>St. Sophia's Church (inside)</td><td class="num muted">~¥20</td></tr>
+            <tr><td>Jing'an Temple</td><td class="num muted">¥50</td></tr>
+            <tr><td>Huangpu River night cruise</td><td class="num muted">¥100–150*</td></tr>
+            <tr><td>Dongchang Road ferry</td><td class="num muted">¥2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="muted reveal" style="margin-top: 28px; font-size: 0.92rem; text-align: center;"><strong style="color:var(--ink);">Free, no ticket:</strong> Wangfujing · Shichahai &amp; hutongs · Qianmen &amp; Dashilar · Zhongyang Street · Songhua River · Nanjing Road · The Bund · Lujiazui skybridge · Xintiandi · Tianzifang · Anfu &amp; Wukang Road</p>
+  </div>
+</section>
+
+<!-- FOOD -->
+<section id="food">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">Matched to the plan</span>
+      <h2>Where to eat</h2>
+      <p>Per person. Rough daily food budget: Beijing ¥250–350, Harbin/Snow Town ¥200–300, Shanghai ¥200–350.</p>
+    </div>
+
+    <h3 class="subhead reveal">Beijing</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>When</th><th>Where</th><th>Order</th><th class="num">¥/person</th></tr></thead>
+          <tbody>
+            <tr><td class="muted">Day 2 dinner</td><td>Donglaishun 东来顺</td><td class="muted">Copper-pot lamb hotpot</td><td class="num">120–180*</td></tr>
+            <tr><td class="muted">Day 3 dinner</td><td>Kaorouji 烤肉季</td><td class="muted">Grilled lamb, lakeside</td><td class="num">100–150*</td></tr>
+            <tr><td class="muted">Day 4 lunch</td><td>Qingfeng Baozi 庆丰包子铺</td><td class="muted">Steamed buns, zhajiang noodles</td><td class="num">20–40</td></tr>
+            <tr><td class="muted">Day 4 dinner</td><td>Siji Minfu 四季民福</td><td class="muted">Peking duck — get a queue number early</td><td class="num">150–170</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="subhead reveal">Harbin &amp; Snow Town</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>When</th><th>Where</th><th>Order</th><th class="num">¥/person</th></tr></thead>
+          <tbody>
+            <tr><td class="muted">Day 5–6</td><td>Your guesthouse kitchen</td><td class="muted">Home-style Northeastern food</td><td class="num">50–100*</td></tr>
+            <tr><td class="muted">Day 6 dinner</td><td>Huamei 华梅西餐厅</td><td class="muted">Borscht, beef stew, red sausage</td><td class="num">100–150*</td></tr>
+            <tr><td class="muted">Day 7 lunch</td><td>Laochujia 老厨家</td><td class="muted">Guo bao rou</td><td class="num">80–120*</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 class="subhead reveal">Shanghai</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>When</th><th>Where</th><th>Order</th><th class="num">¥/person</th></tr></thead>
+          <tbody>
+            <tr><td class="muted">Day 8 lunch</td><td>Yang's Dumplings 小杨生煎</td><td class="muted">Shengjianbao</td><td class="num">15–30</td></tr>
+            <tr><td class="muted">Day 9 morning</td><td>Nanxiang 南翔馒头店</td><td class="muted">Xiaolongbao</td><td class="num">50–100</td></tr>
+            <tr><td class="muted">Day 9 dinner</td><td>Old Jesse 老吉士</td><td class="muted">Red-braised pork — book ahead</td><td class="num">150–200*</td></tr>
+            <tr><td class="muted">Day 10 dinner</td><td>Haidilao 海底捞</td><td class="muted">Hotpot</td><td class="num">130–180</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ TICKETS ═══════════ -->
-<section class="places-section" id="tickets">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Admission</div>
-      <h2 class="section-title">Tickets &amp; Booking</h2>
-      <p class="section-subtitle">Winter prices per adult (¥100 ≈ US$16 at the Alipay planning rate of ~¥6.4 per US$1). Most of Beijing must be booked in advance; Harbin and Shanghai are mostly pay on the day. Prices marked * are estimates.</p>
-      <div class="priority-legend">
-        <span class="priority priority-must">🔴 Book ahead</span>
-        <span class="priority priority-rec">🟡 Buy on the day</span>
-        <span class="priority priority-opt">🟢 Free</span>
+<!-- BUDGET -->
+<section id="budget" style="background: var(--bg-alt);">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">Per person</span>
+      <h2>Estimated budget</h2>
+      <p>Already paid: flights $475 + visa $65 = $540. Solo pricing, with the 2-traveler split built into the same table below.</p>
+    </div>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table class="budget-table">
+          <thead><tr><th>Category</th><th class="num">Budget</th><th class="num mid-col">Mid</th><th class="num">Comfort</th></tr></thead>
+          <tbody>
+            <tr><td>Hotels + guesthouse (10 nights)</td><td class="num">¥3,250 <span class="usd">≈$485</span><br><span class="pill">÷2 ≈$245</span></td><td class="num mid-col">¥5,080 <span class="usd">≈$755</span><br><span class="pill">÷2 ≈$380</span></td><td class="num">¥8,020 <span class="usd">≈$1,195</span><br><span class="pill">÷2 ≈$600</span></td></tr>
+            <tr><td>Beijing → Harbin sleeper</td><td class="num">¥280 <span class="usd">≈$40</span></td><td class="num mid-col">¥280 <span class="usd">≈$40</span></td><td class="num">¥430 <span class="usd">≈$65</span></td></tr>
+            <tr><td>Harbin ↔ Snow Town</td><td class="num">¥290 <span class="usd">≈$45</span></td><td class="num mid-col">¥290 <span class="usd">≈$45</span></td><td class="num">¥350 <span class="usd">≈$50</span></td></tr>
+            <tr><td>Local transport</td><td class="num">¥900 <span class="usd">≈$135</span><br><span class="pill">÷2 ≈$65</span></td><td class="num mid-col">¥1,500 <span class="usd">≈$225</span><br><span class="pill">÷2 ≈$110</span></td><td class="num">¥2,200 <span class="usd">≈$330</span><br><span class="pill">÷2 ≈$165</span></td></tr>
+            <tr><td>Tickets</td><td class="num">¥950 <span class="usd">≈$140</span></td><td class="num mid-col">¥1,200 <span class="usd">≈$180</span></td><td class="num">¥1,450 <span class="usd">≈$215</span></td></tr>
+            <tr><td>Food</td><td class="num">¥2,000 <span class="usd">≈$300</span></td><td class="num mid-col">¥2,800 <span class="usd">≈$420</span></td><td class="num">¥4,000 <span class="usd">≈$600</span></td></tr>
+            <tr><td>Other</td><td class="num">¥400 <span class="usd">≈$60</span></td><td class="num mid-col">¥800 <span class="usd">≈$120</span></td><td class="num">¥1,500 <span class="usd">≈$225</span></td></tr>
+            <tr class="total-row"><td>Solo total <span class="muted-sub">incl. $540 paid</span></td><td class="num">$1,745</td><td class="num mid-col">$2,325</td><td class="num">$3,220</td></tr>
+            <tr class="total-row"><td>Sharing as 2 <span class="muted-sub">per person · both</span></td><td class="num">$1,435 <span class="muted-sub">$2,870</span></td><td class="num mid-col">$1,835 <span class="muted-sub">$3,670</span></td><td class="num">$2,460 <span class="muted-sub">$4,920</span></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
+    <div class="note card reveal"><strong>Harbin and Snow Town both spike hard over Christmas week</strong> — real guests report ¥1,500–2,500+ for Snow Town and ¥700+ for Harbin on Dec 24. Book both as early as possible, and budget toward Comfort, not Budget, for those two nights.</div>
 
-    <div class="places-city reveal">
-      <h3>🔴 Book Online in Advance</h3>
-      <div class="places-list">
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Forbidden City</div><div class="place-note">+ small extra fee for the Treasure Gallery · no tickets at the gate</div></div>
-          <span class="place-duration">¥40</span>
-          <span class="place-slot">Exactly 7 days ahead at 20:00 (Dec 13)</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Tiananmen Square</div><div class="place-note">WeChat: 天安门广场预约参观 · passport</div></div>
-          <span class="place-duration">Free</span>
-          <span class="place-slot">1–7 days ahead</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Mutianyu Great Wall</div><div class="place-note">~¥45 entry + shuttle · cable car or chairlift + toboggan ¥120–160</div></div>
-          <span class="place-duration">~¥165–205</span>
-          <span class="place-slot">A few days ahead on Trip.com</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Harbin Ice &amp; Snow World</div><div class="place-note">Last season's regular price</div></div>
-          <span class="place-duration">~¥328</span>
-          <span class="place-slot">As soon as sales open (TBA)</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Yu Garden</div><div class="place-note">Low-season price · closed Mondays</div></div>
-          <span class="place-duration">¥30</span>
-          <span class="place-slot">A few days ahead (Sun Dec 27)</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Shanghai Tower 118F deck</div><div class="place-note">~10% cheaper online than at the gate</div></div>
-          <span class="place-duration">~¥180</span>
-          <span class="place-slot">Day before</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Temple of Heaven</div><div class="place-note">Combined ticket incl. halls · digital tickets</div></div>
-          <span class="place-duration">~¥28</span>
-          <span class="place-slot">Day before / same day</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-must">Book ahead</span>
-          <div><div class="place-name">Summer Palace</div><div class="place-note">¥20 entry / ¥50 combined ticket</div></div>
-          <span class="place-duration">¥20–50</span>
-          <span class="place-slot">Day before / same day</span>
-        </div>
-      </div>
-      <div class="places-callout"><strong>Mutianyu tip:</strong> The cable car (Tower 14) and the chairlift + toboggan (Tower 6) are run by different operators, so a round-trip ticket on one doesn't work on the other. If you go up by cable car and come down on the toboggan, buy two one-way tickets.</div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>🟡 Buy on the Day</h3>
-      <div class="places-list">
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Jingshan Park</div></div>
-          <span class="place-duration">A few ¥</span>
-          <span class="place-slot">Gate / QR code</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Siberian Tiger Park</div></div>
-          <span class="place-duration">~¥90</span>
-          <span class="place-slot">Gate / QR code</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">St. Sophia's Church (inside)</div><div class="place-note">The square outside is free</div></div>
-          <span class="place-duration">~¥20</span>
-          <span class="place-slot">Gate / QR code</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Sun Island Snow Expo</div><div class="place-note">Optional — only if open</div></div>
-          <span class="place-duration">~¥198</span>
-          <span class="place-slot">Gate / QR code</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Volga Manor</div><div class="place-note">Optional</div></div>
-          <span class="place-duration">~¥100</span>
-          <span class="place-slot">Gate / QR code</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Jing'an Temple</div><div class="place-note">Optional · 07:30–17:00, last entry 16:30</div></div>
-          <span class="place-duration">¥50</span>
-          <span class="place-slot">Gate / WeChat</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Huangpu River night cruise</div><div class="place-note">Optional · Shiliupu Pier</div></div>
-          <span class="place-duration">~¥100–150*</span>
-          <span class="place-slot">Pier</span>
-        </div>
-        <div class="place-row">
-          <span class="priority priority-rec">On the day</span>
-          <div><div class="place-name">Dongchang Road ferry</div></div>
-          <span class="place-duration">¥2</span>
-          <span class="place-slot">Pier</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>🟢 Free — No Ticket Needed</h3>
-      <div class="places-list">
-        <p class="free-list">Wangfujing · Shichahai &amp; the hutongs · Qianmen &amp; Dashilar · Zhongyang Street · Songhua River · Laodaowai · Nanjing Road · The Bund · the Lujiazui skybridge · Xintiandi · Tianzifang · Anfu Road · Wukang Road</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ FOOD ═══════════ -->
-<section class="places-section" id="food">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Eat Like a Local</div>
-      <h2 class="section-title">Where to Eat</h2>
-      <p class="section-subtitle">Each restaurant is matched to a day in the plan. Prices are per person. Rough food budget per day: Beijing ¥250–350 · Harbin ¥200–300 · Shanghai ¥200–350. Prices marked * are estimates; check them on Dianping or Meituan.</p>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>🏯 Beijing</h3>
-      <div class="places-list">
-        <div class="place-row food-row">
-          <span class="place-slot">Day 2 dinner · Wangfujing</span>
-          <div><div class="place-name">Donglaishun 东来顺</div><div class="place-note">Copper-pot hotpot with sliced lamb (main branch)</div></div>
-          <span class="place-duration">¥120–180*</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 3 dinner · Shichahai</span>
-          <div><div class="place-name">Kaorouji 烤肉季</div><div class="place-note">Lakeside, Beijing-style grilled lamb</div></div>
-          <span class="place-duration">¥100–150*</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 4 lunch · on the way</span>
-          <div><div class="place-name">Qingfeng Baozi 庆丰包子铺</div><div class="place-note">Steamed buns, zhajiang noodles (chain)</div></div>
-          <span class="place-duration">¥20–40</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 4 dinner · Qianmen</span>
-          <div><div class="place-name">⭐ Siji Minfu 四季民福</div><div class="place-note">Peking duck (~¥259 per duck) · get a queue number online in the afternoon</div></div>
-          <span class="place-duration">¥150–170</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Alternative</span>
-          <div><div class="place-name">Liqun 利群烤鸭店</div><div class="place-note">Duck in an old hutong courtyard</div></div>
-          <span class="place-duration">~¥250</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Budget option</span>
-          <div><div class="place-name">Bianyifang 便宜坊</div><div class="place-note">Peking duck</div></div>
-          <span class="place-duration">~¥140</span>
-        </div>
-      </div>
-      <div class="places-callout">Duck restaurants usually add a <strong>¥10–15 per person</strong> fee for the sauces and condiments.</div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>❄️ Harbin</h3>
-      <div class="places-list">
-        <div class="place-row food-row">
-          <span class="place-slot">Day 5 dinner · Zhongyang St</span>
-          <div><div class="place-name">⭐ Huamei Western Restaurant 华梅西餐厅</div><div class="place-note">Russian food: borscht, beef stew, red sausage</div></div>
-          <span class="place-duration">¥100–150*</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 5 snack</span>
-          <div><div class="place-name">Madieer 马迭尔</div><div class="place-note">Ice-cream popsicle at -20°C</div></div>
-          <span class="place-duration">¥5–10</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 6 lunch / Day 7</span>
-          <div><div class="place-name">Laochujia 老厨家</div><div class="place-note">Guo bao rou (crispy sweet-and-sour pork, invented here)</div></div>
-          <span class="place-duration">¥80–120*</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Any meal</span>
-          <div><div class="place-name">Dongfang Dumpling King 东方饺子王</div><div class="place-note">Pork dumplings</div></div>
-          <span class="place-duration">¥40–60</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 7 early dinner · Laodaowai</span>
-          <div><div class="place-name">Dacheng 大成 / Lao Zhang 老张 iron-pot stew</div><div class="place-note">Northeastern iron-pot stew (better with 2+ people)</div></div>
-          <span class="place-duration">¥80–120*</span>
-        </div>
-      </div>
-      <div class="places-callout">Huamei gets crowded at lunch, so go early or after 16:30. The food halls inside <strong>Ice &amp; Snow World</strong> are expensive (~¥60–100), so eat a big lunch before you go in.</div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>🌃 Shanghai</h3>
-      <div class="places-list">
-        <div class="place-row food-row">
-          <span class="place-slot">Day 8 lunch · Nanjing Rd</span>
-          <div><div class="place-name">Yang's Dumplings 小杨生煎</div><div class="place-note">Shengjianbao (pan-fried pork buns)</div></div>
-          <span class="place-duration">¥15–30</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 8 lunch · alternative</span>
-          <div><div class="place-name">Jia Jia Tang Bao 佳家汤包</div><div class="place-note">Xiaolongbao (soup dumplings) near People's Square</div></div>
-          <span class="place-duration">¥30–60</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 9 morning · Yu Garden</span>
-          <div><div class="place-name">Nanxiang 南翔馒头店</div><div class="place-note">Xiaolongbao (~¥28 for 6) · long queue, go right after the garden</div></div>
-          <span class="place-duration">¥50–100</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 9 lunch · Xintiandi</span>
-          <div><div class="place-name">Din Tai Fung 鼎泰丰</div><div class="place-note">Xiaolongbao, fried rice</div></div>
-          <span class="place-duration">¥100–150</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 9 dinner</span>
-          <div><div class="place-name">Old Jesse 老吉士</div><div class="place-note">Classic Shanghai dishes, red-braised pork · book ahead</div></div>
-          <span class="place-duration">¥150–200*</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 10 dinner</span>
-          <div><div class="place-name">Haidilao 海底捞</div><div class="place-note">Hotpot</div></div>
-          <span class="place-duration">¥130–180</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Day 10 dinner · alternative</span>
-          <div><div class="place-name">Crab-roe noodle shop</div><div class="place-note">Crab roe noodles (a splurge)</div></div>
-          <span class="place-duration">¥100–250*</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════ BUDGET ═══════════ -->
-<section class="places-section" id="budget">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Money</div>
-      <h2 class="section-title">Estimated Budget</h2>
-      <p class="section-subtitle">Per person. Already paid: flights US$475 + visa US$65 = US$540, added in the grand total at the bottom. Assumes one person with their own room; if two share rooms and taxis, take ~25–30% off each person's share. US$ amounts use the Alipay planning rate of ~¥6.4 per US$1 (market rate ~¥6.68, plus the 3% Alipay fee on payments over ¥200 and card fees).</p>
-    </div>
-
-    <div class="places-city reveal">
-      <div class="places-list">
-        <div class="place-row budget-row budget-head">
-          <span>Category</span>
-          <span>What it covers</span>
-          <span class="place-duration">Budget</span>
-          <span class="place-duration budget-mid">Mid-range</span>
-          <span class="place-duration">Comfort</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🏨 Hotels (10 nights)</div>
-          <span class="place-slot">Beijing 4 nights (¥400–600) · Harbin 2 (¥350–600, peak) · Shanghai 4 (¥500–800, Pudong)</span>
-          <span class="place-duration">¥2,800</span>
-          <span class="place-duration budget-mid">¥5,500</span>
-          <span class="place-duration">¥8,000</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🚄 Beijing → Harbin train</div>
-          <span class="place-slot">Second class ~¥620 / first class ~¥1,000</span>
-          <span class="place-duration">¥620</span>
-          <span class="place-duration budget-mid">¥620</span>
-          <span class="place-duration">¥1,000</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🚕 Local transport</div>
-          <span class="place-slot">1 a.m. airport taxis, Mutianyu private car ¥600–800, PVG ¥150–250 each way, metro/DiDi</span>
-          <span class="place-duration">¥900</span>
-          <span class="place-duration budget-mid">¥1,500</span>
-          <span class="place-duration">¥2,200</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🎫 Tickets</div>
-          <span class="place-slot">Must + recommended ≈ ¥950 · all optional places +¥470</span>
-          <span class="place-duration">¥950</span>
-          <span class="place-duration budget-mid">¥1,200</span>
-          <span class="place-duration">¥1,450</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🍜 Food</div>
-          <span class="place-slot">Beijing ¥250–350/day · Harbin ¥200–300 · Shanghai ¥200–350 · HKG layover</span>
-          <span class="place-duration">¥2,000</span>
-          <span class="place-duration budget-mid">¥2,800</span>
-          <span class="place-duration">¥4,000</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🧳 Other</div>
-          <span class="place-slot">eSIM, Spring Airlines bag, heat packs, souvenirs, card fees</span>
-          <span class="place-duration">¥400</span>
-          <span class="place-duration budget-mid">¥800</span>
-          <span class="place-duration">¥1,500</span>
-        </div>
-        <div class="place-row budget-row budget-total">
-          <div class="place-name">Total (¥)</div>
-          <span class="place-slot"></span>
-          <span class="place-duration">≈ ¥7,700</span>
-          <span class="place-duration budget-mid">≈ ¥12,400</span>
-          <span class="place-duration">≈ ¥18,700</span>
-        </div>
-        <div class="place-row budget-row budget-total">
-          <div class="place-name">Total (US$ @ ¥6.4)</div>
-          <span class="place-slot"></span>
-          <span class="place-duration">≈ $1,200</span>
-          <span class="place-duration budget-mid">≈ $1,940</span>
-          <span class="place-duration">≈ $2,920</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">✈️ Flights <span class="place-slot">(paid)</span></div>
-          <span class="place-slot">CZ374, CZ3165, 9C6190, CX365, CX605</span>
-          <span class="place-duration">$475</span>
-          <span class="place-duration budget-mid">$475</span>
-          <span class="place-duration">$475</span>
-        </div>
-        <div class="place-row budget-row">
-          <div class="place-name">🛂 Visa <span class="place-slot">(paid)</span></div>
-          <span class="place-slot">China visa</span>
-          <span class="place-duration">$65</span>
-          <span class="place-duration budget-mid">$65</span>
-          <span class="place-duration">$65</span>
-        </div>
-        <div class="place-row budget-row budget-total">
-          <div class="place-name">🧾 Grand Total (whole trip)</div>
-          <span class="place-slot"></span>
-          <span class="place-duration">≈ $1,740</span>
-          <span class="place-duration budget-mid">≈ $2,480</span>
-          <span class="place-duration">≈ $3,460</span>
-        </div>
-      </div>
-      <div class="places-callout">Hotel prices are typical December rates, not live quotes. <strong>Harbin</strong> goes up during ice-festival season and Christmas, so book it first.</div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>💳 How to Pay Less in Fees</h3>
-      <div class="places-list">
-        <div class="place-row food-row">
-          <span class="place-slot">¥200 or less on Alipay</span>
-          <div><div class="place-name">No Alipay fee</div><div class="place-note">Only your bank's FX fee (0–2%)</div></div>
-          <span class="place-duration">≈ ¥6.55–6.66 / $1</span>
-        </div>
-        <div class="place-row food-row">
-          <span class="place-slot">Over ¥200 on Alipay</span>
-          <div><div class="place-name">3% Alipay fee</div><div class="place-note">+ your bank's FX fee</div></div>
-          <span class="place-duration">≈ ¥6.35–6.49 / $1</span>
-        </div>
-        <ul class="budget-tips">
-          <li><strong>Prepay hotels &amp; the train on Trip.com</strong> in USD with your card — no Alipay fee on ~¥6,000 of spending.</li>
-          <li><strong>Book ticketed sights on Trip.com</strong> too: Ice &amp; Snow World, Mutianyu, Shanghai Tower.</li>
-          <li><strong>Keep Alipay for everyday spending under ¥200:</strong> meals, metro, DiDi, small tickets.</li>
-          <li><strong>Ask to split large bills</strong> — e.g. a ¥300 dinner into 2 × ¥150.</li>
-          <li><strong>Ask your bank</strong> what foreign-transaction fee it charges. At 0%, your real rate is closer to ¥6.5.</li>
-          <li><strong>Keep ~¥500 in cash</strong> as a backup — a Bank of China or ICBC ATM at the airport beats changing money in Phnom Penh.</li>
+    <div class="cols-2 reveal">
+      <div>
+        <h4>Paying fewer fees</h4>
+        <ul>
+          <li>Prepay hotels &amp; the train on Trip.com in USD — no 3% Alipay fee.</li>
+          <li>Keep Alipay spending under ¥200 where you can.</li>
+          <li>Ask your bank's foreign-transaction fee — 0% gets you ≈¥6.7/$1.</li>
+          <li>Keep ~¥500 cash as backup; airport ATMs beat changing money at home.</li>
         </ul>
       </div>
-      <div class="places-callout">Do the first two and the mid-range spending in China comes to <strong>≈ US$1,880</strong> (≈ US$2,420 for the whole trip).</div>
-    </div>
-
-    <div class="places-city reveal">
-      <h3>✂️ Ways to Save ¥2,000–3,000</h3>
-      <div class="save-grid">
-        <div class="places-list">
-          <div class="save-head">🏨 Hotels</div>
-          <ul class="budget-tips">
-            <li><strong>Budget hotels</strong> (¥250–350/night) in Beijing &amp; Shanghai, but keep a good-location hotel in Harbin, where the cold makes location and heating matter.</li>
-            <li><strong>Book Harbin now with free cancellation</strong>, then check the price again in November. Christmas week and the ice festival push rates up.</li>
-            <li><strong>Skip the hotel breakfast</strong> (¥60–120). Jianbing, baozi or soy milk costs ¥8–20, which saves ~¥400–800 over the trip.</li>
-            <li><strong>Use the kettle in your room.</strong> Hot water is free everywhere, so fill a thermos instead of buying drinks at sights.</li>
-          </ul>
-        </div>
-        <div class="places-list">
-          <div class="save-head">🚇 Getting Around</div>
-          <ul class="budget-tips">
-            <li><strong>Bus package to Mutianyu</strong> instead of a private car — saves ~¥500.</li>
-            <li><strong>Metro inside cities</strong> (¥3–6) instead of DiDi (¥30–60). Save DiDi for late nights, Harbin's Songbei District and luggage.</li>
-            <li><strong>Maglev on Day 11</strong> (¥50 + a short taxi) instead of a taxi all the way to the airport.</li>
-            <li><strong>Use DiDi at airports</strong>, not the drivers who approach you in arrivals. Their offers usually cost 2–3× more.</li>
-            <li><strong>Pre-buy your Spring Airlines bag online.</strong> Paying at the airport counter costs much more.</li>
-          </ul>
-        </div>
-        <div class="places-list">
-          <div class="save-head">🎫 Sights</div>
-          <ul class="budget-tips">
-            <li><strong>Skip the Shanghai Tower deck</strong> (¥180). The skybridge and Bund lights are free, or have a ¥40–50 coffee with the view at Duoyun Books on the 52nd floor.</li>
-            <li><strong>Skip the Snow Expo &amp; Volga Manor</strong> — ~¥300 in tickets + ~¥200 in taxis.</li>
-            <li><strong>Jingshan Park</strong> (a few yuan) is Beijing's best view. You don't need a paid tower.</li>
-            <li><strong>Shanghai Museum</strong> at People's Square is free with an online reservation, good for very cold or rainy hours.</li>
-            <li><strong>Buy combo tickets on Trip.com</strong> (e.g. Mutianyu entry + shuttle + lift).</li>
-          </ul>
-        </div>
-        <div class="places-list">
-          <div class="save-head">🍜 Food</div>
-          <ul class="budget-tips">
-            <li><strong>Order a half duck</strong> at Siji Minfu if there are only one or two of you.</li>
-            <li><strong>Have the big meal at lunch.</strong> Lunch sets (套餐) are cheaper for the same dishes.</li>
-            <li><strong>Group-buy deals (团购)</strong> on Meituan or Dianping often take 20–40% off restaurant meals and hotpot.</li>
-            <li><strong>Snack away from the sights.</strong> Food inside Ice &amp; Snow World, Mutianyu and Yu Garden Bazaar costs 2–3× more.</li>
-          </ul>
-        </div>
-        <div class="places-list">
-          <div class="save-head">🛍️ Shopping &amp; Money</div>
-          <ul class="budget-tips">
-            <li><strong>Buy heat packs (暖宝宝) in China</strong> at supermarkets or pharmacies, ~¥1–3 each.</li>
-            <li><strong>Buy souvenirs away from the sights.</strong> Chocolates on Zhongyang St and "antiques" at Yu Garden are marked up.</li>
-            <li><strong>Use an eSIM data plan</strong> (~US$10–15 for 10 GB) instead of roaming.</li>
-            <li>Follow the <strong>💳 fee tips</strong> above: prepay on Trip.com, and keep Alipay payments under ¥200.</li>
-          </ul>
-        </div>
+      <div>
+        <h4>Ways to save ¥2,000–3,000</h4>
+        <ul>
+          <li>Budget hotels in Beijing &amp; Shanghai; spend more in Harbin where heating matters.</li>
+          <li>Metro over DiDi inside cities; bus package to Mutianyu saves ~¥500.</li>
+          <li>Skip the Shanghai Tower deck — the Lujiazui skybridge is free.</li>
+          <li>Order a half duck at Siji Minfu if dining for one or two.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ GALLERY ═══════════ -->
-<section class="gallery-section" id="gallery">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Visual Journey</div>
-      <h2 class="section-title">Moments to Capture</h2>
-      <p class="section-subtitle">A preview of the sights along the way. Tap any photo to view it full-screen.</p>
+<!-- PACK -->
+<section id="pack">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Before you go</span>
+      <h2>Booking &amp; packing</h2>
     </div>
-    <div class="gallery-filters reveal" role="group" aria-label="Filter gallery by city">
-      <button class="gallery-filter active" data-filter="all">All</button>
-      <button class="gallery-filter" data-filter="beijing">🏯 Beijing</button>
-      <button class="gallery-filter" data-filter="harbin">❄️ Harbin</button>
-      <button class="gallery-filter" data-filter="shanghai">🌃 Shanghai</button>
-      <button class="gallery-filter" data-filter="hongkong">✈️ Hong Kong</button>
+
+    <h3 class="subhead reveal">Hotel booking plan — where, how many nights</h3>
+    <div class="table-wrap reveal">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>City</th><th>Nights</th><th>Dates</th><th>Where to look</th></tr></thead>
+          <tbody>
+            <tr><td>Beijing</td><td>4</td><td class="muted">Dec 19 → 23</td><td class="muted">Hanting, Jinjiang Inn, 7 Days Inn — near Wangfujing/Dongcheng</td></tr>
+            <tr><td>Harbin</td><td>1</td><td class="muted">Dec 24 → 25</td><td class="muted">Daoli District, near Zhongyang St — book first, peak season</td></tr>
+            <tr><td>Snow Town</td><td>1</td><td class="muted">Dec 23 → 24</td><td class="muted">Guesthouse (农家院) on Xueyun St — often incl. meals</td></tr>
+            <tr><td>Shanghai</td><td>4</td><td class="muted">Dec 25 → 29</td><td class="muted">Hanting, Home Inn — Pudong or Metro Line 2</td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="gallery-grid reveal" id="galleryGrid">
-      <!-- Beijing -->
-      <button class="gallery-item big" data-city="beijing" data-caption="Great Wall of China" data-sub="Day 3 · Mutianyu" data-full="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=85&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=900&q=80&auto=format&fit=crop" alt="Great Wall of China" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Great Wall of China</span></div>
-      </button>
-      <button class="gallery-item" data-city="beijing" data-caption="View from Jingshan Park" data-sub="Day 2 · Sunset over the Forbidden City">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg/960px-Views_of_the_Forbidden_City_from_Jingshan_Park_1.jpg" alt="View from Jingshan Park" loading="lazy" />
-        <div class="gallery-item-overlay"><span>View from Jingshan Park</span></div>
-      </button>
-      <button class="gallery-item" data-city="beijing" data-caption="Temple of Heaven" data-sub="Day 4 · Hall of Prayer for Good Harvests">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_01.jpg/960px-Temple_of_Heaven_-_Hall_of_Prayer_for_Good_Harvests_01.jpg" alt="Temple of Heaven" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Temple of Heaven</span></div>
-      </button>
-      <button class="gallery-item" data-city="beijing" data-caption="Tiananmen Gate" data-sub="Day 2 · Gateway to the Forbidden City">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Tiananmen_Gate_2019.jpg/960px-Tiananmen_Gate_2019.jpg" alt="Tiananmen Gate" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Tiananmen Gate</span></div>
-      </button>
-      <button class="gallery-item" data-city="beijing" data-caption="Summer Palace" data-sub="Day 4 · Longevity Hill">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Longevity_Hill_of_the_Summer_Palace.jpg/960px-Longevity_Hill_of_the_Summer_Palace.jpg" alt="Longevity Hill, Summer Palace" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Summer Palace</span></div>
-      </button>
-      <button class="gallery-item wide" data-city="beijing" data-caption="Mutianyu Watchtowers" data-sub="Day 3 · Towers 14 – 20" data-full="https://images.unsplash.com/photo-1608037521244-f1c6c7635194?w=1920&q=85&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1608037521244-f1c6c7635194?w=900&q=80&auto=format&fit=crop" alt="Great Wall watchtowers" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Mutianyu Watchtowers</span></div>
-      </button>
+    <div class="note card reveal">See the <a href="#budget">budget table</a> for price ranges. <strong>Chain names</strong> (Hanting, Jinjiang Inn, 7 Days Inn, Home Inn) are real options to start your search on Trip.com/Ctrip — not specific bookable properties.</div>
+    <div class="note card reveal"><strong>Squeeze out an extra night:</strong> on Dec 25 in Harbin you check out ~12:30 PM but don't fly until 9:55 PM. Skip the late-checkout fee — store bags free, then spend the afternoon out (a pub near Zhongyang St works well). Same trick applies in Beijing on Dec 22 with the 3-night option.</div>
 
-      <!-- Harbin -->
-      <button class="gallery-item big" data-city="harbin" data-caption="Harbin Ice &amp; Snow World" data-sub="Day 6 · Illuminated ice castles">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E5%93%88%E5%B0%94%E6%BB%A8%E5%86%B0%E9%9B%AA%E5%A4%A7%E4%B8%96%E7%95%8C%E3%80%81The_Eleventh_Harbin_Ice_Snow_World%E3%80%81IMG_0027.JPG/960px-%E7%AC%AC%E5%8D%81%E4%B8%80%E5%B1%8A%E5%93%88%E5%B0%94%E6%BB%A8%E5%86%B0%E9%9B%AA%E5%A4%A7%E4%B8%96%E7%95%8C%E3%80%81The_Eleventh_Harbin_Ice_Snow_World%E3%80%81IMG_0027.JPG" alt="Harbin Ice and Snow World" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Harbin Ice &amp; Snow World</span></div>
-      </button>
-      <button class="gallery-item" data-city="harbin" data-caption="St. Sophia in Winter" data-sub="Day 5 · Ice festival season">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg/960px-Harbin_Ice_%26_Snow_Festival_2026_-_Saint_Sophia_Cathedral.jpg" alt="Saint Sophia Cathedral during the ice festival" loading="lazy" />
-        <div class="gallery-item-overlay"><span>St. Sophia in Winter</span></div>
-      </button>
-      <button class="gallery-item" data-city="harbin" data-caption="Saint Sophia Cathedral" data-sub="Day 5 · 1907 Neo-Byzantine church">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Saint_Sophia_Cathedral%2C_Harbin_4.jpg/960px-Saint_Sophia_Cathedral%2C_Harbin_4.jpg" alt="Saint Sophia Cathedral, Harbin" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Saint Sophia Cathedral</span></div>
-      </button>
-      <button class="gallery-item wide" data-city="harbin" data-caption="Zhongyang Street" data-sub="Day 5 · Harbin's historic main street">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Zhongyang_Street%2C_Central_Street%2C_Harbin_06.01.2026.jpg/960px-Zhongyang_Street%2C_Central_Street%2C_Harbin_06.01.2026.jpg" alt="Zhongyang Street, Harbin in winter" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Zhongyang Street</span></div>
-      </button>
+    <h3 class="subhead reveal">Still to book</h3>
+    <ul class="checklist reveal">
+      <li><div class="box done"></div><div class="label"><strong>Visa &amp; flights</strong><span>Obtained / booked — CZ374, CZ3165, 9C6190, CX365, CX605</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Beijing hotel</strong><span>Dec 19–23, 4 nights — 2:30 AM check-in on arrival</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Harbin hotel</strong><span>Dec 24–25, 1 night, Daoli District — book first, peak season</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Snow Town guesthouse</strong><span>Dec 23, 1 night, Xueyun Street — sells out over Christmas week</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Shanghai hotel</strong><span>Dec 25–29, 4 nights, Pudong or Metro Line 2</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Beijing → Harbin sleeper train (Z17)</strong><span>Dec 7 (15 days ahead) — ~9:26 PM–7:48 AM, confirm arrival station</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Harbin → Yabuli West train</strong><span>Dec 8 (15 days ahead) — ~10:30–11:00 AM departure</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Forbidden City ticket</strong><span>Dec 13, 8:00 PM Beijing time, for Dec 20</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Tiananmen Square reservation</strong><span>1–7 days ahead of Dec 20, WeChat</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Ice &amp; Snow World ticket</strong><span>Once the 2026–27 date is confirmed, for Dec 24</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>Mutianyu entry + lift</strong><span>A few days before Dec 21</span></div></li>
+      <li><div class="box"></div><div class="label"><strong>eSIM &amp; VPN</strong><span>Alipay/WeChat card-linked, installed before Dec 19</span></div></li>
+    </ul>
 
-      <!-- Shanghai -->
-      <button class="gallery-item big" data-city="shanghai" data-caption="Shanghai Skyline" data-sub="Day 8 · Lujiazui" data-full="https://images.unsplash.com/photo-1548919973-5cef591cdbc9?w=1920&q=85&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1548919973-5cef591cdbc9?w=900&q=80&auto=format&fit=crop" alt="Shanghai skyline" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Shanghai Skyline</span></div>
-      </button>
-      <button class="gallery-item" data-city="shanghai" data-caption="The Bund at Night" data-sub="Day 8 · Huangpu riverfront">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/The_Bund%2C_Shanghai_at_night.jpg/960px-The_Bund%2C_Shanghai_at_night.jpg" alt="Shanghai Bund at night" loading="lazy" />
-        <div class="gallery-item-overlay"><span>The Bund at Night</span></div>
-      </button>
-      <button class="gallery-item" data-city="shanghai" data-caption="Classical Yu Garden" data-sub="Day 9 · Ming dynasty garden">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Shanghai_-_Yu_Garden_-_0034.jpg/960px-Shanghai_-_Yu_Garden_-_0034.jpg" alt="Yu Garden Shanghai" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Classical Yu Garden</span></div>
-      </button>
-      <button class="gallery-item" data-city="shanghai" data-caption="Yu Garden Pavilions" data-sub="Day 9 · Rockeries &amp; ponds">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Yu_Garden_Shanghai_November_2017_002.jpg/960px-Yu_Garden_Shanghai_November_2017_002.jpg" alt="Yu Garden pavilions" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Yu Garden Pavilions</span></div>
-      </button>
-
-      <!-- Hong Kong -->
-      <button class="gallery-item wide" data-city="hongkong" data-caption="Victoria Harbour" data-sub="Day 11 · Hong Kong layover">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Victoria_Harbour_skyscrapers.jpg/960px-Victoria_Harbour_skyscrapers.jpg" alt="Hong Kong skyline" loading="lazy" />
-        <div class="gallery-item-overlay"><span>Victoria Harbour</span></div>
-      </button>
+    <h3 class="subhead reveal">Winter packing — Harbin &amp; Snow Town, down to ~-20°C</h3>
+    <div class="cols-2 reveal">
+      <ul>
+        <li>Thermal base layers + fleece mid layer + long heavy down coat</li>
+        <li>Insulated, waterproof winter boots with real grip</li>
+        <li>Thick wool socks, beanie, balaclava or neck gaiter</li>
+        <li>Insulated gloves/mittens + thin liner gloves for your phone</li>
+      </ul>
+      <ul>
+        <li>Adhesive heat packs — buy in China, don't pack a whole box</li>
+        <li>Lip balm &amp; heavy moisturizer for the dry cold</li>
+        <li>Headlamp for the pre-dawn Bangchuishan hike</li>
+        <li>Power bank, passport, cash + Alipay</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ LIGHTBOX ═══════════ -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <span class="lightbox-counter" id="lightboxCounter"></span>
-  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
-  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous photo">‹</button>
-  <figure class="lightbox-figure">
-    <img class="lightbox-img" id="lightboxImg" alt="" />
-    <figcaption class="lightbox-caption">
-      <strong id="lightboxCaption"></strong>
-      <span id="lightboxSub"></span>
-    </figcaption>
-  </figure>
-  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next photo">›</button>
-</div>
-
-<!-- ═══════════ TRAVEL TIPS ═══════════ -->
-<section class="tips-section" id="tips">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Essentials</div>
-      <h2 class="section-title">Travel Tips & Prep</h2>
-      <p class="section-subtitle">Key things to know before your winter China adventure.</p>
+<!-- MAP -->
+<section id="map" style="background: var(--bg-alt);">
+  <div class="wrap-wide">
+    <div class="section-head reveal">
+      <span class="eyebrow">Overview</span>
+      <h2>The full route</h2>
+      <p>Beijing → Harbin → Snow Town → Shanghai — roughly 4,000 km across China.</p>
     </div>
-    <div class="tips-grid">
-      <div class="tip-card reveal">
-        <div class="tip-card-icon">📱</div>
-        <h4>Essential Apps</h4>
-        <p><strong>Alipay & WeChat</strong> — Link your Visa/Mastercard for cashless payments, Metro QR codes, and DiDi ride-hailing. Install an eSIM (Airalo/Nomad) + China VPN before departure.</p>
-      </div>
-      <div class="tip-card reveal" style="transition-delay:0.1s">
-        <div class="tip-card-icon">🧥</div>
-        <h4>Winter Packing</h4>
-        <p><strong>Harbin: -22°C!</strong> Bring heavy thermals, insulated boots, ski gloves, balaclava & adhesive heat packs (nuanbaobao). Shanghai is milder at 4–10°C.</p>
-      </div>
-      <div class="tip-card reveal" style="transition-delay:0.2s">
-        <div class="tip-card-icon">🎫</div>
-        <h4>Book Ahead</h4>
-        <p><strong>Forbidden City</strong> opens 7 days prior at 20:00. <strong>Tiananmen Square</strong> reservation 1–7 days prior (free, WeChat). <strong>Beijing→Harbin train</strong> opens 15 days prior. <strong>Yu Garden</strong> for Sunday. Confirm <strong>Ice & Snow World</strong> & Snow Expo opening dates in early December.</p>
-      </div>
-      <div class="tip-card reveal" style="transition-delay:0.3s">
-        <div class="tip-card-icon">🪪</div>
-        <h4>Important Documents</h4>
-        <p>✅ <strong>Visa obtained.</strong> Carry your <strong>physical passport</strong> everywhere — required for Tiananmen Square security, train boarding, hotel check-in, and attraction entry.</p>
-      </div>
-      <div class="tip-card reveal" style="transition-delay:0.4s">
-        <div class="tip-card-icon">💰</div>
-        <h4>Money & Payments</h4>
-        <p>China is nearly <strong>100% cashless</strong>. Alipay accepts international cards. Keep a small amount of cash as backup for rural vendors.</p>
-      </div>
-      <div class="tip-card reveal" style="transition-delay:0.5s">
-        <div class="tip-card-icon">🚄</div>
-        <h4>Getting Around</h4>
-        <p>Use the <strong>metro QR code</strong> in Alipay for subways. <strong>DiDi</strong> (in WeChat/Alipay) for taxis. High-speed trains bookable on <strong>Trip.com</strong> or 12306 app.</p>
-      </div>
+    <div class="route-wrap reveal">
+      <svg class="route-map" viewBox="-25 -25 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline map of China showing the route from Beijing to Harbin by sleeper train, the Snow Town side-trip, then flights to Shanghai and Hong Kong">
+        <defs>
+          <g id="rm-train" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="-6" y="-7" width="12" height="11" rx="2"></rect>
+            <line x1="-6" y1="-1" x2="6" y2="-1"></line>
+            <circle cx="-3" cy="6" r="1.4" fill="currentColor" stroke="none"></circle>
+            <circle cx="3" cy="6" r="1.4" fill="currentColor" stroke="none"></circle>
+          </g>
+          <g id="rm-plane" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M0,-6 L0,6 M-7,1 L7,1 M-3,5 L3,5"></path>
+          </g>
+        </defs>
+
+        <!-- China outline (mainland, Hainan, Taiwan) -->
+        <path class="locator-outline" d="M 651.1,55.0 L 672.1,59.8 L 686.4,70.4 L 691.3,84.3 L 709.6,84.3 L 740.0,74.1 L 716.7,123.7 L 702.1,121.1 L 691.7,126.3 L 693.2,156.6 L 687.0,157.0 L 687.1,164.6 L 679.3,155.8 L 674.5,164.1 L 655.9,170.6 L 657.8,178.4 L 641.6,173.2 L 610.2,201.3 L 571.5,216.6 L 584.9,193.9 L 578.5,186.1 L 547.0,211.3 L 535.1,212.1 L 529.0,219.0 L 555.2,242.5 L 568.7,231.9 L 587.2,238.1 L 589.2,245.9 L 572.1,250.0 L 548.5,275.9 L 561.5,284.1 L 581.8,323.8 L 581.6,334.9 L 574.0,338.9 L 584.0,351.5 L 579.1,375.4 L 572.3,376.7 L 542.6,430.1 L 509.2,456.4 L 488.2,464.7 L 484.1,459.8 L 477.2,467.2 L 447.6,477.0 L 443.5,492.7 L 436.8,493.6 L 436.5,477.0 L 402.5,470.8 L 396.7,464.8 L 398.6,456.2 L 381.8,447.9 L 371.5,455.8 L 337.4,463.3 L 339.3,480.3 L 332.8,479.9 L 331.4,470.2 L 322.5,474.6 L 308.4,466.2 L 311.9,453.9 L 304.2,451.0 L 301.4,437.3 L 288.6,439.8 L 290.1,422.1 L 301.5,409.7 L 301.6,386.1 L 292.3,373.7 L 272.3,372.6 L 276.3,366.4 L 270.7,357.1 L 262.1,363.4 L 252.0,359.7 L 227.1,380.3 L 217.4,382.1 L 197.1,374.3 L 182.6,389.2 L 181.6,377.5 L 146.5,375.7 L 104.4,347.3 L 94.7,342.7 L 89.7,346.3 L 72.9,335.9 L 61.1,326.4 L 57.7,310.0 L 66.3,312.0 L 63.2,284.7 L 50.2,267.3 L 30.4,261.2 L 15.7,238.6 L 14.3,224.3 L 3.1,222.5 L 0.0,208.7 L 1.8,201.8 L 13.3,194.8 L 34.4,193.9 L 38.9,184.4 L 54.4,182.6 L 77.7,168.6 L 78.5,156.8 L 86.7,152.9 L 75.9,127.1 L 105.9,117.8 L 114.6,91.2 L 138.6,96.1 L 145.3,89.3 L 145.9,74.4 L 169.8,61.9 L 172.9,72.3 L 200.3,85.8 L 208.6,97.8 L 204.0,115.1 L 208.3,121.6 L 238.9,126.2 L 260.9,137.1 L 273.5,159.7 L 327.7,160.6 L 377.4,176.5 L 391.5,168.5 L 443.1,157.5 L 460.2,144.5 L 454.4,133.9 L 460.7,124.3 L 479.9,128.7 L 527.7,101.0 L 554.7,100.7 L 556.0,95.4 L 535.4,80.2 L 526.1,85.7 L 507.4,85.3 L 504.3,79.2 L 518.7,53.1 L 533.2,58.7 L 550.2,49.3 L 550.1,42.8 L 567.7,22.2 L 567.5,14.0 L 560.9,10.5 L 570.9,3.1 L 601.8,0.0 L 630.5,9.9 L 651.1,55.0 Z"></path>
+        <path class="locator-outline" d="M 442.2,517.4 L 431.8,524.6 L 421.9,520.0 L 421.6,507.2 L 427.5,500.4 L 440.7,496.3 L 447.6,496.6 L 450.3,502.3 L 445.0,508.8 L 442.2,517.4 Z"></path>
+        <path class="locator-outline" d="M 580.2,432.4 L 572.9,456.2 L 567.8,468.4 L 561.4,455.9 L 560.0,444.9 L 567.1,430.2 L 576.8,419.0 L 582.3,423.4 L 580.2,432.4 Z"></path>
+
+        <!-- route: Beijing -> Harbin (sleeper train) -->
+        <path class="route-line" d="M 515.4,201.6 Q 585,175 637.6,113.9"></path>
+        <!-- spur: Harbin -> Snow Town (detailed in its own section) -->
+        <path class="route-spur" d="M 637.6,113.9 L 667.6,138.2"></path>
+        <!-- route: Harbin -> Shanghai (flight) -->
+        <path class="route-line" d="M 637.6,113.9 Q 640,220 576.5,330.7"></path>
+        <!-- route: Shanghai -> Hong Kong (flight) -->
+        <path class="route-line" d="M 576.5,330.7 Q 552,397 488.4,463.3"></path>
+
+        <!-- mode badge: sleeper train -->
+        <circle class="locator-badge" cx="580.8" cy="166.4" r="11"></circle>
+        <g transform="translate(580.8,166.4) scale(0.68)" color="var(--accent)"><use href="#rm-train"></use></g>
+        <rect class="locator-via-chip" x="539.0" y="182.9" width="119.5" height="15" rx="7.5"></rect>
+        <text x="598.8" y="193.9" text-anchor="middle" class="locator-via">Sleeper train · ~10 h</text>
+
+        <!-- mode badge: flight to Shanghai -->
+        <circle class="locator-badge" cx="623.5" cy="221.1" r="11"></circle>
+        <g transform="translate(623.5,221.1) rotate(160) scale(0.68)" color="var(--accent)"><use href="#rm-plane"></use></g>
+        <rect class="locator-via-chip" x="583.5" y="237.6" width="80.1" height="15" rx="7.5"></rect>
+        <text x="623.5" y="248.6" text-anchor="middle" class="locator-via">Flight · ~3 h</text>
+
+        <!-- mode badge: flight to Hong Kong -->
+        <circle class="locator-badge" cx="542.2" cy="397.0" r="11"></circle>
+        <g transform="translate(542.2,397.0) rotate(160) scale(0.68)" color="var(--accent)"><use href="#rm-plane"></use></g>
+        <rect class="locator-via-chip" x="502.2" y="413.5" width="80.1" height="15" rx="7.5"></rect>
+        <text x="542.2" y="424.5" text-anchor="middle" class="locator-via">Flight · ~3 h</text>
+
+        <!-- Beijing -->
+        <circle class="locator-pin-ring" cx="515.4" cy="201.6" r="6"></circle>
+        <circle class="locator-pin" cx="515.4" cy="201.6" r="2.5"></circle>
+        <text x="505.4" y="191.6" text-anchor="end" class="locator-label">Beijing</text>
+
+        <!-- Harbin -->
+        <circle class="locator-pin-ring" cx="637.6" cy="113.9" r="6"></circle>
+        <circle class="locator-pin" cx="637.6" cy="113.9" r="2.5"></circle>
+        <text x="637.6" y="97.9" text-anchor="middle" class="locator-label">Harbin</text>
+
+        <!-- Snow Town (links to the detailed guide) -->
+        <a href="#snowtown">
+          <circle class="locator-pin-ring" cx="667.6" cy="138.2" r="6"></circle>
+          <circle class="locator-pin" cx="667.6" cy="138.2" r="2.5"></circle>
+          <text x="677.6" y="156.2" text-anchor="start" class="locator-label sm">Snow Town</text>
+        </a>
+
+        <!-- Shanghai -->
+        <circle class="locator-pin-ring" cx="576.5" cy="330.7" r="6"></circle>
+        <circle class="locator-pin" cx="576.5" cy="330.7" r="2.5"></circle>
+        <text x="586.5" y="335.7" text-anchor="start" class="locator-label">Shanghai</text>
+
+        <!-- Hong Kong -->
+        <circle class="locator-pin-ring" cx="488.4" cy="463.3" r="6"></circle>
+        <circle class="locator-pin" cx="488.4" cy="463.3" r="2.5"></circle>
+        <text x="488.4" y="483.3" text-anchor="middle" class="locator-label">Hong Kong</text>
+      </svg>
+    </div>
+    <div class="map-links">
+      <a href="https://maps.google.com/maps?q=Beijing+China" target="_blank" rel="noopener">Beijing →</a>
+      <a href="https://maps.google.com/maps?q=Harbin+China" target="_blank" rel="noopener">Harbin →</a>
+      <a href="https://maps.google.com/maps?q=Xuexiang+Snow+Town" target="_blank" rel="noopener">Snow Town →</a>
+      <a href="https://maps.google.com/maps?q=Shanghai+China" target="_blank" rel="noopener">Shanghai →</a>
+      <a href="https://maps.google.com/maps?q=Hong+Kong" target="_blank" rel="noopener">Hong Kong →</a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ FULL MAP ═══════════ -->
-<section class="fullmap-section" id="map">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Overview Map</div>
-      <h2 class="section-title">The Full Route</h2>
-      <p class="section-subtitle">Beijing → Harbin → Shanghai — spanning 4,000 km across China.</p>
-    </div>
-    <div class="fullmap-container reveal">
-      <iframe src="https://maps.google.com/maps?q=China&t=&z=4&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
-    </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;" class="reveal">
-      <a class="map-link" href="https://maps.google.com/maps?q=Beijing+China" target="_blank" rel="noopener">🏯 Beijing</a>
-      <a class="map-link" href="https://maps.google.com/maps?q=Harbin+China" target="_blank" rel="noopener">❄️ Harbin</a>
-      <a class="map-link" href="https://maps.google.com/maps?q=Shanghai+China" target="_blank" rel="noopener">🌃 Shanghai</a>
-      <a class="map-link" href="https://maps.google.com/maps?q=Hong+Kong" target="_blank" rel="noopener">✈️ Hong Kong</a>
-    </div>
-  </div>
-</section>
+</main>
 
-<!-- ═══════════ FOOTER ═══════════ -->
-<footer class="footer">
-  <div class="container">
-    <p style="font-size:2rem;margin-bottom:12px;">🇨🇳</p>
-    <p class="footer-route">SGN ✈ CAN ✈ PKX 🚄 HRB ✈ PVG ✈ HKG ✈ KTI</p>
-    <p style="font-family:'Noto Serif SC',serif;font-size:1.4rem;color:var(--gold);margin:12px 0;">
-      一路平安 · Safe Travels
-    </p>
-    <p class="footer-copy">China Winter Journey 2026 · Dec 19 – Dec 29 · 11 Days of Wonder</p>
-  </div>
+<footer>
+  <div class="route">SGN → CAN → PKX → HRB → Yabuli → Snow Town → HRB → PVG → HKG → KTI</div>
+  <div>China Winter Journey · Dec 19 – Dec 29, 2026 · 11 Days</div>
 </footer>
 
-<!-- ═══════════ SCRIPTS ═══════════ -->
 <script>
-  // ─── Navbar scroll effect ───
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  });
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ─── Hero parallax ───
-  const heroBg = document.getElementById('heroBg');
-  window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight) {
-      heroBg.style.transform = `scale(1.1) translateY(${y * 0.3}px)`;
-    }
-  });
+  if (!reduceMotion) {
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
 
-  // ─── Scroll reveal (Intersection Observer) ───
-  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => observer.observe(el));
-
-  // ─── Smooth scroll for nav links ───
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // ─── Mobile nav toggle (simple) ───
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.querySelector('.nav-links');
-  navToggle.addEventListener('click', () => {
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.display = 'none';
-    } else {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '60px';
-      navLinks.style.right = '24px';
-      navLinks.style.background = 'rgba(6,8,15,0.95)';
-      navLinks.style.backdropFilter = 'blur(20px)';
-      navLinks.style.padding = '20px';
-      navLinks.style.borderRadius = '12px';
-      navLinks.style.border = '1px solid rgba(255,255,255,0.1)';
-      navLinks.style.gap = '16px';
-    }
-  });
-
-  // ─── Gallery filters ───
-  const galleryItems = Array.from(document.querySelectorAll('#galleryGrid .gallery-item'));
-  document.querySelectorAll('.gallery-filter').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.gallery-filter').forEach(b => b.classList.toggle('active', b === btn));
-      const city = btn.dataset.filter;
-      galleryItems.forEach(item => {
-        item.classList.toggle('hidden', city !== 'all' && item.dataset.city !== city);
+  if (!reduceMotion) {
+    const parallaxImgs = document.querySelectorAll('.hero-photo img, .banner img');
+    let ticking = false;
+    function updateParallax() {
+      const vh = window.innerHeight;
+      parallaxImgs.forEach((img) => {
+        const rect = img.parentElement.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > vh) return;
+        const center = rect.top + rect.height / 2;
+        const maxOffset = Math.min(18, rect.height * 0.05);
+        const offset = Math.max(-maxOffset, Math.min(maxOffset, (vh / 2 - center) * 0.06));
+        img.style.transform = `translateY(${offset}px) scale(1.08)`;
       });
-    });
-  });
-
-  // ─── Lightbox image viewer ───
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  const lightboxSub = document.getElementById('lightboxSub');
-  const lightboxCounter = document.getElementById('lightboxCounter');
-  let lightboxList = [];
-  let lightboxIndex = 0;
-  let lastFocused = null;
-
-  function showLightboxImage() {
-    const item = lightboxList[lightboxIndex];
-    const thumb = item.querySelector('img');
-    lightboxImg.classList.add('loading');
-    lightboxImg.onload = () => lightboxImg.classList.remove('loading');
-    lightboxImg.onerror = () => {
-      lightboxImg.onerror = null;
-      lightboxImg.classList.remove('loading');
-      lightboxImg.src = thumb.src;
-    };
-    lightboxImg.src = item.dataset.full || thumb.src;
-    lightboxImg.alt = thumb.alt;
-    lightboxCaption.textContent = item.dataset.caption || thumb.alt;
-    lightboxSub.textContent = item.dataset.sub || '';
-    lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxList.length}`;
+      ticking = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(updateParallax); ticking = true; }
+    }, { passive: true });
+    window.addEventListener('resize', updateParallax);
+    updateParallax();
   }
-  function openLightbox(item) {
-    lightboxList = galleryItems.filter(i => !i.classList.contains('hidden'));
-    lightboxIndex = lightboxList.indexOf(item);
-    lastFocused = document.activeElement;
-    showLightboxImage();
-    lightbox.classList.add('open');
-    requestAnimationFrame(() => lightbox.classList.add('visible'));
-    document.body.style.overflow = 'hidden';
-    document.getElementById('lightboxClose').focus();
-  }
-  function closeLightbox() {
-    lightbox.classList.remove('visible');
-    setTimeout(() => lightbox.classList.remove('open'), 300);
-    document.body.style.overflow = '';
-    if (lastFocused) lastFocused.focus();
-  }
-  function stepLightbox(dir) {
-    lightboxIndex = (lightboxIndex + dir + lightboxList.length) % lightboxList.length;
-    showLightboxImage();
-  }
-
-  galleryItems.forEach(item => item.addEventListener('click', () => openLightbox(item)));
-  document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
-  document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
-  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    else if (e.key === 'ArrowLeft') stepLightbox(-1);
-    else if (e.key === 'ArrowRight') stepLightbox(1);
-  });
-
-  // Swipe left/right on touch screens
-  let touchStartX = null;
-  lightbox.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
-  lightbox.addEventListener('touchend', (e) => {
-    if (touchStartX === null) return;
-    const dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) > 50) stepLightbox(dx < 0 ? 1 : -1);
-    touchStartX = null;
-  });
-
-  // ─── Counter animation for hero stats ───
-  function animateCounters() {
-    document.querySelectorAll('.hero-stat-value').forEach(el => {
-      const target = el.textContent;
-      const num = parseInt(target);
-      if (isNaN(num)) return;
-      const suffix = target.replace(/\d+/g, '');
-      let current = 0;
-      const step = Math.max(1, Math.floor(num / 30));
-      const timer = setInterval(() => {
-        current += step;
-        if (current >= num) { current = num; clearInterval(timer); }
-        el.textContent = current + suffix;
-      }, 40);
-    });
-  }
-  setTimeout(animateCounters, 800);
 </script>
 
 </body>
